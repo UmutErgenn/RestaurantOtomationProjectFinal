@@ -36,5 +36,10 @@ namespace RestaurantOtomasyonuLive
             signForm.Show();
             this.Hide();
         }
+
+        private void btn_loginExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

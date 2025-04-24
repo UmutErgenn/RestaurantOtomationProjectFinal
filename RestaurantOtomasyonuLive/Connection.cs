@@ -10,9 +10,8 @@ namespace RestaurantOtomasyonuLive
     internal class Connection
     {
         SqlConnection connect;
-        String connString = "server=DARKMATTER\\MSSQLSERVER01; " +
+        String connString = "server=DESKTOP-GDM81IQ\\SQLEXPRESS; " +
                 "database=RESTAURANT2; Trusted_Connection=True";
-
         public SqlConnection Connect
         {
             get
@@ -25,7 +24,6 @@ namespace RestaurantOtomasyonuLive
                 return connect;
             }
         }
-
         public String statue()
         {
             return connect.State.ToString();

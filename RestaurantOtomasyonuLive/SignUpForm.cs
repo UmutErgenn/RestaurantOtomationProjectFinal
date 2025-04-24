@@ -46,7 +46,7 @@ namespace RestaurantOtomasyonuLive
 
         private void btn_cancelSignUpForm_Click(object sender, EventArgs e)
         {
-            Form1 home = new Form1();
+            StartScreen home = new StartScreen();
             home.Show();
             this.Hide();
         }

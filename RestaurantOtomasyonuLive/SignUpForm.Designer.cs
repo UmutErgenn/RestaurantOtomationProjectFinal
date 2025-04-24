@@ -55,10 +55,9 @@
             // btn_signUpPerson
             // 
             this.btn_signUpPerson.Font = new System.Drawing.Font("Rockwell Nova", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_signUpPerson.Location = new System.Drawing.Point(219, 558);
-            this.btn_signUpPerson.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_signUpPerson.Location = new System.Drawing.Point(166, 457);
             this.btn_signUpPerson.Name = "btn_signUpPerson";
-            this.btn_signUpPerson.Size = new System.Drawing.Size(108, 40);
+            this.btn_signUpPerson.Size = new System.Drawing.Size(81, 32);
             this.btn_signUpPerson.TabIndex = 0;
             this.btn_signUpPerson.Text = "Kayıt Ol";
             this.btn_signUpPerson.UseVisualStyleBackColor = true;
@@ -68,10 +67,9 @@
             // 
             this.btn_cancelSignUpForm.BackColor = System.Drawing.Color.Transparent;
             this.btn_cancelSignUpForm.Font = new System.Drawing.Font("Rockwell Nova", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_cancelSignUpForm.Location = new System.Drawing.Point(84, 558);
-            this.btn_cancelSignUpForm.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cancelSignUpForm.Location = new System.Drawing.Point(65, 457);
             this.btn_cancelSignUpForm.Name = "btn_cancelSignUpForm";
-            this.btn_cancelSignUpForm.Size = new System.Drawing.Size(108, 40);
+            this.btn_cancelSignUpForm.Size = new System.Drawing.Size(81, 32);
             this.btn_cancelSignUpForm.TabIndex = 0;
             this.btn_cancelSignUpForm.Text = "İptal";
             this.btn_cancelSignUpForm.UseVisualStyleBackColor = false;
@@ -82,20 +80,18 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Rockwell Nova", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(80, 359);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(58, 291);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 21);
+            this.label1.Size = new System.Drawing.Size(28, 18);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ad";
             // 
             // txt_nameSignUp
             // 
             this.txt_nameSignUp.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_nameSignUp.Location = new System.Drawing.Point(122, 358);
-            this.txt_nameSignUp.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_nameSignUp.Location = new System.Drawing.Point(92, 291);
             this.txt_nameSignUp.Name = "txt_nameSignUp";
-            this.txt_nameSignUp.Size = new System.Drawing.Size(205, 22);
+            this.txt_nameSignUp.Size = new System.Drawing.Size(155, 20);
             this.txt_nameSignUp.TabIndex = 2;
             // 
             // label2
@@ -103,19 +99,17 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Rockwell Nova", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(53, 391);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(35, 317);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 21);
+            this.label2.Size = new System.Drawing.Size(51, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Soyad";
             // 
             // txt_surnameSignUp
             // 
-            this.txt_surnameSignUp.Location = new System.Drawing.Point(122, 390);
-            this.txt_surnameSignUp.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_surnameSignUp.Location = new System.Drawing.Point(92, 317);
             this.txt_surnameSignUp.Name = "txt_surnameSignUp";
-            this.txt_surnameSignUp.Size = new System.Drawing.Size(205, 22);
+            this.txt_surnameSignUp.Size = new System.Drawing.Size(155, 20);
             this.txt_surnameSignUp.TabIndex = 2;
             // 
             // label3
@@ -123,19 +117,17 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Rockwell Nova", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(38, 423);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(24, 343);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 21);
+            this.label3.Size = new System.Drawing.Size(62, 18);
             this.label3.TabIndex = 1;
             this.label3.Text = "E-posta";
             // 
             // txt_mailSignUp
             // 
-            this.txt_mailSignUp.Location = new System.Drawing.Point(122, 422);
-            this.txt_mailSignUp.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_mailSignUp.Location = new System.Drawing.Point(92, 343);
             this.txt_mailSignUp.Name = "txt_mailSignUp";
-            this.txt_mailSignUp.Size = new System.Drawing.Size(205, 22);
+            this.txt_mailSignUp.Size = new System.Drawing.Size(155, 20);
             this.txt_mailSignUp.TabIndex = 2;
             // 
             // label4
@@ -143,19 +135,17 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Rockwell Nova", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(63, 455);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(44, 369);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 21);
+            this.label4.Size = new System.Drawing.Size(42, 18);
             this.label4.TabIndex = 1;
             this.label4.Text = "Şifre";
             // 
             // txt_passwordSignUp
             // 
-            this.txt_passwordSignUp.Location = new System.Drawing.Point(122, 454);
-            this.txt_passwordSignUp.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_passwordSignUp.Location = new System.Drawing.Point(92, 369);
             this.txt_passwordSignUp.Name = "txt_passwordSignUp";
-            this.txt_passwordSignUp.Size = new System.Drawing.Size(205, 22);
+            this.txt_passwordSignUp.Size = new System.Drawing.Size(155, 20);
             this.txt_passwordSignUp.TabIndex = 2;
             // 
             // label5
@@ -163,19 +153,17 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Rockwell Nova", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(39, 487);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(24, 395);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 21);
+            this.label5.Size = new System.Drawing.Size(64, 18);
             this.label5.TabIndex = 1;
             this.label5.Text = "Telefon";
             // 
             // txt_phoneNumSignUp
             // 
-            this.txt_phoneNumSignUp.Location = new System.Drawing.Point(122, 486);
-            this.txt_phoneNumSignUp.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_phoneNumSignUp.Location = new System.Drawing.Point(92, 395);
             this.txt_phoneNumSignUp.Name = "txt_phoneNumSignUp";
-            this.txt_phoneNumSignUp.Size = new System.Drawing.Size(205, 22);
+            this.txt_phoneNumSignUp.Size = new System.Drawing.Size(155, 20);
             this.txt_phoneNumSignUp.TabIndex = 2;
             // 
             // panel1
@@ -200,10 +188,9 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(13, 13);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(10, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(394, 627);
+            this.panel1.Size = new System.Drawing.Size(296, 510);
             this.panel1.TabIndex = 3;
             // 
             // label7
@@ -212,10 +199,9 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Forte", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(50, 22);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(32, 20);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(286, 44);
+            this.label7.Size = new System.Drawing.Size(229, 35);
             this.label7.TabIndex = 5;
             this.label7.Text = "Mola Restoran";
             // 
@@ -224,10 +210,10 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(58, 69);
+            this.pictureBox2.Location = new System.Drawing.Point(47, 46);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(269, 253);
+            this.pictureBox2.Size = new System.Drawing.Size(200, 200);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
@@ -237,10 +223,9 @@
             this.combobox_genderSignUp.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
-            this.combobox_genderSignUp.Location = new System.Drawing.Point(122, 518);
-            this.combobox_genderSignUp.Margin = new System.Windows.Forms.Padding(4);
+            this.combobox_genderSignUp.Location = new System.Drawing.Point(92, 421);
             this.combobox_genderSignUp.Name = "combobox_genderSignUp";
-            this.combobox_genderSignUp.Size = new System.Drawing.Size(205, 24);
+            this.combobox_genderSignUp.Size = new System.Drawing.Size(155, 21);
             this.combobox_genderSignUp.TabIndex = 3;
             // 
             // label6
@@ -248,10 +233,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Rockwell Nova", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(31, 521);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(17, 424);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 21);
+            this.label6.Size = new System.Drawing.Size(69, 18);
             this.label6.TabIndex = 1;
             this.label6.Text = "Cinsiyet";
             // 
@@ -261,22 +245,20 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1176, 653);
+            this.pictureBox1.Size = new System.Drawing.Size(882, 531);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // SignUpForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1176, 653);
+            this.ClientSize = new System.Drawing.Size(882, 531);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SignUpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUpForm";

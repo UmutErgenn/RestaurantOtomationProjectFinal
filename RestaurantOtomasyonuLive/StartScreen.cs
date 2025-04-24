@@ -10,33 +10,27 @@ using System.Windows.Forms;
 
 namespace RestaurantOtomasyonuLive
 {
-    public partial class Form1 : Form
+    public partial class StartScreen : Form
     {
-        public Form1()
+        public StartScreen()
         {
             InitializeComponent();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btn_login_Click(object sender, EventArgs e)
+        private void btn_login_Click(object sender, EventArgs e) //Login butonu kontrol kısmı
         {
             if (sqlMethods.login(txt_mail.Text, txt_password.Text))
             {
-                MessageBox.Show("hoş geldiniz");
-                Form2 home = new Form2();
-                home.Show();
+                MessageBox.Show("Hoş geldiniz");
+                MainMenu mainMenu = new MainMenu();
+                mainMenu.Show();
                 this.Hide();
             }
-
             else
                 MessageBox.Show("Hatalı kullanıcı adı ya da şifre.");
         }
 
-        private void btn_signUp_Click(object sender, EventArgs e)
+        private void btn_signUp_Click(object sender, EventArgs e) //SignUp butonu - Kayıt olma kısmı kontrolü
         {
             SignUpForm signForm = new SignUpForm();
             signForm.Show();

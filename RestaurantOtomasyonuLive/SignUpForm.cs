@@ -50,5 +50,10 @@ namespace RestaurantOtomasyonuLive
             home.Show();
             this.Hide();
         }
+
+        private void btn_signUpExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

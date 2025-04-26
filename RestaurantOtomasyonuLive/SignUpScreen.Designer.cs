@@ -57,7 +57,7 @@
             // 
             this.btn_signUpPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_signUpPerson.Location = new System.Drawing.Point(219, 558);
-            this.btn_signUpPerson.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_signUpPerson.Margin = new System.Windows.Forms.Padding(4);
             this.btn_signUpPerson.Name = "btn_signUpPerson";
             this.btn_signUpPerson.Size = new System.Drawing.Size(108, 39);
             this.btn_signUpPerson.TabIndex = 0;
@@ -70,7 +70,7 @@
             this.btn_cancelSignUpForm.BackColor = System.Drawing.Color.Transparent;
             this.btn_cancelSignUpForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_cancelSignUpForm.Location = new System.Drawing.Point(84, 558);
-            this.btn_cancelSignUpForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cancelSignUpForm.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cancelSignUpForm.Name = "btn_cancelSignUpForm";
             this.btn_cancelSignUpForm.Size = new System.Drawing.Size(108, 39);
             this.btn_cancelSignUpForm.TabIndex = 0;
@@ -94,7 +94,7 @@
             // 
             this.txt_nameSignUp.BackColor = System.Drawing.SystemColors.Window;
             this.txt_nameSignUp.Location = new System.Drawing.Point(123, 358);
-            this.txt_nameSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_nameSignUp.Margin = new System.Windows.Forms.Padding(4);
             this.txt_nameSignUp.Name = "txt_nameSignUp";
             this.txt_nameSignUp.Size = new System.Drawing.Size(205, 22);
             this.txt_nameSignUp.TabIndex = 2;
@@ -114,7 +114,7 @@
             // txt_surnameSignUp
             // 
             this.txt_surnameSignUp.Location = new System.Drawing.Point(123, 390);
-            this.txt_surnameSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_surnameSignUp.Margin = new System.Windows.Forms.Padding(4);
             this.txt_surnameSignUp.Name = "txt_surnameSignUp";
             this.txt_surnameSignUp.Size = new System.Drawing.Size(205, 22);
             this.txt_surnameSignUp.TabIndex = 2;
@@ -134,7 +134,7 @@
             // txt_mailSignUp
             // 
             this.txt_mailSignUp.Location = new System.Drawing.Point(123, 422);
-            this.txt_mailSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_mailSignUp.Margin = new System.Windows.Forms.Padding(4);
             this.txt_mailSignUp.Name = "txt_mailSignUp";
             this.txt_mailSignUp.Size = new System.Drawing.Size(205, 22);
             this.txt_mailSignUp.TabIndex = 2;
@@ -154,7 +154,7 @@
             // txt_passwordSignUp
             // 
             this.txt_passwordSignUp.Location = new System.Drawing.Point(123, 454);
-            this.txt_passwordSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_passwordSignUp.Margin = new System.Windows.Forms.Padding(4);
             this.txt_passwordSignUp.Name = "txt_passwordSignUp";
             this.txt_passwordSignUp.Size = new System.Drawing.Size(205, 22);
             this.txt_passwordSignUp.TabIndex = 2;
@@ -174,7 +174,7 @@
             // txt_phoneNumSignUp
             // 
             this.txt_phoneNumSignUp.Location = new System.Drawing.Point(123, 486);
-            this.txt_phoneNumSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_phoneNumSignUp.Margin = new System.Windows.Forms.Padding(4);
             this.txt_phoneNumSignUp.Name = "txt_phoneNumSignUp";
             this.txt_phoneNumSignUp.Size = new System.Drawing.Size(205, 22);
             this.txt_phoneNumSignUp.TabIndex = 2;
@@ -202,7 +202,7 @@
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Location = new System.Drawing.Point(13, 14);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(394, 627);
             this.panel1.TabIndex = 3;
@@ -225,7 +225,6 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(59, 69);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
@@ -240,7 +239,7 @@
             "Erkek",
             "Kadın"});
             this.combobox_genderSignUp.Location = new System.Drawing.Point(123, 518);
-            this.combobox_genderSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.combobox_genderSignUp.Margin = new System.Windows.Forms.Padding(4);
             this.combobox_genderSignUp.Name = "combobox_genderSignUp";
             this.combobox_genderSignUp.Size = new System.Drawing.Size(205, 24);
             this.combobox_genderSignUp.TabIndex = 3;
@@ -263,7 +262,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(1176, 654);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -277,7 +276,7 @@
             this.btn_signUpExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_signUpExit.ForeColor = System.Drawing.Color.Red;
             this.btn_signUpExit.Location = new System.Drawing.Point(1143, 0);
-            this.btn_signUpExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_signUpExit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_signUpExit.Name = "btn_signUpExit";
             this.btn_signUpExit.Size = new System.Drawing.Size(33, 33);
             this.btn_signUpExit.TabIndex = 8;
@@ -285,7 +284,7 @@
             this.btn_signUpExit.UseVisualStyleBackColor = false;
             this.btn_signUpExit.Click += new System.EventHandler(this.btn_signUpExit_Click);
             // 
-            // SignUpForm
+            // SignUpScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -294,8 +293,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "SignUpForm";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "SignUpScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUpForm";
             this.Load += new System.EventHandler(this.SignUpForm_Load);

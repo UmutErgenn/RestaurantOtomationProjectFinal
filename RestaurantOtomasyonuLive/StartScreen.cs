@@ -33,7 +33,7 @@ namespace RestaurantOtomasyonuLive
             }
 
             // Giriş işlemi
-            if (sqlMethods.login(txt_mail.Text, txt_password.Text))
+            if (sqlMethods2.login(txt_mail.Text, txt_password.Text))
             {
                 notification.showNotification(this, "Hoş geldiniz!", false);
                 MainMenu mainMenu = new MainMenu();

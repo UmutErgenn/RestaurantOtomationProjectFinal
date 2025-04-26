@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RestaurantOtomasyonuLive
 {
-    public partial class Form2 : Form
+    public partial class MainMenu : Form
     {
-        public Form2()
+        public MainMenu()
         {
             InitializeComponent();
         }

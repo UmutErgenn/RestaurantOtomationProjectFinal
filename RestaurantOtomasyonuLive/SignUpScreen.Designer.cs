@@ -1,6 +1,6 @@
 ﻿namespace RestaurantOtomasyonuLive
 {
-    partial class SignUpForm
+    partial class SignUpScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUpScreen));
             this.btn_signUpPerson = new System.Windows.Forms.Button();
             this.btn_cancelSignUpForm = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,9 +56,10 @@
             // btn_signUpPerson
             // 
             this.btn_signUpPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_signUpPerson.Location = new System.Drawing.Point(164, 453);
+            this.btn_signUpPerson.Location = new System.Drawing.Point(219, 558);
+            this.btn_signUpPerson.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_signUpPerson.Name = "btn_signUpPerson";
-            this.btn_signUpPerson.Size = new System.Drawing.Size(81, 32);
+            this.btn_signUpPerson.Size = new System.Drawing.Size(108, 39);
             this.btn_signUpPerson.TabIndex = 0;
             this.btn_signUpPerson.Text = "Kayıt Ol";
             this.btn_signUpPerson.UseVisualStyleBackColor = true;
@@ -68,9 +69,10 @@
             // 
             this.btn_cancelSignUpForm.BackColor = System.Drawing.Color.Transparent;
             this.btn_cancelSignUpForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_cancelSignUpForm.Location = new System.Drawing.Point(63, 453);
+            this.btn_cancelSignUpForm.Location = new System.Drawing.Point(84, 558);
+            this.btn_cancelSignUpForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cancelSignUpForm.Name = "btn_cancelSignUpForm";
-            this.btn_cancelSignUpForm.Size = new System.Drawing.Size(81, 32);
+            this.btn_cancelSignUpForm.Size = new System.Drawing.Size(108, 39);
             this.btn_cancelSignUpForm.TabIndex = 0;
             this.btn_cancelSignUpForm.Text = "İptal";
             this.btn_cancelSignUpForm.UseVisualStyleBackColor = false;
@@ -81,18 +83,20 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(23, 294);
+            this.label1.Location = new System.Drawing.Point(31, 362);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 17);
+            this.label1.Size = new System.Drawing.Size(31, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ad";
             // 
             // txt_nameSignUp
             // 
             this.txt_nameSignUp.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_nameSignUp.Location = new System.Drawing.Point(92, 291);
+            this.txt_nameSignUp.Location = new System.Drawing.Point(123, 358);
+            this.txt_nameSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_nameSignUp.Name = "txt_nameSignUp";
-            this.txt_nameSignUp.Size = new System.Drawing.Size(155, 20);
+            this.txt_nameSignUp.Size = new System.Drawing.Size(205, 22);
             this.txt_nameSignUp.TabIndex = 2;
             // 
             // label2
@@ -100,17 +104,19 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(23, 320);
+            this.label2.Location = new System.Drawing.Point(31, 394);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 17);
+            this.label2.Size = new System.Drawing.Size(60, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Soyad";
             // 
             // txt_surnameSignUp
             // 
-            this.txt_surnameSignUp.Location = new System.Drawing.Point(92, 317);
+            this.txt_surnameSignUp.Location = new System.Drawing.Point(123, 390);
+            this.txt_surnameSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_surnameSignUp.Name = "txt_surnameSignUp";
-            this.txt_surnameSignUp.Size = new System.Drawing.Size(155, 20);
+            this.txt_surnameSignUp.Size = new System.Drawing.Size(205, 22);
             this.txt_surnameSignUp.TabIndex = 2;
             // 
             // label3
@@ -118,17 +124,19 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(22, 346);
+            this.label3.Location = new System.Drawing.Point(29, 426);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 17);
+            this.label3.Size = new System.Drawing.Size(74, 20);
             this.label3.TabIndex = 1;
             this.label3.Text = "E-posta";
             // 
             // txt_mailSignUp
             // 
-            this.txt_mailSignUp.Location = new System.Drawing.Point(92, 343);
+            this.txt_mailSignUp.Location = new System.Drawing.Point(123, 422);
+            this.txt_mailSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_mailSignUp.Name = "txt_mailSignUp";
-            this.txt_mailSignUp.Size = new System.Drawing.Size(155, 20);
+            this.txt_mailSignUp.Size = new System.Drawing.Size(205, 22);
             this.txt_mailSignUp.TabIndex = 2;
             // 
             // label4
@@ -136,17 +144,19 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(23, 372);
+            this.label4.Location = new System.Drawing.Point(31, 458);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 17);
+            this.label4.Size = new System.Drawing.Size(49, 20);
             this.label4.TabIndex = 1;
             this.label4.Text = "Şifre";
             // 
             // txt_passwordSignUp
             // 
-            this.txt_passwordSignUp.Location = new System.Drawing.Point(92, 369);
+            this.txt_passwordSignUp.Location = new System.Drawing.Point(123, 454);
+            this.txt_passwordSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_passwordSignUp.Name = "txt_passwordSignUp";
-            this.txt_passwordSignUp.Size = new System.Drawing.Size(155, 20);
+            this.txt_passwordSignUp.Size = new System.Drawing.Size(205, 22);
             this.txt_passwordSignUp.TabIndex = 2;
             // 
             // label5
@@ -154,17 +164,19 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(22, 398);
+            this.label5.Location = new System.Drawing.Point(29, 490);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 17);
+            this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 1;
             this.label5.Text = "Telefon";
             // 
             // txt_phoneNumSignUp
             // 
-            this.txt_phoneNumSignUp.Location = new System.Drawing.Point(92, 395);
+            this.txt_phoneNumSignUp.Location = new System.Drawing.Point(123, 486);
+            this.txt_phoneNumSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_phoneNumSignUp.Name = "txt_phoneNumSignUp";
-            this.txt_phoneNumSignUp.Size = new System.Drawing.Size(155, 20);
+            this.txt_phoneNumSignUp.Size = new System.Drawing.Size(205, 22);
             this.txt_phoneNumSignUp.TabIndex = 2;
             // 
             // panel1
@@ -189,9 +201,10 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Location = new System.Drawing.Point(10, 11);
+            this.panel1.Location = new System.Drawing.Point(13, 14);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(296, 510);
+            this.panel1.Size = new System.Drawing.Size(394, 627);
             this.panel1.TabIndex = 3;
             // 
             // label7
@@ -200,9 +213,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Forte", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(38, 18);
+            this.label7.Location = new System.Drawing.Point(51, 22);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(229, 35);
+            this.label7.Size = new System.Drawing.Size(286, 44);
             this.label7.TabIndex = 5;
             this.label7.Text = "Mola Restoran";
             // 
@@ -212,10 +226,10 @@
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(44, 56);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(59, 69);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(202, 206);
+            this.pictureBox2.Size = new System.Drawing.Size(269, 254);
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
@@ -225,9 +239,10 @@
             this.combobox_genderSignUp.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
-            this.combobox_genderSignUp.Location = new System.Drawing.Point(92, 421);
+            this.combobox_genderSignUp.Location = new System.Drawing.Point(123, 518);
+            this.combobox_genderSignUp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.combobox_genderSignUp.Name = "combobox_genderSignUp";
-            this.combobox_genderSignUp.Size = new System.Drawing.Size(155, 21);
+            this.combobox_genderSignUp.Size = new System.Drawing.Size(205, 24);
             this.combobox_genderSignUp.TabIndex = 3;
             // 
             // label6
@@ -235,9 +250,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(23, 423);
+            this.label6.Location = new System.Drawing.Point(31, 521);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 17);
+            this.label6.Size = new System.Drawing.Size(77, 20);
             this.label6.TabIndex = 1;
             this.label6.Text = "Cinsiyet";
             // 
@@ -247,19 +263,23 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(882, 531);
+            this.pictureBox1.Size = new System.Drawing.Size(1176, 654);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // btn_signUpExit
             // 
-            this.btn_signUpExit.BackColor = System.Drawing.Color.Crimson;
+            this.btn_signUpExit.BackColor = System.Drawing.Color.Black;
             this.btn_signUpExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_signUpExit.Location = new System.Drawing.Point(857, 0);
+            this.btn_signUpExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_signUpExit.ForeColor = System.Drawing.Color.Red;
+            this.btn_signUpExit.Location = new System.Drawing.Point(1143, 0);
+            this.btn_signUpExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_signUpExit.Name = "btn_signUpExit";
-            this.btn_signUpExit.Size = new System.Drawing.Size(25, 25);
+            this.btn_signUpExit.Size = new System.Drawing.Size(33, 33);
             this.btn_signUpExit.TabIndex = 8;
             this.btn_signUpExit.Text = "X";
             this.btn_signUpExit.UseVisualStyleBackColor = false;
@@ -267,13 +287,14 @@
             // 
             // SignUpForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 531);
+            this.ClientSize = new System.Drawing.Size(1176, 654);
             this.Controls.Add(this.btn_signUpExit);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "SignUpForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUpForm";

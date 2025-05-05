@@ -50,5 +50,17 @@ namespace RestaurantOtomasyonuLive
             cmd.ExecuteNonQuery();
             return true;
         }
+
+        public static bool addCampaign(string campaignName, string campaignDescription, string campaignImagePath)
+        {
+            Connection connection = new Connection();
+            SqlCommand cmd = new SqlCommand("add_Campaign_proc", connection.Connect);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("campaign_Name", campaignName);
+            cmd.Parameters.AddWithValue("campaign_Description", campaignDescription);
+            cmd.Parameters.AddWithValue("campaign_Image_Path", campaignImagePath);
+            cmd.ExecuteNonQuery();
+            return true;
+        }
     }
 }

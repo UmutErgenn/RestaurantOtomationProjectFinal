@@ -64,6 +64,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminCampaign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCampaign.Designer.cs">
+      <DependentUpon>AdminCampaign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCampaignEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminCampaignEdit.Designer.cs">
+      <DependentUpon>AdminCampaignEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="CampaignSQL.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="MainMenu2.cs">
@@ -94,6 +106,12 @@
     <Compile Include="SignUpScreen.Designer.cs">
       <DependentUpon>SignUpScreen.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AdminCampaign.resx">
+      <DependentUpon>AdminCampaign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminCampaignEdit.resx">
+      <DependentUpon>AdminCampaignEdit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainMenu2.resx">
       <DependentUpon>MainMenu2.cs</DependentUpon>
     </EmbeddedResource>

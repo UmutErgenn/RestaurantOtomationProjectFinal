@@ -13,7 +13,7 @@ namespace RestaurantOtomasyonuLive
     public partial class SignUpScreen : Form
     {
         Notification notification = new Notification();
-        StartScreen startScreen = new StartScreen();
+        StartScreen2 startScreen = new StartScreen2();
         public SignUpScreen()
         {
             InitializeComponent();

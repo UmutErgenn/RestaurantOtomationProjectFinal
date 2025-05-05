@@ -64,20 +64,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CampaignSQL.cs" />
     <Compile Include="Connection.cs" />
-    <Compile Include="MainMenu.cs">
+    <Compile Include="MainMenu2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu.Designer.cs">
-      <DependentUpon>MainMenu.cs</DependentUpon>
+    <Compile Include="MainMenu2.Designer.cs">
+      <DependentUpon>MainMenu2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu2Capmaign.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu2Capmaign.Designer.cs">
+      <DependentUpon>MainMenu2Capmaign.cs</DependentUpon>
     </Compile>
     <Compile Include="Notification.cs" />
     <Compile Include="sqlMethods2.cs" />
-    <Compile Include="StartScreen.cs">
+    <Compile Include="StartScreen2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartScreen.Designer.cs">
-      <DependentUpon>StartScreen.cs</DependentUpon>
+    <Compile Include="StartScreen2.Designer.cs">
+      <DependentUpon>StartScreen2.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,14 +94,14 @@
     <Compile Include="SignUpScreen.Designer.cs">
       <DependentUpon>SignUpScreen.cs</DependentUpon>
     </Compile>
-    <Compile Include="Test1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test1.Designer.cs">
-      <DependentUpon>Test1.cs</DependentUpon>
-    </Compile>
-    <EmbeddedResource Include="StartScreen.resx">
-      <DependentUpon>StartScreen.cs</DependentUpon>
+    <EmbeddedResource Include="MainMenu2.resx">
+      <DependentUpon>MainMenu2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu2Capmaign.resx">
+      <DependentUpon>MainMenu2Capmaign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartScreen2.resx">
+      <DependentUpon>StartScreen2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -107,9 +114,6 @@
     </Compile>
     <EmbeddedResource Include="SignUpScreen.resx">
       <DependentUpon>SignUpScreen.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test1.resx">
-      <DependentUpon>Test1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

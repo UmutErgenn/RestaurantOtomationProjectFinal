@@ -62,8 +62,6 @@ namespace RestaurantOtomasyonuLive
             AdminCampaignEdit adminCampaignEdit = new AdminCampaignEdit();
             adminCampaignEdit.Show();
         }
-
-
     }
 
 }

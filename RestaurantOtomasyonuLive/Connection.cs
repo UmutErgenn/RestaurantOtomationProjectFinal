@@ -11,7 +11,8 @@ namespace RestaurantOtomasyonuLive
     {
         SqlConnection connect;
         String connString = "server=DESKTOP-GDM81IQ\\SQLEXPRESS; " +
-               "database=RESTAURANT2; Trusted_Connection=True";
+               "database=RESTAURANT3; Trusted_Connection=True";
+        //DESKTOP-GDM81IQ\SQLEXPRESS umut
         public SqlConnection Connect
         {
             get

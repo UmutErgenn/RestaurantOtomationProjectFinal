@@ -126,5 +126,12 @@ namespace RestaurantOtomasyonuLive
         {
 
         }
+
+        private void btn_Rezervasyon_Click(object sender, EventArgs e)
+        {
+            ReservationForm reservationForm = new ReservationForm();
+            reservationForm.Show();
+            this.Hide();
+        }
     }
 }

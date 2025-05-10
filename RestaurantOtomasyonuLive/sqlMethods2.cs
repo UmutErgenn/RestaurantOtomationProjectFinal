@@ -62,5 +62,17 @@ namespace RestaurantOtomasyonuLive
             cmd.ExecuteNonQuery();
             return true;
         }
+
+        public static bool addReservation(string mail,int tableNo,DateTime dateTime)
+        {
+            Connection connection = new Connection();
+            SqlCommand cmd = new SqlCommand("addReservation_proc", connection.Connect);
+            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("mail", mail);
+            cmd.Parameters.AddWithValue("table_id", tableNo);
+            cmd.Parameters.AddWithValue("reservation_date", dateTime);
+            cmd.ExecuteNonQuery();
+            return true;
+        }
     }
 }

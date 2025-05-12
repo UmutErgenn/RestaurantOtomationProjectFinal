@@ -78,17 +78,23 @@
     </Compile>
     <Compile Include="CampaignSQL.cs" />
     <Compile Include="Connection.cs" />
-    <Compile Include="MainMenu2.cs">
+    <Compile Include="MainMenu3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu2.Designer.cs">
-      <DependentUpon>MainMenu2.cs</DependentUpon>
+    <Compile Include="MainMenu3.Designer.cs">
+      <DependentUpon>MainMenu3.cs</DependentUpon>
     </Compile>
     <Compile Include="MainMenu2Capmaign.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainMenu2Capmaign.Designer.cs">
       <DependentUpon>MainMenu2Capmaign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyAccount.Designer.cs">
+      <DependentUpon>MyAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Notification.cs" />
     <Compile Include="ReservationForm.cs">
@@ -97,12 +103,12 @@
     <Compile Include="ReservationForm.Designer.cs">
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="sqlMethods2.cs" />
-    <Compile Include="StartScreen2.cs">
+    <Compile Include="sqlMethods3.cs" />
+    <Compile Include="StartScreen3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StartScreen2.Designer.cs">
-      <DependentUpon>StartScreen2.cs</DependentUpon>
+    <Compile Include="StartScreen3.Designer.cs">
+      <DependentUpon>StartScreen3.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,17 +124,20 @@
     <EmbeddedResource Include="AdminCampaignEdit.resx">
       <DependentUpon>AdminCampaignEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu2.resx">
-      <DependentUpon>MainMenu2.cs</DependentUpon>
+    <EmbeddedResource Include="MainMenu3.resx">
+      <DependentUpon>MainMenu3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu2Capmaign.resx">
       <DependentUpon>MainMenu2Capmaign.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyAccount.resx">
+      <DependentUpon>MyAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReservationForm.resx">
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StartScreen2.resx">
-      <DependentUpon>StartScreen2.cs</DependentUpon>
+    <EmbeddedResource Include="StartScreen3.resx">
+      <DependentUpon>StartScreen3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -13,7 +13,7 @@ namespace RestaurantOtomasyonuLive
     public partial class SignUpScreen : Form
     {
         Notification notification = new Notification();
-        StartScreen2 startScreen = new StartScreen2();
+        StartScreen3 startScreen = new StartScreen3();
         public SignUpScreen()
         {
             InitializeComponent();
@@ -45,7 +45,7 @@ namespace RestaurantOtomasyonuLive
             {
                 try
                 {
-                    sqlMethods2.SignUp(
+                    sqlMethods3.SignUp(
                         txt_nameSignUp.Text,
                         txt_surnameSignUp.Text,
                         txt_mailSignUp.Text,

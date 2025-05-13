@@ -76,6 +76,12 @@
     <Compile Include="AdminCampaignEdit.Designer.cs">
       <DependentUpon>AdminCampaignEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="CampaignSQL.cs" />
     <Compile Include="Connection.cs" />
     <Compile Include="MainMenu3.cs">

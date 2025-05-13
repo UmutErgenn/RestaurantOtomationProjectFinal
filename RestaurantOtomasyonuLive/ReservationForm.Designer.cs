@@ -40,6 +40,18 @@
             this.pBox_restaurantLogo = new System.Windows.Forms.PictureBox();
             this.lbl_restaurantNameText = new System.Windows.Forms.Label();
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.pnl_RezervasyonOnay = new System.Windows.Forms.Panel();
+            this.txt_mail_info = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_add_reservation = new System.Windows.Forms.Button();
+            this.dateTimePicker_info = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txt_table_No = new System.Windows.Forms.TextBox();
+            this.txt_surname_info = new System.Windows.Forms.TextBox();
+            this.txt_name_info = new System.Windows.Forms.TextBox();
+            this.lbl_name = new System.Windows.Forms.Label();
             this.Table_9_Brown = new System.Windows.Forms.PictureBox();
             this.Table_6_Brown = new System.Windows.Forms.PictureBox();
             this.Table_3_Brown = new System.Windows.Forms.PictureBox();
@@ -55,22 +67,13 @@
             this.pBox_CartLogo = new System.Windows.Forms.PictureBox();
             this.pBox_AccountLogo = new System.Windows.Forms.PictureBox();
             this.flowLP_campaigns = new System.Windows.Forms.FlowLayoutPanel();
-            this.pnl_RezervasyonOnay = new System.Windows.Forms.Panel();
-            this.lbl_name = new System.Windows.Forms.Label();
-            this.txt_name_info = new System.Windows.Forms.TextBox();
-            this.txt_surname_info = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_table_No = new System.Windows.Forms.TextBox();
-            this.dateTimePicker_info = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btn_add_reservation = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txt_mail_info = new System.Windows.Forms.TextBox();
+            this.btn_close_reserv_info = new System.Windows.Forms.Button();
+            this.txt_table_1_status = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_restaurantLogo)).BeginInit();
             this.PanelMenu.SuspendLayout();
+            this.pnl_RezervasyonOnay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Table_9_Brown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_6_Brown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_3_Brown)).BeginInit();
@@ -82,7 +85,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Table_1_Brown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_CartLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_AccountLogo)).BeginInit();
-            this.pnl_RezervasyonOnay.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -241,6 +243,7 @@
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.PanelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelMenu.BackgroundImage")));
             this.PanelMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PanelMenu.Controls.Add(this.txt_table_1_status);
             this.PanelMenu.Controls.Add(this.pnl_RezervasyonOnay);
             this.PanelMenu.Controls.Add(this.Table_9_Brown);
             this.PanelMenu.Controls.Add(this.Table_6_Brown);
@@ -263,6 +266,117 @@
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(694, 531);
             this.PanelMenu.TabIndex = 17;
+            // 
+            // pnl_RezervasyonOnay
+            // 
+            this.pnl_RezervasyonOnay.Controls.Add(this.btn_close_reserv_info);
+            this.pnl_RezervasyonOnay.Controls.Add(this.txt_mail_info);
+            this.pnl_RezervasyonOnay.Controls.Add(this.label1);
+            this.pnl_RezervasyonOnay.Controls.Add(this.btn_add_reservation);
+            this.pnl_RezervasyonOnay.Controls.Add(this.dateTimePicker_info);
+            this.pnl_RezervasyonOnay.Controls.Add(this.label5);
+            this.pnl_RezervasyonOnay.Controls.Add(this.label4);
+            this.pnl_RezervasyonOnay.Controls.Add(this.label3);
+            this.pnl_RezervasyonOnay.Controls.Add(this.txt_table_No);
+            this.pnl_RezervasyonOnay.Controls.Add(this.txt_surname_info);
+            this.pnl_RezervasyonOnay.Controls.Add(this.txt_name_info);
+            this.pnl_RezervasyonOnay.Controls.Add(this.lbl_name);
+            this.pnl_RezervasyonOnay.Enabled = false;
+            this.pnl_RezervasyonOnay.Location = new System.Drawing.Point(231, 172);
+            this.pnl_RezervasyonOnay.Name = "pnl_RezervasyonOnay";
+            this.pnl_RezervasyonOnay.Size = new System.Drawing.Size(335, 262);
+            this.pnl_RezervasyonOnay.TabIndex = 29;
+            this.pnl_RezervasyonOnay.Visible = false;
+            // 
+            // txt_mail_info
+            // 
+            this.txt_mail_info.Location = new System.Drawing.Point(106, 90);
+            this.txt_mail_info.Name = "txt_mail_info";
+            this.txt_mail_info.Size = new System.Drawing.Size(200, 20);
+            this.txt_mail_info.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(33, 97);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(29, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Mail:";
+            // 
+            // btn_add_reservation
+            // 
+            this.btn_add_reservation.Location = new System.Drawing.Point(231, 196);
+            this.btn_add_reservation.Name = "btn_add_reservation";
+            this.btn_add_reservation.Size = new System.Drawing.Size(75, 23);
+            this.btn_add_reservation.TabIndex = 4;
+            this.btn_add_reservation.Text = "Sepete Ekle";
+            this.btn_add_reservation.UseVisualStyleBackColor = true;
+            this.btn_add_reservation.Click += new System.EventHandler(this.btn_add_reservation_Click);
+            // 
+            // dateTimePicker_info
+            // 
+            this.dateTimePicker_info.Location = new System.Drawing.Point(106, 145);
+            this.dateTimePicker_info.Name = "dateTimePicker_info";
+            this.dateTimePicker_info.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker_info.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(33, 151);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(34, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Tarih:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(33, 123);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Masa No:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(33, 71);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Surname:";
+            // 
+            // txt_table_No
+            // 
+            this.txt_table_No.Location = new System.Drawing.Point(106, 116);
+            this.txt_table_No.Name = "txt_table_No";
+            this.txt_table_No.Size = new System.Drawing.Size(200, 20);
+            this.txt_table_No.TabIndex = 1;
+            // 
+            // txt_surname_info
+            // 
+            this.txt_surname_info.Location = new System.Drawing.Point(106, 64);
+            this.txt_surname_info.Name = "txt_surname_info";
+            this.txt_surname_info.Size = new System.Drawing.Size(200, 20);
+            this.txt_surname_info.TabIndex = 1;
+            // 
+            // txt_name_info
+            // 
+            this.txt_name_info.Location = new System.Drawing.Point(106, 38);
+            this.txt_name_info.Name = "txt_name_info";
+            this.txt_name_info.Size = new System.Drawing.Size(200, 20);
+            this.txt_name_info.TabIndex = 1;
+            // 
+            // lbl_name
+            // 
+            this.lbl_name.AutoSize = true;
+            this.lbl_name.Location = new System.Drawing.Point(33, 45);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(38, 13);
+            this.lbl_name.TabIndex = 0;
+            this.lbl_name.Text = "Name:";
             // 
             // Table_9_Brown
             // 
@@ -452,115 +566,27 @@
             this.flowLP_campaigns.TabIndex = 13;
             this.flowLP_campaigns.WrapContents = false;
             // 
-            // pnl_RezervasyonOnay
+            // btn_close_reserv_info
             // 
-            this.pnl_RezervasyonOnay.Controls.Add(this.txt_mail_info);
-            this.pnl_RezervasyonOnay.Controls.Add(this.label1);
-            this.pnl_RezervasyonOnay.Controls.Add(this.btn_add_reservation);
-            this.pnl_RezervasyonOnay.Controls.Add(this.dateTimePicker_info);
-            this.pnl_RezervasyonOnay.Controls.Add(this.label5);
-            this.pnl_RezervasyonOnay.Controls.Add(this.label4);
-            this.pnl_RezervasyonOnay.Controls.Add(this.label3);
-            this.pnl_RezervasyonOnay.Controls.Add(this.txt_table_No);
-            this.pnl_RezervasyonOnay.Controls.Add(this.txt_surname_info);
-            this.pnl_RezervasyonOnay.Controls.Add(this.txt_name_info);
-            this.pnl_RezervasyonOnay.Controls.Add(this.lbl_name);
-            this.pnl_RezervasyonOnay.Enabled = false;
-            this.pnl_RezervasyonOnay.Location = new System.Drawing.Point(174, 162);
-            this.pnl_RezervasyonOnay.Name = "pnl_RezervasyonOnay";
-            this.pnl_RezervasyonOnay.Size = new System.Drawing.Size(335, 262);
-            this.pnl_RezervasyonOnay.TabIndex = 29;
-            this.pnl_RezervasyonOnay.Visible = false;
+            this.btn_close_reserv_info.BackColor = System.Drawing.Color.Black;
+            this.btn_close_reserv_info.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_close_reserv_info.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_close_reserv_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_close_reserv_info.ForeColor = System.Drawing.Color.White;
+            this.btn_close_reserv_info.Location = new System.Drawing.Point(310, 0);
+            this.btn_close_reserv_info.Name = "btn_close_reserv_info";
+            this.btn_close_reserv_info.Size = new System.Drawing.Size(25, 27);
+            this.btn_close_reserv_info.TabIndex = 28;
+            this.btn_close_reserv_info.Text = "X";
+            this.btn_close_reserv_info.UseVisualStyleBackColor = false;
+            this.btn_close_reserv_info.Click += new System.EventHandler(this.btn_close_reserv_info_Click);
             // 
-            // lbl_name
+            // txt_table_1_status
             // 
-            this.lbl_name.AutoSize = true;
-            this.lbl_name.Location = new System.Drawing.Point(33, 45);
-            this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(38, 13);
-            this.lbl_name.TabIndex = 0;
-            this.lbl_name.Text = "Name:";
-            // 
-            // txt_name_info
-            // 
-            this.txt_name_info.Location = new System.Drawing.Point(106, 38);
-            this.txt_name_info.Name = "txt_name_info";
-            this.txt_name_info.Size = new System.Drawing.Size(200, 20);
-            this.txt_name_info.TabIndex = 1;
-            // 
-            // txt_surname_info
-            // 
-            this.txt_surname_info.Location = new System.Drawing.Point(106, 64);
-            this.txt_surname_info.Name = "txt_surname_info";
-            this.txt_surname_info.Size = new System.Drawing.Size(200, 20);
-            this.txt_surname_info.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 71);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Surname:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 123);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Masa No:";
-            // 
-            // txt_table_No
-            // 
-            this.txt_table_No.Location = new System.Drawing.Point(106, 116);
-            this.txt_table_No.Name = "txt_table_No";
-            this.txt_table_No.Size = new System.Drawing.Size(200, 20);
-            this.txt_table_No.TabIndex = 1;
-            // 
-            // dateTimePicker_info
-            // 
-            this.dateTimePicker_info.Location = new System.Drawing.Point(106, 145);
-            this.dateTimePicker_info.Name = "dateTimePicker_info";
-            this.dateTimePicker_info.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker_info.TabIndex = 3;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(33, 151);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(34, 13);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Tarih:";
-            // 
-            // btn_add_reservation
-            // 
-            this.btn_add_reservation.Location = new System.Drawing.Point(231, 196);
-            this.btn_add_reservation.Name = "btn_add_reservation";
-            this.btn_add_reservation.Size = new System.Drawing.Size(75, 23);
-            this.btn_add_reservation.TabIndex = 4;
-            this.btn_add_reservation.Text = "Sepete Ekle";
-            this.btn_add_reservation.UseVisualStyleBackColor = true;
-            this.btn_add_reservation.Click += new System.EventHandler(this.btn_add_reservation_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 97);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Mail:";
-            // 
-            // txt_mail_info
-            // 
-            this.txt_mail_info.Location = new System.Drawing.Point(106, 90);
-            this.txt_mail_info.Name = "txt_mail_info";
-            this.txt_mail_info.Size = new System.Drawing.Size(200, 20);
-            this.txt_mail_info.TabIndex = 6;
+            this.txt_table_1_status.Location = new System.Drawing.Point(160, 171);
+            this.txt_table_1_status.Name = "txt_table_1_status";
+            this.txt_table_1_status.Size = new System.Drawing.Size(52, 20);
+            this.txt_table_1_status.TabIndex = 30;
             // 
             // ReservationForm
             // 
@@ -579,6 +605,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBox_restaurantLogo)).EndInit();
             this.PanelMenu.ResumeLayout(false);
             this.PanelMenu.PerformLayout();
+            this.pnl_RezervasyonOnay.ResumeLayout(false);
+            this.pnl_RezervasyonOnay.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Table_9_Brown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_6_Brown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_3_Brown)).EndInit();
@@ -590,8 +618,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Table_1_Brown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_CartLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_AccountLogo)).EndInit();
-            this.pnl_RezervasyonOnay.ResumeLayout(false);
-            this.pnl_RezervasyonOnay.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -636,5 +662,7 @@
         private System.Windows.Forms.Button btn_add_reservation;
         private System.Windows.Forms.TextBox txt_mail_info;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_close_reserv_info;
+        private System.Windows.Forms.TextBox txt_table_1_status;
     }
 }

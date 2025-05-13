@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using static RestaurantOtomasyonuLive.StartScreen3;
 
 namespace RestaurantOtomasyonuLive
 {
@@ -69,6 +70,15 @@ namespace RestaurantOtomasyonuLive
                 // FlowLayoutPanel'e ekle
                 flowLP_campaigns.Controls.Add(panel);
             }
+                string role = KullaniciBilgileri.KullaniciData.Role;
+            // Eğer kullanıcı "admin" değilse, admin panel butonunu gizle
+            if (role.Equals("admin"))
+            {
+                AdminForm adminForm = new AdminForm();
+                adminForm.Show();
+                this.Hide();
+            }
+
         }
 
         private void DynamicCampaignLabel_Click(object sender, EventArgs e)

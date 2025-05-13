@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -47,6 +48,11 @@ namespace RestaurantOtomasyonuLive
                         );
 
                     notification.showNotification(this, "Rezervasyon eklendi", false);
+                    
+                    Thread.Sleep(1000); 
+                    pnl_RezervasyonOnay.Visible = false; 
+                    pnl_RezervasyonOnay.Enabled = false; 
+                    pnl_RezervasyonOnay.SendToBack();
                 }
                 catch (Exception hata)
                 {
@@ -84,6 +90,13 @@ namespace RestaurantOtomasyonuLive
 
 
             txt_table_No.Text = num;
+        }
+
+        private void btn_close_reserv_info_Click(object sender, EventArgs e)
+        {
+            pnl_RezervasyonOnay.SendToBack();
+            pnl_RezervasyonOnay.Visible = false;
+            pnl_RezervasyonOnay.Enabled = false;
         }
     }
 }

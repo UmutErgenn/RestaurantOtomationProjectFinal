@@ -40,9 +40,20 @@ namespace RestaurantOtomasyonuLive
                 KullaniciGiris(txt_mail.Text, txt_password.Text);
 
                 notification.showNotification(this, "Hoş geldiniz!", false);
-                MainMenu3 mainMenu2 = new MainMenu3();
-                mainMenu2.Show();
-                this.Hide();
+                // Kullanıcı rolüne göre yönlendirme yapılıyor. TODO: buraya daha sonra personel de eklenecek
+                string role = KullaniciBilgileri.KullaniciData.Role;
+                if (role.Equals("admin"))
+                {
+                    AdminForm adminForm = new AdminForm();
+                    adminForm.Show();
+                    this.Hide();
+                }
+                else if (role.Equals("user"))
+                {
+                    MainMenu3 mainMenu2 = new MainMenu3();
+                    mainMenu2.Show();
+                    this.Hide();
+                }
             }
             else // Hatalı giriş işlemi, var olmayan kullanıcı bilgileri
             {
@@ -69,6 +80,7 @@ namespace RestaurantOtomasyonuLive
             public string Telefon { get; set; }
             public string Mail { get; set; }
             public string Sifre { get; set; }
+            public string Role { get; set; }
         }
 
         public static class KullaniciBilgileri
@@ -92,13 +104,15 @@ namespace RestaurantOtomasyonuLive
                 {
                     if (reader.Read())
                     {
+                        string role = reader["Role"].ToString();
                         KullaniciBilgileri.KullaniciData = new Kullanici
                         {
                             Ad = reader["Ad"].ToString(),
                             Soyad = reader["Soyad"].ToString(),
                             Telefon = reader["Telefon"].ToString(),
                             Mail = reader["Mail"].ToString(),
-                            Sifre = reader["psswrd"].ToString()
+                            Sifre = reader["psswrd"].ToString(),
+                            Role = role
                         };
                     }
                     else

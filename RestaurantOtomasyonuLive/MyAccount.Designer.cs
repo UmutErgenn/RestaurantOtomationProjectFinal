@@ -78,9 +78,9 @@
             this.panel2.Controls.Add(this.lbl_restaurantNameText);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.panel2.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(251, 654);
+            this.panel2.Size = new System.Drawing.Size(188, 531);
             this.panel2.TabIndex = 16;
             // 
             // pictureBox3
@@ -89,10 +89,10 @@
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Location = new System.Drawing.Point(209, 614);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(8, 5, 5, 5);
+            this.pictureBox3.Location = new System.Drawing.Point(157, 499);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(6, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox3.Size = new System.Drawing.Size(26, 28);
             this.pictureBox3.TabIndex = 27;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
@@ -104,10 +104,10 @@
             this.btn_Hakkımızda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Hakkımızda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Hakkımızda.ForeColor = System.Drawing.Color.White;
-            this.btn_Hakkımızda.Location = new System.Drawing.Point(17, 482);
-            this.btn_Hakkımızda.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.btn_Hakkımızda.Location = new System.Drawing.Point(13, 392);
+            this.btn_Hakkımızda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
             this.btn_Hakkımızda.Name = "btn_Hakkımızda";
-            this.btn_Hakkımızda.Size = new System.Drawing.Size(220, 39);
+            this.btn_Hakkımızda.Size = new System.Drawing.Size(165, 32);
             this.btn_Hakkımızda.TabIndex = 19;
             this.btn_Hakkımızda.Text = "Hakkımıza";
             this.btn_Hakkımızda.UseVisualStyleBackColor = false;
@@ -119,10 +119,10 @@
             this.btn_Yardım.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Yardım.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Yardım.ForeColor = System.Drawing.Color.White;
-            this.btn_Yardım.Location = new System.Drawing.Point(17, 428);
-            this.btn_Yardım.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.btn_Yardım.Location = new System.Drawing.Point(13, 348);
+            this.btn_Yardım.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
             this.btn_Yardım.Name = "btn_Yardım";
-            this.btn_Yardım.Size = new System.Drawing.Size(220, 39);
+            this.btn_Yardım.Size = new System.Drawing.Size(165, 32);
             this.btn_Yardım.TabIndex = 17;
             this.btn_Yardım.Text = "Yardım";
             this.btn_Yardım.UseVisualStyleBackColor = false;
@@ -134,10 +134,10 @@
             this.btn_Rezervasyon.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Rezervasyon.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Rezervasyon.ForeColor = System.Drawing.Color.White;
-            this.btn_Rezervasyon.Location = new System.Drawing.Point(17, 374);
-            this.btn_Rezervasyon.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.btn_Rezervasyon.Location = new System.Drawing.Point(13, 304);
+            this.btn_Rezervasyon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
             this.btn_Rezervasyon.Name = "btn_Rezervasyon";
-            this.btn_Rezervasyon.Size = new System.Drawing.Size(220, 39);
+            this.btn_Rezervasyon.Size = new System.Drawing.Size(165, 32);
             this.btn_Rezervasyon.TabIndex = 16;
             this.btn_Rezervasyon.Text = "Rezervasyon";
             this.btn_Rezervasyon.UseVisualStyleBackColor = false;
@@ -149,10 +149,10 @@
             this.btn_Siparişlerim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Siparişlerim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Siparişlerim.ForeColor = System.Drawing.Color.White;
-            this.btn_Siparişlerim.Location = new System.Drawing.Point(17, 320);
-            this.btn_Siparişlerim.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.btn_Siparişlerim.Location = new System.Drawing.Point(13, 260);
+            this.btn_Siparişlerim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
             this.btn_Siparişlerim.Name = "btn_Siparişlerim";
-            this.btn_Siparişlerim.Size = new System.Drawing.Size(220, 39);
+            this.btn_Siparişlerim.Size = new System.Drawing.Size(165, 32);
             this.btn_Siparişlerim.TabIndex = 15;
             this.btn_Siparişlerim.Text = "Siparişlerim";
             this.btn_Siparişlerim.UseVisualStyleBackColor = false;
@@ -164,10 +164,10 @@
             this.btn_Menü.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Menü.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Menü.ForeColor = System.Drawing.Color.White;
-            this.btn_Menü.Location = new System.Drawing.Point(17, 266);
-            this.btn_Menü.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.btn_Menü.Location = new System.Drawing.Point(13, 216);
+            this.btn_Menü.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
             this.btn_Menü.Name = "btn_Menü";
-            this.btn_Menü.Size = new System.Drawing.Size(220, 39);
+            this.btn_Menü.Size = new System.Drawing.Size(165, 32);
             this.btn_Menü.TabIndex = 14;
             this.btn_Menü.Text = "Menü";
             this.btn_Menü.UseVisualStyleBackColor = false;
@@ -179,10 +179,10 @@
             this.btn_Ana_Menü.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Ana_Menü.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Ana_Menü.ForeColor = System.Drawing.Color.White;
-            this.btn_Ana_Menü.Location = new System.Drawing.Point(17, 212);
-            this.btn_Ana_Menü.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.btn_Ana_Menü.Location = new System.Drawing.Point(13, 172);
+            this.btn_Ana_Menü.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
             this.btn_Ana_Menü.Name = "btn_Ana_Menü";
-            this.btn_Ana_Menü.Size = new System.Drawing.Size(220, 39);
+            this.btn_Ana_Menü.Size = new System.Drawing.Size(165, 32);
             this.btn_Ana_Menü.TabIndex = 13;
             this.btn_Ana_Menü.Text = "Ana Menü";
             this.btn_Ana_Menü.UseVisualStyleBackColor = false;
@@ -195,10 +195,10 @@
             this.pBox_restaurantLogo.BackColor = System.Drawing.Color.Transparent;
             this.pBox_restaurantLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pBox_restaurantLogo.BackgroundImage")));
             this.pBox_restaurantLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pBox_restaurantLogo.Location = new System.Drawing.Point(64, 57);
+            this.pBox_restaurantLogo.Location = new System.Drawing.Point(48, 46);
             this.pBox_restaurantLogo.Margin = new System.Windows.Forms.Padding(0);
             this.pBox_restaurantLogo.Name = "pBox_restaurantLogo";
-            this.pBox_restaurantLogo.Size = new System.Drawing.Size(127, 132);
+            this.pBox_restaurantLogo.Size = new System.Drawing.Size(95, 107);
             this.pBox_restaurantLogo.TabIndex = 11;
             this.pBox_restaurantLogo.TabStop = false;
             // 
@@ -208,10 +208,10 @@
             this.lbl_restaurantNameText.BackColor = System.Drawing.Color.Transparent;
             this.lbl_restaurantNameText.Font = new System.Drawing.Font("Forte", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_restaurantNameText.ForeColor = System.Drawing.Color.White;
-            this.lbl_restaurantNameText.Location = new System.Drawing.Point(12, 25);
+            this.lbl_restaurantNameText.Location = new System.Drawing.Point(9, 20);
             this.lbl_restaurantNameText.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_restaurantNameText.Name = "lbl_restaurantNameText";
-            this.lbl_restaurantNameText.Size = new System.Drawing.Size(214, 32);
+            this.lbl_restaurantNameText.Size = new System.Drawing.Size(171, 26);
             this.lbl_restaurantNameText.TabIndex = 12;
             this.lbl_restaurantNameText.Text = "Mola Restoran";
             // 
@@ -235,10 +235,10 @@
             this.PanelMenu.Controls.Add(this.label_ad);
             this.PanelMenu.Controls.Add(this.label1);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PanelMenu.Location = new System.Drawing.Point(251, 0);
+            this.PanelMenu.Location = new System.Drawing.Point(188, 0);
             this.PanelMenu.Margin = new System.Windows.Forms.Padding(1);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(925, 654);
+            this.PanelMenu.Size = new System.Drawing.Size(694, 531);
             this.PanelMenu.TabIndex = 17;
             // 
             // textBox_telefonText
@@ -247,10 +247,9 @@
             this.textBox_telefonText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_telefonText.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox_telefonText.ForeColor = System.Drawing.Color.White;
-            this.textBox_telefonText.Location = new System.Drawing.Point(232, 364);
-            this.textBox_telefonText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_telefonText.Location = new System.Drawing.Point(174, 296);
             this.textBox_telefonText.Name = "textBox_telefonText";
-            this.textBox_telefonText.Size = new System.Drawing.Size(205, 35);
+            this.textBox_telefonText.Size = new System.Drawing.Size(154, 29);
             this.textBox_telefonText.TabIndex = 35;
             // 
             // textBox_şifreText
@@ -259,10 +258,9 @@
             this.textBox_şifreText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_şifreText.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox_şifreText.ForeColor = System.Drawing.Color.White;
-            this.textBox_şifreText.Location = new System.Drawing.Point(232, 316);
-            this.textBox_şifreText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_şifreText.Location = new System.Drawing.Point(174, 257);
             this.textBox_şifreText.Name = "textBox_şifreText";
-            this.textBox_şifreText.Size = new System.Drawing.Size(205, 35);
+            this.textBox_şifreText.Size = new System.Drawing.Size(154, 29);
             this.textBox_şifreText.TabIndex = 34;
             // 
             // textBox_soyadText
@@ -271,10 +269,9 @@
             this.textBox_soyadText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_soyadText.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox_soyadText.ForeColor = System.Drawing.Color.White;
-            this.textBox_soyadText.Location = new System.Drawing.Point(232, 222);
-            this.textBox_soyadText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_soyadText.Location = new System.Drawing.Point(174, 180);
             this.textBox_soyadText.Name = "textBox_soyadText";
-            this.textBox_soyadText.Size = new System.Drawing.Size(205, 35);
+            this.textBox_soyadText.Size = new System.Drawing.Size(154, 29);
             this.textBox_soyadText.TabIndex = 33;
             // 
             // textBox_adText
@@ -284,10 +281,9 @@
             this.textBox_adText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.textBox_adText.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.textBox_adText.ForeColor = System.Drawing.Color.White;
-            this.textBox_adText.Location = new System.Drawing.Point(232, 176);
-            this.textBox_adText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox_adText.Location = new System.Drawing.Point(174, 143);
             this.textBox_adText.Name = "textBox_adText";
-            this.textBox_adText.Size = new System.Drawing.Size(205, 35);
+            this.textBox_adText.Size = new System.Drawing.Size(154, 29);
             this.textBox_adText.TabIndex = 32;
             // 
             // btn_mainExit
@@ -297,10 +293,9 @@
             this.btn_mainExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_mainExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_mainExit.ForeColor = System.Drawing.Color.White;
-            this.btn_mainExit.Location = new System.Drawing.Point(892, 0);
-            this.btn_mainExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_mainExit.Location = new System.Drawing.Point(669, 0);
             this.btn_mainExit.Name = "btn_mainExit";
-            this.btn_mainExit.Size = new System.Drawing.Size(33, 33);
+            this.btn_mainExit.Size = new System.Drawing.Size(25, 27);
             this.btn_mainExit.TabIndex = 30;
             this.btn_mainExit.Text = "X";
             this.btn_mainExit.UseVisualStyleBackColor = false;
@@ -314,10 +309,10 @@
             this.btn_SaveChances.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_SaveChances.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_SaveChances.ForeColor = System.Drawing.Color.White;
-            this.btn_SaveChances.Location = new System.Drawing.Point(612, 537);
-            this.btn_SaveChances.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.btn_SaveChances.Location = new System.Drawing.Point(459, 436);
+            this.btn_SaveChances.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
             this.btn_SaveChances.Name = "btn_SaveChances";
-            this.btn_SaveChances.Size = new System.Drawing.Size(220, 39);
+            this.btn_SaveChances.Size = new System.Drawing.Size(165, 32);
             this.btn_SaveChances.TabIndex = 29;
             this.btn_SaveChances.Text = "Bilgileri Güncelle";
             this.btn_SaveChances.UseVisualStyleBackColor = false;
@@ -331,10 +326,10 @@
             this.btn_DeleteAccount.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_DeleteAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_DeleteAccount.ForeColor = System.Drawing.Color.White;
-            this.btn_DeleteAccount.Location = new System.Drawing.Point(91, 537);
-            this.btn_DeleteAccount.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.btn_DeleteAccount.Location = new System.Drawing.Point(68, 436);
+            this.btn_DeleteAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
             this.btn_DeleteAccount.Name = "btn_DeleteAccount";
-            this.btn_DeleteAccount.Size = new System.Drawing.Size(220, 39);
+            this.btn_DeleteAccount.Size = new System.Drawing.Size(165, 32);
             this.btn_DeleteAccount.TabIndex = 28;
             this.btn_DeleteAccount.Text = "Hesabımı Sil";
             this.btn_DeleteAccount.UseVisualStyleBackColor = false;
@@ -346,10 +341,10 @@
             this.label_telefon.BackColor = System.Drawing.Color.Transparent;
             this.label_telefon.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_telefon.ForeColor = System.Drawing.Color.White;
-            this.label_telefon.Location = new System.Drawing.Point(111, 368);
-            this.label_telefon.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
+            this.label_telefon.Location = new System.Drawing.Point(83, 299);
+            this.label_telefon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 16);
             this.label_telefon.Name = "label_telefon";
-            this.label_telefon.Size = new System.Drawing.Size(102, 27);
+            this.label_telefon.Size = new System.Drawing.Size(86, 22);
             this.label_telefon.TabIndex = 22;
             this.label_telefon.Text = "Telefon:";
             // 
@@ -359,10 +354,10 @@
             this.label_şifre.BackColor = System.Drawing.Color.Transparent;
             this.label_şifre.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_şifre.ForeColor = System.Drawing.Color.White;
-            this.label_şifre.Location = new System.Drawing.Point(145, 320);
-            this.label_şifre.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
+            this.label_şifre.Location = new System.Drawing.Point(109, 260);
+            this.label_şifre.Margin = new System.Windows.Forms.Padding(2, 0, 2, 16);
             this.label_şifre.Name = "label_şifre";
-            this.label_şifre.Size = new System.Drawing.Size(71, 27);
+            this.label_şifre.Size = new System.Drawing.Size(60, 22);
             this.label_şifre.TabIndex = 20;
             this.label_şifre.Text = "Şifre:";
             // 
@@ -372,10 +367,10 @@
             this.label_mailText.BackColor = System.Drawing.Color.Transparent;
             this.label_mailText.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label_mailText.ForeColor = System.Drawing.Color.White;
-            this.label_mailText.Location = new System.Drawing.Point(231, 272);
-            this.label_mailText.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
+            this.label_mailText.Location = new System.Drawing.Point(173, 221);
+            this.label_mailText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 16);
             this.label_mailText.Name = "label_mailText";
-            this.label_mailText.Size = new System.Drawing.Size(34, 29);
+            this.label_mailText.Size = new System.Drawing.Size(25, 22);
             this.label_mailText.TabIndex = 19;
             this.label_mailText.Text = "...";
             // 
@@ -385,10 +380,10 @@
             this.label_mail.BackColor = System.Drawing.Color.Transparent;
             this.label_mail.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_mail.ForeColor = System.Drawing.Color.White;
-            this.label_mail.Location = new System.Drawing.Point(108, 273);
-            this.label_mail.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
+            this.label_mail.Location = new System.Drawing.Point(81, 222);
+            this.label_mail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 16);
             this.label_mail.Name = "label_mail";
-            this.label_mail.Size = new System.Drawing.Size(104, 27);
+            this.label_mail.Size = new System.Drawing.Size(88, 22);
             this.label_mail.TabIndex = 18;
             this.label_mail.Text = "E-posta:";
             // 
@@ -398,10 +393,10 @@
             this.label_soyad.BackColor = System.Drawing.Color.Transparent;
             this.label_soyad.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label_soyad.ForeColor = System.Drawing.Color.White;
-            this.label_soyad.Location = new System.Drawing.Point(124, 226);
-            this.label_soyad.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
+            this.label_soyad.Location = new System.Drawing.Point(93, 184);
+            this.label_soyad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 16);
             this.label_soyad.Name = "label_soyad";
-            this.label_soyad.Size = new System.Drawing.Size(86, 27);
+            this.label_soyad.Size = new System.Drawing.Size(76, 22);
             this.label_soyad.TabIndex = 16;
             this.label_soyad.Text = "Soyad:";
             // 
@@ -411,10 +406,10 @@
             this.label_ad.BackColor = System.Drawing.Color.Transparent;
             this.label_ad.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_ad.ForeColor = System.Drawing.Color.White;
-            this.label_ad.Location = new System.Drawing.Point(169, 178);
-            this.label_ad.Margin = new System.Windows.Forms.Padding(3, 0, 3, 20);
+            this.label_ad.Location = new System.Drawing.Point(127, 145);
+            this.label_ad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 16);
             this.label_ad.Name = "label_ad";
-            this.label_ad.Size = new System.Drawing.Size(50, 27);
+            this.label_ad.Size = new System.Drawing.Size(42, 22);
             this.label_ad.TabIndex = 14;
             this.label_ad.Text = "Ad:";
             // 
@@ -424,10 +419,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Forte", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(389, 25);
+            this.label1.Location = new System.Drawing.Point(292, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 41);
+            this.label1.Size = new System.Drawing.Size(125, 32);
             this.label1.TabIndex = 13;
             this.label1.Text = "Hesabım";
             // 
@@ -439,14 +434,14 @@
             // 
             // MyAccount
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1176, 654);
+            this.ClientSize = new System.Drawing.Size(882, 531);
             this.Controls.Add(this.PanelMenu);
             this.Controls.Add(this.panel2);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MyAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MyAccount";

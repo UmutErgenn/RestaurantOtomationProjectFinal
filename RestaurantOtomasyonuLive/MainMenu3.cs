@@ -150,5 +150,27 @@ namespace RestaurantOtomasyonuLive
             myAccount.Show();
             this.Close();
         }
+
+        private void btn_Yardım_Click(object sender, EventArgs e)
+        {   
+            pnl_UserMessage.BringToFront();
+            pnl_UserMessage.Visible = true;
+            pnl_UserMessage.Enabled = true;
+
+            PanelMenu.SendToBack();
+            PanelMenu.Visible = false;
+            PanelMenu.Enabled = false;
+        }
+
+        private void btn_SendMessage_Click(object sender, EventArgs e)
+        {
+            string mail = txt_Mail.Text;
+            string subject = txt_Topic.Text;
+            string message = rtxt_Message.Text;
+
+            bool sent = sqlMethods3.SendMessage(mail, subject, message);
+            if (sent)
+                MessageBox.Show("Mesajınız gönderildi.");
+        }
     }
 }

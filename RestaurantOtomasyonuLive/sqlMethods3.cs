@@ -116,6 +116,86 @@ namespace RestaurantOtomasyonuLive
         }
 
         //kullanıcı giriş yaptığında bilgileri doğrulayan ve kullanıcıya ait bilgileri tutan sql kodu
-        
+
+        // admin panelinde kullanıcıların listelendiği sql metodu
+        public static DataTable getAllPersons()
+        {
+            Connection connection = new Connection();
+            SqlCommand cmd = new SqlCommand("getAllPersons_proc", connection.Connect);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+        }
+
+        //Admin kulanıcı silme işlemi için sql metodu
+        public static bool deleteUser(int person_id)
+        {
+            try
+            {
+                Connection connection = new Connection();
+                SqlCommand cmd = new SqlCommand("delete_user_proc", connection.Connect);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@person_id", person_id);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Silme Hatası: " + ex.Message);
+                return false;
+            }
+        }
+
+        public static bool SendMessage(string mail, string subject, string messageBody)
+        {
+            try
+            {
+                Connection connection = new Connection();
+                SqlCommand cmd = new SqlCommand("send_message_proc", connection.Connect);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                cmd.Parameters.AddWithValue("@mail", mail);
+                cmd.Parameters.AddWithValue("@subject", subject);
+                cmd.Parameters.AddWithValue("@message_body", messageBody);
+
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Mesaj gönderilemedi: " + ex.Message);
+                return false;
+            }
+        }
+
+        public static DataTable GetMessages()
+        {
+            Connection connection = new Connection();
+            SqlCommand cmd = new SqlCommand("get_messages_proc", connection.Connect);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt;
+        }
+
+        public static DataRow GetMessageDetail(int messageId)
+        {
+            Connection connection = new Connection();
+            SqlCommand cmd = new SqlCommand("get_message_detail_proc", connection.Connect);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@message_id", messageId);
+
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+            adapter.Fill(dt);
+            return dt.Rows.Count > 0 ? dt.Rows[0] : null;
+        }
+
+
     }
 }

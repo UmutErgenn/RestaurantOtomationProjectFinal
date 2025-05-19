@@ -41,7 +41,7 @@ namespace RestaurantOtomasyonuLive
             {
                 try
                 {
-                    sqlMethods3.addReservation(
+                    sqlMethods4.addReservation(
                         txt_mail_info.Text,
                         Convert.ToInt32(txt_table_No.Text),
                         dateTimePicker_info.Value

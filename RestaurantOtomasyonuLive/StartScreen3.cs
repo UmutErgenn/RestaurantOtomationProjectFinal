@@ -34,7 +34,7 @@ namespace RestaurantOtomasyonuLive
             }
 
             // Giriş işlemi
-            if (sqlMethods3.login(txt_mail.Text, txt_password.Text))  // login metodu burada başarılıysa
+            if (sqlMethods4.login(txt_mail.Text, txt_password.Text))  // login metodu burada başarılıysa
             {
                 // Kullanıcı bilgilerini al
                 KullaniciGiris(txt_mail.Text, txt_password.Text);

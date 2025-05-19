@@ -93,7 +93,7 @@ namespace RestaurantOtomasyonuLive
 
             if (sonuc == DialogResult.Yes)
             {
-                bool guncellendi = sqlMethods3.UpdateUserInfo(
+                bool guncellendi = sqlMethods4.UpdateUserInfo(
                     k.Mail,
                     textBox_adText.Text,
                     textBox_soyadText.Text,

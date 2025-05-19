@@ -98,5 +98,10 @@ namespace RestaurantOtomasyonuLive
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.ReadOnly = true;
         }
+
+        private void btn_Users_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

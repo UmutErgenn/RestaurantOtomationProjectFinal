@@ -1,176 +1,227 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static RestaurantOtomasyonuLive.StartScreen3;
 
 namespace RestaurantOtomasyonuLive
 {
-    internal class sqlMethods3
+    public static class sqlMethods3
     {
         public static bool login(string mail, string psswrd)
         {
-            Connection connection = new Connection();
-            SqlCommand cmd = new SqlCommand("login_proc", connection.Connect);
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.Add(new SqlParameter("mail", mail));
-            cmd.Parameters.Add(new SqlParameter("psswrd", psswrd));
-
-            SqlDataReader reader = cmd.ExecuteReader();
-            if (reader.Read())
+            using (SqlConnection connString = new SqlConnection(Connection.connString))
             {
-                int result = Convert.ToInt32(reader[0]);
-                return result == 1; // 1 ise başarılı
-            }
-            else
-            {
-                return false;
+                connString.Open();
+                SqlCommand cmd = new SqlCommand("login_proc", connString);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@mail", mail);
+                cmd.Parameters.AddWithValue("@psswrd", psswrd);
+                var sonuc = cmd.ExecuteScalar();
+                return sonuc != null && Convert.ToInt32(sonuc) == 1;
             }
         }
 
         public static bool SignUp(string name, string surname, string mail, string password, string phone, string gender)
         {
-            Connection connection = new Connection();
-            SqlCommand cmd = new SqlCommand("signUp_proc", connection.Connect);
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("name", name);
-            cmd.Parameters.AddWithValue("surname", surname);
-            cmd.Parameters.AddWithValue("mail", mail);
-            cmd.Parameters.AddWithValue("psswrd", password);
-            cmd.Parameters.AddWithValue("phone", Convert.ToDecimal(phone));
-            if (gender == "Kadın"){
-                cmd.Parameters.AddWithValue("gender", 0);
-            }
-            else
+            using (SqlConnection conn = new SqlConnection(Connection.connString))
             {
-                cmd.Parameters.AddWithValue("gender", 1);
-            }
-            cmd.ExecuteNonQuery();
-            return true;
-        }
-
-        public static bool addCampaign(string campaignName, string campaignDescription, string campaignImagePath)
-        {
-            Connection connection = new Connection();
-            SqlCommand cmd = new SqlCommand("add_Campaign_proc", connection.Connect);
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("campaign_Name", campaignName);
-            cmd.Parameters.AddWithValue("campaign_Description", campaignDescription);
-            cmd.Parameters.AddWithValue("campaign_Image_Path", campaignImagePath);
-            cmd.ExecuteNonQuery();
-            return true;
-        }
-
-        public static bool addReservation(string mail,int tableNo,DateTime dateTime)
-        {
-            Connection connection = new Connection();
-            SqlCommand cmd = new SqlCommand("addReservation_proc", connection.Connect);
-            cmd.CommandType = System.Data.CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("mail", mail);
-            cmd.Parameters.AddWithValue("table_id", tableNo);
-            cmd.Parameters.AddWithValue("reservation_date", dateTime);
-            cmd.ExecuteNonQuery();
-            return true;
-        }
-
-        //kullanıcı bilgileri güncelleme sql metodu
-        public static bool UpdateUserInfo(string mail, string ad, string soyad, string telefon, string sifre)
-        {
-            try
-            {
-                using (SqlConnection conn = new Connection().Connect)
-                {
-                    using (SqlCommand cmd = new SqlCommand("sp_GuncelleKullaniciBilgileri", conn))
-                    {
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-
-                        cmd.Parameters.AddWithValue("@ad", ad);
-                        cmd.Parameters.AddWithValue("@soyad", soyad);
-                        cmd.Parameters.AddWithValue("@telefon", telefon);
-                        cmd.Parameters.AddWithValue("@sifre", sifre);
-                        cmd.Parameters.AddWithValue("@mail", mail);
-
-                        // Geri dönüş değeri parametresi
-                        SqlParameter returnValue = new SqlParameter();
-                        returnValue.Direction = ParameterDirection.ReturnValue;
-                        cmd.Parameters.Add(returnValue);
-
-                        cmd.ExecuteNonQuery();
-
-                        int affectedRows = (int)returnValue.Value;
-
-                        return affectedRows > 0; // Güncelleme başarılıysa true döner
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                // Hata mesajını döndürme
-                MessageBox.Show("Hata: " + ex.Message);
-                return false;
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("signUp_proc", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@name", name);
+                cmd.Parameters.AddWithValue("@surname", surname);
+                cmd.Parameters.AddWithValue("@mail", mail);
+                cmd.Parameters.AddWithValue("@psswrd", password);
+                cmd.Parameters.AddWithValue("@phone", phone);
+                cmd.Parameters.AddWithValue("@gender", gender == "Kadın" ? 0 : 1);
+                var sonuc = cmd.ExecuteScalar();
+                return sonuc != null && Convert.ToInt32(sonuc) == 1;
             }
         }
 
-        //kullanıcı giriş yaptığında bilgileri doğrulayan ve kullanıcıya ait bilgileri tutan sql kodu
-
-        // admin panelinde kullanıcıların listelendiği sql metodu
-        public static DataTable getAllPersons()
+        public static bool addReservation(string mail, int tableNo, DateTime dateTime)
         {
-            Connection connection = new Connection();
-            SqlCommand cmd = new SqlCommand("getAllPersons_proc", connection.Connect);
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable dt = new DataTable();
-            adapter.Fill(dt);
-            return dt;
-        }
-
-        //Admin kulanıcı silme işlemi için sql metodu
-        public static bool deleteUser(int person_id)
-        {
-            try
+            using (SqlConnection conn = new SqlConnection(Connection.connString))
             {
-                Connection connection = new Connection();
-                SqlCommand cmd = new SqlCommand("delete_user_proc", connection.Connect);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@person_id", person_id);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("addReservation_proc", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@mail", mail);
+                cmd.Parameters.AddWithValue("@table_id", tableNo);
+                cmd.Parameters.AddWithValue("@reservation_date", dateTime);
                 cmd.ExecuteNonQuery();
                 return true;
             }
-            catch (Exception ex)
+        }
+
+        public static bool UpdateUserInfo(string mail, string ad, string soyad, string telefon, string sifre)
+        {
+            using (SqlConnection conn = new SqlConnection(Connection.connString))
             {
-                MessageBox.Show("Silme Hatası: " + ex.Message);
-                return false;
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_GuncelleKullaniciBilgileri", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ad", ad);
+                cmd.Parameters.AddWithValue("@soyad", soyad);
+                cmd.Parameters.AddWithValue("@telefon", telefon);
+                cmd.Parameters.AddWithValue("@sifre", sifre);
+                cmd.Parameters.AddWithValue("@mail", mail);
+                SqlParameter returnValue = new SqlParameter();
+                returnValue.Direction = ParameterDirection.ReturnValue;
+                cmd.Parameters.Add(returnValue);
+                cmd.ExecuteNonQuery();
+                int affectedRows = (int)returnValue.Value;
+                return affectedRows > 0;
+            }
+        }
+
+        public static DataTable getAllPersons()
+        {
+            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("getAllPersons_proc", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                adapter.Fill(dt);
+                return dt;
+            }
+        }
+
+        public static bool deleteUser(int person_id)
+        {
+            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("delete_user_proc", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@person_id", person_id);
+                cmd.ExecuteNonQuery();
+                return true;
             }
         }
 
         public static bool SendMessage(string mail, string subject, string messageBody)
         {
-            try
+            using (SqlConnection conn = new SqlConnection(Connection.connString))
             {
-                Connection connection = new Connection();
-                SqlCommand cmd = new SqlCommand("send_message_proc", connection.Connect);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("send_message_proc", conn);
                 cmd.CommandType = CommandType.StoredProcedure;
-
                 cmd.Parameters.AddWithValue("@mail", mail);
                 cmd.Parameters.AddWithValue("@subject", subject);
                 cmd.Parameters.AddWithValue("@message_body", messageBody);
-
                 cmd.ExecuteNonQuery();
                 return true;
             }
-            catch (Exception ex)
+        }
+
+        // ÖRNEK: İstatistik fonksiyonları
+        public static int GetToplamSatis()
+        {
+            int toplam = 0;
+            using (SqlConnection conn = new SqlConnection(Connection.connString))
             {
-                MessageBox.Show("Mesaj gönderilemedi: " + ex.Message);
-                return false;
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_ToplamSatis", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                var sonuc = cmd.ExecuteScalar();
+                if (sonuc != null && sonuc != DBNull.Value)
+                    toplam = Convert.ToInt32(sonuc);
+            }
+            return toplam;
+        }
+
+        public static int GetToplamSiparis()
+        {
+            int toplam = 0;
+            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Orders", conn);
+                var sonuc = cmd.ExecuteScalar();
+                if (sonuc != null && sonuc != DBNull.Value)
+                    toplam = Convert.ToInt32(sonuc);
+            }
+            return toplam;
+        }
+
+        public static int GetToplamKullanici()
+        {
+            int toplam = 0;
+            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_MusteriSayisi", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                var sonuc = cmd.ExecuteScalar();
+                if (sonuc != null && sonuc != DBNull.Value)
+                    toplam = Convert.ToInt32(sonuc);
+            }
+            return toplam;
+        }
+
+        public static int GetToplamRezervasyon()
+        {
+            int toplam = 0;
+            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_RezervasyonSayisi", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                var sonuc = cmd.ExecuteScalar();
+                if (sonuc != null && sonuc != DBNull.Value)
+                    toplam = Convert.ToInt32(sonuc);
+            }
+            return toplam;
+        }
+
+        public static DataTable GetAylikSatis()
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_AylikSatis", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            return dt;
+        }
+        public static string GetTopMenu()
+        {
+            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_GetTopMenu", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                var reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    return reader["UrunAdi"].ToString();
+                }
+                else
+                {
+                    return "Veri yok";
+                }
             }
         }
 
+        public static DataTable GetHaftalikSiparis()
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_GetHaftalikSiparis", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                da.Fill(dt);
+            }
+            return dt;
+        }
         public static DataTable GetMessages()
         {
             Connection connection = new Connection();

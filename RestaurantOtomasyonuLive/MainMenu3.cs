@@ -151,16 +151,23 @@ namespace RestaurantOtomasyonuLive
             this.Close();
         }
 
-        private void btn_Yardım_Click(object sender, EventArgs e)
-        {   
-            pnl_UserMessage.BringToFront();
-            pnl_UserMessage.Visible = true;
-            pnl_UserMessage.Enabled = true;
+         private void btn_Yardım_Click(object sender, EventArgs e)
+         {   
+             pnl_UserMessage.BringToFront();
+             pnl_UserMessage.Visible = true;
+             pnl_UserMessage.Enabled = true;
 
-            PanelMenu.SendToBack();
-            PanelMenu.Visible = false;
-            PanelMenu.Enabled = false;
-        }
+             PanelMenu.SendToBack();
+             PanelMenu.Visible = false;
+             PanelMenu.Enabled = false;
+         }
+        
+        
+
+
+
+
+
 
         private void btn_SendMessage_Click(object sender, EventArgs e)
         {
@@ -172,5 +179,15 @@ namespace RestaurantOtomasyonuLive
             if (sent)
                 MessageBox.Show("Mesajınız gönderildi.");
         }
+
+        private void btn_Hakkımızda_Click(object sender, EventArgs e)
+        {
+            PanelMenu.Controls.Clear();
+            AboutUserControl aboutUC = new AboutUserControl();
+            PanelMenu.Controls.Add(aboutUC);
+            aboutUC.Dock = DockStyle.Fill;
+        }
+
+
     }
 }

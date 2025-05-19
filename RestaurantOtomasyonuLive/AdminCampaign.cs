@@ -62,6 +62,11 @@ namespace RestaurantOtomasyonuLive
             AdminCampaignEdit adminCampaignEdit = new AdminCampaignEdit();
             adminCampaignEdit.Show();
         }
+
+        private void pBoxAdmin_campaign3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

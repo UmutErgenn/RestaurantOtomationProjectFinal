@@ -7,11 +7,12 @@ using System.Threading.Tasks;
 
 namespace RestaurantOtomasyonuLive
 {
-    internal class Connection
+    internal  class Connection
     {
         SqlConnection connect;
-        String connString = "server=DESKTOP-GDM81IQ\\SQLEXPRESS; " +
-               "database=RESTAURANT5; Trusted_Connection=True";
+        public static string connString = "Data Source=ASUS;Initial Catalog=RESTAURANT5;Integrated Security=True;";
+
+
         //DESKTOP-GDM81IQ\SQLEXPRESS umut
         public SqlConnection Connect
         {

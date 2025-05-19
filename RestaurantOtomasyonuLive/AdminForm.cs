@@ -42,5 +42,28 @@ namespace RestaurantOtomasyonuLive
             adminMessagesForm.Show();
             this.Hide();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_Stock_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            StockUserControl stockUC = new StockUserControl();
+            panel1.Controls.Add(stockUC);
+            stockUC.Dock = DockStyle.Fill;
+        }
+
+        private void btn_Statistics_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            StatisticsUserControl statUC = new StatisticsUserControl();
+            panel1.Controls.Add(statUC);
+            statUC.Dock = DockStyle.Fill;
+        }
+
+
     }
 }

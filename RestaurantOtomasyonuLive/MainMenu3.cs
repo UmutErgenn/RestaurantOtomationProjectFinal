@@ -168,7 +168,7 @@ namespace RestaurantOtomasyonuLive
             string subject = txt_Topic.Text;
             string message = rtxt_Message.Text;
 
-            bool sent = sqlMethods3.SendMessage(mail, subject, message);
+            bool sent = sqlMethods4.SendMessage(mail, subject, message);
             if (sent)
                 MessageBox.Show("Mesajınız gönderildi.");
         }

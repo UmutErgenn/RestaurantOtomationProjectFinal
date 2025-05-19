@@ -19,7 +19,7 @@ namespace RestaurantOtomasyonuLive
 
         private void AdminMessagesForm_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = sqlMethods3.GetMessages();
+            dataGridView1.DataSource = sqlMethods4.GetMessages();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -27,7 +27,7 @@ namespace RestaurantOtomasyonuLive
             if (e.RowIndex >= 0)
             {
                 int selectedId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells["message_id"].Value);
-                DataRow detail = sqlMethods3.GetMessageDetail(selectedId);
+                DataRow detail = sqlMethods4.GetMessageDetail(selectedId);
                 if (detail != null)
                 {
                     lbl_mail.Text = detail["mail"].ToString();

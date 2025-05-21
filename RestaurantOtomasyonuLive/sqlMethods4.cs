@@ -43,19 +43,32 @@ namespace RestaurantOtomasyonuLive
             }
         }
 
-        public static bool addReservation(string mail, int tableNo, DateTime dateTime)
+        public static int addReservation(string mail, int tableNo, DateTime dateTime)
         {
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            int newResId = -1;
+            try
             {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("addReservation_proc", conn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@mail", mail);
-                cmd.Parameters.AddWithValue("@table_id", tableNo);
-                cmd.Parameters.AddWithValue("@reservation_date", dateTime);
+                Connection connection = new Connection();
+                SqlCommand cmd = new SqlCommand("addReservation_proc", connection.Connect);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("mail", mail);
+                cmd.Parameters.AddWithValue("table_id", tableNo);
+                cmd.Parameters.AddWithValue("reservation_date", dateTime);
+
+                var outParam = new SqlParameter("@newResId", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                cmd.Parameters.Add(outParam);
                 cmd.ExecuteNonQuery();
-                return true;
+                newResId = (int)outParam.Value;
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Rezervasyon eklenirken hata: " + ex.Message);
+            }
+
+            return newResId;
         }
 
         public static bool UpdateUserInfo(string mail, string ad, string soyad, string telefon, string sifre)
@@ -314,5 +327,202 @@ namespace RestaurantOtomasyonuLive
                 return false;
             }
         }
+
+
+        // 2) Rezervasyonu sepete ekle
+        public static bool AddReservationToCart(int cartId, int reservationId)
+        {
+            try
+            {
+                Connection connection = new Connection();
+                SqlCommand cmd = new SqlCommand("cart_AddReservation", connection.Connect) { CommandType = CommandType.StoredProcedure };
+                cmd.Parameters.AddWithValue("@cartId", cartId);
+                cmd.Parameters.AddWithValue("@reservationId", reservationId);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch { return false; }
+        }
+
+        // 3) Yemeği sepete ekle
+        public static bool AddMealToCart(int cartId, string mealName, int quantity)
+        {
+            try
+            {
+                Connection connection = new Connection();
+                SqlCommand cmd = new SqlCommand("cart_AddMeal", connection.Connect) { CommandType = CommandType.StoredProcedure };
+                cmd.Parameters.AddWithValue("@cartId", cartId);
+                cmd.Parameters.AddWithValue("@mealName", mealName);
+                cmd.Parameters.AddWithValue("@quantity", quantity);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch { return false; }
+        }
+
+        // 4) Sepet içeriğini al
+        public static DataTable GetCartContents(int cartId)
+        {
+            Connection connection = new Connection();
+            SqlCommand cmd = new SqlCommand("cart_GetContents", connection.Connect) { CommandType = CommandType.StoredProcedure };
+            cmd.Parameters.AddWithValue("@cartId", cartId);
+
+            var da = new SqlDataAdapter(cmd);
+            var dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+
+
+
+        // Sepeti onayla ve sipariş ID’sini döndür
+        public static int ConfirmCart(int cartId)
+        {
+            int newOrderId = -1;
+
+            Connection connection = new Connection();
+            SqlCommand cmd = new SqlCommand("cart_Confirm", connection.Connect);
+            cmd.CommandType = CommandType.StoredProcedure;
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                // Input parametre
+                cmd.Parameters.AddWithValue("@cartId", cartId);
+
+                // Output parametre
+                SqlParameter outputParam = new SqlParameter("@newOrderId", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                cmd.Parameters.Add(outputParam);
+
+                try
+                {
+                    cmd.ExecuteNonQuery();
+
+                    // Sipariş ID’sini al
+                    newOrderId = (int)outputParam.Value;
+                }
+                catch (Exception ex)
+                {
+                    // Hata yönetimi
+                    MessageBox.Show("Sipariş onaylanırken hata oluştu:\n" + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            return newOrderId;
+        }
+
+        // sepet içeriğini db'den çekiyoruz
+        public DataTable GetCartContentsForCardLoad(int cartId)
+        {
+            Connection connection = new Connection();
+            SqlCommand cmd = new SqlCommand("cart_GetContents", connection.Connect);
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@cartId", cartId);
+
+                var da = new SqlDataAdapter(cmd);
+                var dt = new DataTable();
+                da.Fill(dt);
+                return dt;
+            }
+        }
+
+        // Sepeti al ya da oluştur
+        public static int GetOrCreateCart(string mail)
+        {
+            int cartId = -1;
+            try
+            {
+                Connection connection = new Connection();
+                SqlCommand cmd = new SqlCommand("sp_GetOrCreateCart", connection.Connect)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+
+                cmd.Parameters.AddWithValue("@mail", mail);
+                var outParam = new SqlParameter("@cartId", SqlDbType.Int)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                cmd.Parameters.Add(outParam);
+
+                cmd.ExecuteNonQuery();
+                cartId = (int)outParam.Value;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Sepet alınırken hata: " + ex.Message);
+            }
+            return cartId;
+        }
+
+
+        // Rezervasyonu kaldır
+        public static bool RemoveReservationFromCart(int cartId)
+        {
+            try
+            {
+                Connection conn = new Connection();
+                SqlCommand cmd = new SqlCommand("cart_RemoveReservation", conn.Connect)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                cmd.Parameters.AddWithValue("@cartId", cartId);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                // Şimdi hatayı göreceksin
+                MessageBox.Show("Hata(Rezervasyon silme): " + ex.Message);
+                return false;
+            }
+        }
+
+        // Yemek kalemini kaldır
+        public static bool RemoveMealFromCart(int cartId, int urunId)
+        {
+            try
+            {
+                Connection conn = new Connection();
+                SqlCommand cmd = new SqlCommand("cart_RemoveMeal", conn.Connect)
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                cmd.Parameters.AddWithValue("@cartId", cartId);
+                cmd.Parameters.AddWithValue("@urunId", urunId);
+                cmd.ExecuteNonQuery();
+                return true;
+            }
+            catch { return false; }
+        }
+
+
+        // Yemek miktarını güncelle
+        public static bool UpdateMealQuantity(int cartId, int urunId, int newQuantity)
+        {
+            try
+            {
+                Connection conn = new Connection();
+                using (var cmd = new SqlCommand("cart_UpdateMealQuantity", conn.Connect))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@cartId", cartId);
+                    cmd.Parameters.AddWithValue("@urunId", urunId);
+                    cmd.Parameters.AddWithValue("@quantity", newQuantity);
+                    cmd.ExecuteNonQuery();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Adet güncellenirken hata: " + ex.Message);
+                return false;
+            }
+        }
+
     }
 }

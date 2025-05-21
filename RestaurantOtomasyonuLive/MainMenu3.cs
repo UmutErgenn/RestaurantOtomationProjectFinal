@@ -188,6 +188,11 @@ namespace RestaurantOtomasyonuLive
             aboutUC.Dock = DockStyle.Fill;
         }
 
-
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            CardForm cardForm = new CardForm();
+            cardForm.Show();
+            this.Hide();
+        }
     }
 }

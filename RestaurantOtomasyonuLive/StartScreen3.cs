@@ -54,6 +54,8 @@ namespace RestaurantOtomasyonuLive
                     mainMenu2.Show();
                     this.Hide();
                 }
+                //currentCartId = sqlMethods4.CreateCart(StartScreen3.KullaniciBilgileri.KullaniciData.Mail);
+                AppSession.CartId = sqlMethods4.GetOrCreateCart(KullaniciBilgileri.KullaniciData.Mail);
             }
             else // Hatalı giriş işlemi, var olmayan kullanıcı bilgileri
             {

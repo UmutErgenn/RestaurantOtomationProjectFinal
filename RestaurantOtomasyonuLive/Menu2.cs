@@ -112,6 +112,23 @@ namespace RestaurantOtomasyonuLive
             flowLayoutPanelEx.Visible = false;
             Notification notification = new Notification();
             notification.showNotification(this, "Ürün sepete eklendi", false);
+
+            //try
+            //{
+            //    bool ok = sqlMethods4.AddMealToCart(
+            //        AppSession.CartId,
+            //        urun_name.Text,
+            //        Convert.ToInt32(urun_quantity.Value)
+            //        );
+            //    Notification notification = new Notification();
+            //    notification.showNotification(this, "Ürün sepete eklendi", false);
+            //
+            //
+            //}
+            //catch (Exception hata)
+            //{
+            //    MessageBox.Show("Hata: " + hata.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
         }
     }
 }

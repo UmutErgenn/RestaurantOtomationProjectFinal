@@ -11,9 +11,9 @@ namespace RestaurantOtomasyonuLive
     {
         SqlConnection connect;
         public static string connString = "Data Source=ASUS;Initial Catalog=RESTAURANT5;Integrated Security=True;";
+        // umut
+        //public static String connString = "server=DESKTOP-GDM81IQ\\SQLEXPRESS; " + "database=RESTAURANT6; Trusted_Connection=True";
 
-
-        //DESKTOP-GDM81IQ\SQLEXPRESS umut
         public SqlConnection Connect
         {
             get

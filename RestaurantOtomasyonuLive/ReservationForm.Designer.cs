@@ -40,7 +40,9 @@
             this.pBox_restaurantLogo = new System.Windows.Forms.PictureBox();
             this.lbl_restaurantNameText = new System.Windows.Forms.Label();
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.txt_table_1_status = new System.Windows.Forms.TextBox();
             this.pnl_RezervasyonOnay = new System.Windows.Forms.Panel();
+            this.btn_close_reserv_info = new System.Windows.Forms.Button();
             this.txt_mail_info = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_add_reservation = new System.Windows.Forms.Button();
@@ -67,8 +69,6 @@
             this.pBox_CartLogo = new System.Windows.Forms.PictureBox();
             this.pBox_AccountLogo = new System.Windows.Forms.PictureBox();
             this.flowLP_campaigns = new System.Windows.Forms.FlowLayoutPanel();
-            this.btn_close_reserv_info = new System.Windows.Forms.Button();
-            this.txt_table_1_status = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_restaurantLogo)).BeginInit();
@@ -267,6 +267,13 @@
             this.PanelMenu.Size = new System.Drawing.Size(694, 531);
             this.PanelMenu.TabIndex = 17;
             // 
+            // txt_table_1_status
+            // 
+            this.txt_table_1_status.Location = new System.Drawing.Point(160, 171);
+            this.txt_table_1_status.Name = "txt_table_1_status";
+            this.txt_table_1_status.Size = new System.Drawing.Size(52, 20);
+            this.txt_table_1_status.TabIndex = 30;
+            // 
             // pnl_RezervasyonOnay
             // 
             this.pnl_RezervasyonOnay.Controls.Add(this.btn_close_reserv_info);
@@ -287,6 +294,21 @@
             this.pnl_RezervasyonOnay.Size = new System.Drawing.Size(335, 262);
             this.pnl_RezervasyonOnay.TabIndex = 29;
             this.pnl_RezervasyonOnay.Visible = false;
+            // 
+            // btn_close_reserv_info
+            // 
+            this.btn_close_reserv_info.BackColor = System.Drawing.Color.Black;
+            this.btn_close_reserv_info.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_close_reserv_info.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_close_reserv_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btn_close_reserv_info.ForeColor = System.Drawing.Color.White;
+            this.btn_close_reserv_info.Location = new System.Drawing.Point(310, 0);
+            this.btn_close_reserv_info.Name = "btn_close_reserv_info";
+            this.btn_close_reserv_info.Size = new System.Drawing.Size(25, 27);
+            this.btn_close_reserv_info.TabIndex = 28;
+            this.btn_close_reserv_info.Text = "X";
+            this.btn_close_reserv_info.UseVisualStyleBackColor = false;
+            this.btn_close_reserv_info.Click += new System.EventHandler(this.btn_close_reserv_info_Click);
             // 
             // txt_mail_info
             // 
@@ -539,6 +561,7 @@
             this.pBox_CartLogo.Size = new System.Drawing.Size(41, 45);
             this.pBox_CartLogo.TabIndex = 26;
             this.pBox_CartLogo.TabStop = false;
+            this.pBox_CartLogo.Click += new System.EventHandler(this.pBox_CartLogo_Click);
             // 
             // pBox_AccountLogo
             // 
@@ -565,28 +588,6 @@
             this.flowLP_campaigns.Size = new System.Drawing.Size(0, 0);
             this.flowLP_campaigns.TabIndex = 13;
             this.flowLP_campaigns.WrapContents = false;
-            // 
-            // btn_close_reserv_info
-            // 
-            this.btn_close_reserv_info.BackColor = System.Drawing.Color.Black;
-            this.btn_close_reserv_info.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close_reserv_info.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_close_reserv_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btn_close_reserv_info.ForeColor = System.Drawing.Color.White;
-            this.btn_close_reserv_info.Location = new System.Drawing.Point(310, 0);
-            this.btn_close_reserv_info.Name = "btn_close_reserv_info";
-            this.btn_close_reserv_info.Size = new System.Drawing.Size(25, 27);
-            this.btn_close_reserv_info.TabIndex = 28;
-            this.btn_close_reserv_info.Text = "X";
-            this.btn_close_reserv_info.UseVisualStyleBackColor = false;
-            this.btn_close_reserv_info.Click += new System.EventHandler(this.btn_close_reserv_info_Click);
-            // 
-            // txt_table_1_status
-            // 
-            this.txt_table_1_status.Location = new System.Drawing.Point(160, 171);
-            this.txt_table_1_status.Name = "txt_table_1_status";
-            this.txt_table_1_status.Size = new System.Drawing.Size(52, 20);
-            this.txt_table_1_status.TabIndex = 30;
             // 
             // ReservationForm
             // 

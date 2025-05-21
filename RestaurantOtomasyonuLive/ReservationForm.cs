@@ -41,18 +41,28 @@ namespace RestaurantOtomasyonuLive
             {
                 try
                 {
-                    sqlMethods4.addReservation(
+                    int selectedReservationId = sqlMethods4.addReservation(
                         txt_mail_info.Text,
                         Convert.ToInt32(txt_table_No.Text),
                         dateTimePicker_info.Value
                         );
 
-                    notification.showNotification(this, "Rezervasyon eklendi", false);
-                    
-                    Thread.Sleep(1000); 
-                    pnl_RezervasyonOnay.Visible = false; 
-                    pnl_RezervasyonOnay.Enabled = false; 
-                    pnl_RezervasyonOnay.SendToBack();
+                    bool ok = sqlMethods4.AddReservationToCart(AppSession.CartId, selectedReservationId);
+
+                    if (selectedReservationId > 0)
+                    {
+                        MessageBox.Show("Rezervasyon sepete eklendi. ID: " + selectedReservationId);
+                        // Şimdi bu ID cart’a ekleniyor:
+                        //_currentCartId = sqlMethods4.CreateCart(StartScreen3.KullaniciBilgileri.KullaniciData.Mail);
+
+                        pnl_RezervasyonOnay.Visible = false;
+                        pnl_RezervasyonOnay.Enabled = false;
+                        pnl_RezervasyonOnay.SendToBack();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Rezervasyon eklenemedi.");
+                    }
                 }
                 catch (Exception hata)
                 {
@@ -97,6 +107,13 @@ namespace RestaurantOtomasyonuLive
             pnl_RezervasyonOnay.SendToBack();
             pnl_RezervasyonOnay.Visible = false;
             pnl_RezervasyonOnay.Enabled = false;
+        }
+
+        private void pBox_CartLogo_Click(object sender, EventArgs e)
+        {
+            CardForm cardForm = new CardForm();
+            cardForm.Show();
+            this.Hide();
         }
     }
 }

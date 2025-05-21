@@ -95,7 +95,14 @@
     <Compile Include="AdminMessagesForm.Designer.cs">
       <DependentUpon>AdminMessagesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="AppSession.cs" />
     <Compile Include="CampaignSQL.cs" />
+    <Compile Include="CardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardForm.Designer.cs">
+      <DependentUpon>CardForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="MainMenu3.cs">
       <SubType>Form</SubType>
@@ -187,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMessagesForm.resx">
       <DependentUpon>AdminMessagesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CardForm.resx">
+      <DependentUpon>CardForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu3.resx">
       <DependentUpon>MainMenu3.cs</DependentUpon>

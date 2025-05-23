@@ -34,7 +34,7 @@ namespace RestaurantOtomasyonuLive
             }
 
             // Giriş işlemi
-            if (sqlMethods4.login(txt_mail.Text, txt_password.Text))  // login metodu burada başarılıysa
+            if (sqlMethods4Ace.login(txt_mail.Text, txt_password.Text))  // login metodu burada başarılıysa
             {
                 // Kullanıcı bilgilerini al
                 KullaniciGiris(txt_mail.Text, txt_password.Text);
@@ -50,12 +50,12 @@ namespace RestaurantOtomasyonuLive
                 }
                 else if (role.Equals("user"))
                 {
-                    MainMenu3 mainMenu2 = new MainMenu3();
+                    MainMenu3Ace mainMenu2 = new MainMenu3Ace();
                     mainMenu2.Show();
                     this.Hide();
                 }
                 //currentCartId = sqlMethods4.CreateCart(StartScreen3.KullaniciBilgileri.KullaniciData.Mail);
-                AppSession.CartId = sqlMethods4.GetOrCreateCart(KullaniciBilgileri.KullaniciData.Mail);
+                AppSession.CartId = sqlMethods4Ace.GetOrCreateCart(KullaniciBilgileri.KullaniciData.Mail);
             }
             else // Hatalı giriş işlemi, var olmayan kullanıcı bilgileri
             {

@@ -45,7 +45,7 @@ namespace RestaurantOtomasyonuLive
             {
                 try
                 {
-                    sqlMethods4.SignUp(
+                    sqlMethods4Ace.SignUp(
                         txt_nameSignUp.Text,
                         txt_surnameSignUp.Text,
                         txt_mailSignUp.Text,

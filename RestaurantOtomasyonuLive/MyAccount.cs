@@ -39,7 +39,7 @@ namespace RestaurantOtomasyonuLive
 
         private void btn_Ana_Menü_Click(object sender, EventArgs e)
         {
-            MainMenu3 mainMenu = new MainMenu3();
+            MainMenu3Ace mainMenu = new MainMenu3Ace();
             mainMenu.Show();
             this.Close();
         }
@@ -93,7 +93,7 @@ namespace RestaurantOtomasyonuLive
 
             if (sonuc == DialogResult.Yes)
             {
-                bool guncellendi = sqlMethods4.UpdateUserInfo(
+                bool guncellendi = sqlMethods4Ace.UpdateUserInfo(
                     k.Mail,
                     textBox_adText.Text,
                     textBox_soyadText.Text,

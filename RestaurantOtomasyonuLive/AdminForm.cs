@@ -26,7 +26,7 @@ namespace RestaurantOtomasyonuLive
 
         private void btn_Campaigns_Click(object sender, EventArgs e)
         {
-            AdminCampaign adminCampaign = new AdminCampaign();
+            AdminCampaignAce adminCampaign = new AdminCampaignAce();
             adminCampaign.Show();
             this.Hide();
         }

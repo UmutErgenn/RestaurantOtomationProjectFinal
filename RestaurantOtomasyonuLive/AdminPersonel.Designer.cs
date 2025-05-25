@@ -70,6 +70,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_restaurantLogo)).BeginInit();
@@ -264,6 +267,9 @@
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelMenu.BackgroundImage")));
             this.panelMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelMenu.Controls.Add(this.panel1);
+            this.panelMenu.Controls.Add(this.button4);
+            this.panelMenu.Controls.Add(this.label15);
             this.panelMenu.Controls.Add(this.button3);
             this.panelMenu.Controls.Add(this.txt_salaryUpdate);
             this.panelMenu.Controls.Add(this.label14);
@@ -307,7 +313,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(644, 504);
+            this.button3.Location = new System.Drawing.Point(600, 366);
             this.button3.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(205, 39);
@@ -319,7 +325,7 @@
             // txt_salaryUpdate
             // 
             this.txt_salaryUpdate.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_salaryUpdate.Location = new System.Drawing.Point(644, 445);
+            this.txt_salaryUpdate.Location = new System.Drawing.Point(600, 330);
             this.txt_salaryUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.txt_salaryUpdate.Name = "txt_salaryUpdate";
             this.txt_salaryUpdate.Size = new System.Drawing.Size(205, 22);
@@ -331,7 +337,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(539, 447);
+            this.label14.Location = new System.Drawing.Point(495, 332);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(54, 20);
@@ -341,7 +347,7 @@
             // txt_mailSalary
             // 
             this.txt_mailSalary.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_mailSalary.Location = new System.Drawing.Point(644, 402);
+            this.txt_mailSalary.Location = new System.Drawing.Point(600, 287);
             this.txt_mailSalary.Margin = new System.Windows.Forms.Padding(4);
             this.txt_mailSalary.Name = "txt_mailSalary";
             this.txt_mailSalary.Size = new System.Drawing.Size(205, 22);
@@ -353,7 +359,7 @@
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(539, 404);
+            this.label13.Location = new System.Drawing.Point(495, 289);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(74, 20);
@@ -366,7 +372,7 @@
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(496, 338);
+            this.label12.Location = new System.Drawing.Point(452, 234);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(387, 32);
@@ -380,7 +386,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(635, 190);
+            this.button2.Location = new System.Drawing.Point(600, 150);
             this.button2.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(205, 39);
@@ -396,7 +402,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(179, 474);
+            this.button1.Location = new System.Drawing.Point(177, 428);
             this.button1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(205, 39);
@@ -408,7 +414,7 @@
             // txt_mailPersonDelete
             // 
             this.txt_mailPersonDelete.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_mailPersonDelete.Location = new System.Drawing.Point(635, 136);
+            this.txt_mailPersonDelete.Location = new System.Drawing.Point(600, 114);
             this.txt_mailPersonDelete.Margin = new System.Windows.Forms.Padding(4);
             this.txt_mailPersonDelete.Name = "txt_mailPersonDelete";
             this.txt_mailPersonDelete.Size = new System.Drawing.Size(205, 22);
@@ -420,7 +426,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(530, 138);
+            this.label11.Location = new System.Drawing.Point(495, 116);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(74, 20);
@@ -433,7 +439,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(528, 70);
+            this.label10.Location = new System.Drawing.Point(493, 57);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(297, 32);
@@ -446,7 +452,7 @@
             this.combobox_gender.Items.AddRange(new object[] {
             "Erkek",
             "Kadın"});
-            this.combobox_gender.Location = new System.Drawing.Point(179, 334);
+            this.combobox_gender.Location = new System.Drawing.Point(177, 310);
             this.combobox_gender.Margin = new System.Windows.Forms.Padding(4);
             this.combobox_gender.Name = "combobox_gender";
             this.combobox_gender.Size = new System.Drawing.Size(205, 24);
@@ -455,7 +461,7 @@
             // txt_salary
             // 
             this.txt_salary.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_salary.Location = new System.Drawing.Point(179, 416);
+            this.txt_salary.Location = new System.Drawing.Point(177, 392);
             this.txt_salary.Margin = new System.Windows.Forms.Padding(4);
             this.txt_salary.Name = "txt_salary";
             this.txt_salary.Size = new System.Drawing.Size(205, 22);
@@ -464,7 +470,7 @@
             // txt_position
             // 
             this.txt_position.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_position.Location = new System.Drawing.Point(179, 376);
+            this.txt_position.Location = new System.Drawing.Point(177, 352);
             this.txt_position.Margin = new System.Windows.Forms.Padding(4);
             this.txt_position.Name = "txt_position";
             this.txt_position.Size = new System.Drawing.Size(205, 22);
@@ -473,7 +479,7 @@
             // txt_telno
             // 
             this.txt_telno.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_telno.Location = new System.Drawing.Point(179, 296);
+            this.txt_telno.Location = new System.Drawing.Point(177, 272);
             this.txt_telno.Margin = new System.Windows.Forms.Padding(4);
             this.txt_telno.Name = "txt_telno";
             this.txt_telno.Size = new System.Drawing.Size(205, 22);
@@ -482,7 +488,7 @@
             // txt_pass
             // 
             this.txt_pass.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_pass.Location = new System.Drawing.Point(179, 258);
+            this.txt_pass.Location = new System.Drawing.Point(177, 234);
             this.txt_pass.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pass.Name = "txt_pass";
             this.txt_pass.Size = new System.Drawing.Size(205, 22);
@@ -491,7 +497,7 @@
             // txt_mail
             // 
             this.txt_mail.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_mail.Location = new System.Drawing.Point(179, 216);
+            this.txt_mail.Location = new System.Drawing.Point(177, 192);
             this.txt_mail.Margin = new System.Windows.Forms.Padding(4);
             this.txt_mail.Name = "txt_mail";
             this.txt_mail.Size = new System.Drawing.Size(205, 22);
@@ -500,7 +506,7 @@
             // txt_surname
             // 
             this.txt_surname.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_surname.Location = new System.Drawing.Point(179, 176);
+            this.txt_surname.Location = new System.Drawing.Point(177, 152);
             this.txt_surname.Margin = new System.Windows.Forms.Padding(4);
             this.txt_surname.Name = "txt_surname";
             this.txt_surname.Size = new System.Drawing.Size(205, 22);
@@ -509,7 +515,7 @@
             // txt_name
             // 
             this.txt_name.BackColor = System.Drawing.SystemColors.Window;
-            this.txt_name.Location = new System.Drawing.Point(179, 138);
+            this.txt_name.Location = new System.Drawing.Point(177, 114);
             this.txt_name.Margin = new System.Windows.Forms.Padding(4);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(205, 22);
@@ -521,7 +527,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(72, 70);
+            this.label9.Location = new System.Drawing.Point(70, 46);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(321, 32);
@@ -534,7 +540,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(74, 418);
+            this.label8.Location = new System.Drawing.Point(72, 394);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 20);
@@ -547,7 +553,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(74, 378);
+            this.label7.Location = new System.Drawing.Point(72, 354);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(85, 20);
@@ -560,7 +566,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(74, 138);
+            this.label1.Location = new System.Drawing.Point(72, 114);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 20);
@@ -573,7 +579,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(74, 178);
+            this.label2.Location = new System.Drawing.Point(72, 154);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 20);
@@ -586,7 +592,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(74, 218);
+            this.label3.Location = new System.Drawing.Point(72, 194);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 20);
@@ -599,7 +605,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(74, 258);
+            this.label4.Location = new System.Drawing.Point(72, 234);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 20);
@@ -612,7 +618,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(74, 338);
+            this.label6.Location = new System.Drawing.Point(72, 314);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 20);
@@ -625,12 +631,49 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(74, 298);
+            this.label5.Location = new System.Drawing.Point(72, 274);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 10, 4, 10);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(71, 20);
             this.label5.TabIndex = 34;
             this.label5.Text = "Telefon";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(527, 458);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(263, 32);
+            this.label15.TabIndex = 57;
+            this.label15.Text = "Kayıtlı Personeller";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(24)))), ((int)(((byte)(24)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button4.ForeColor = System.Drawing.Color.White;
+            this.button4.Location = new System.Drawing.Point(512, 505);
+            this.button4.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(293, 39);
+            this.button4.TabIndex = 58;
+            this.button4.Text = "Kayıtlı Personelleri Görüntüle";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(164, 95);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(603, 449);
+            this.panel1.TabIndex = 59;
+            this.panel1.Visible = false;
             // 
             // AdminPersonel
             // 
@@ -696,5 +739,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel1;
     }
 }

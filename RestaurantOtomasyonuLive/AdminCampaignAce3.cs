@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace RestaurantOtomasyonuLive
 {
-    public partial class AdminCampaignAce2 : Form
+    public partial class AdminCampaignAce3 : Form
     {
         public static List<string> AdmincampaignNames = new List<string>();
         public static List<string> AdmincampaignDescriptions = new List<string>();
         public static List<string> AdmincampaignImagePaths = new List<string>();
 
-        public AdminCampaignAce2()
+        public AdminCampaignAce3()
         {
             InitializeComponent();
             start();
@@ -25,38 +25,40 @@ namespace RestaurantOtomasyonuLive
 
         private void start()
         {
-           
-            AdmincampaignNames.Clear();
-            AdmincampaignDescriptions.Clear();
-            AdmincampaignImagePaths.Clear();
-
-            
-            var campaignSQL = new CampaignSQLAce();
+            CampaignSQLAce campaignSQL = new CampaignSQLAce();
             campaignSQL.getCampaigns();
 
-           
             AdmincampaignNames.AddRange(CampaignSQLAce.campaignNames);
             AdmincampaignDescriptions.AddRange(CampaignSQLAce.campaignDescriptions);
             AdmincampaignImagePaths.AddRange(CampaignSQLAce.campaignImagePaths);
 
-            
-            int total = AdmincampaignNames.Count;
+            // Kampanya sayısını al
+            int totalCampaigns = AdmincampaignNames.Count;
 
-            
-            var pics = new[] { pBoxAdmin_campaign1, pBoxAdmin_campaign2, pBoxAdmin_campaign3 };
-            var heads = new[] { lbl_campaignHead1, lbl_campaignHead2, lbl_campaignHead3 };
-            var texts = new[] { lbl_campaignText1, lbl_campaignText2, lbl_campaignText3 };
-
-            
-            for (int i = 0; i < Math.Min(total, pics.Length); i++)
+            if (totalCampaigns > 0)
             {
-                pics[i].ImageLocation = AdmincampaignImagePaths[i];
-                pics[i].SizeMode = PictureBoxSizeMode.StretchImage;
-                heads[i].Text = AdmincampaignNames[i];
-                texts[i].Text = AdmincampaignDescriptions[i];
+                pBoxAdmin_campaign1.ImageLocation = AdmincampaignImagePaths[0];
+                pBoxAdmin_campaign1.SizeMode = PictureBoxSizeMode.StretchImage;
+                lbl_campaignHead1.Text = AdmincampaignNames[0];
+                lbl_campaignText1.Text = AdmincampaignDescriptions[0];
+            }
+
+            if (totalCampaigns > 1)
+            {
+                pBoxAdmin_campaign2.ImageLocation = AdmincampaignImagePaths[1];
+                pBoxAdmin_campaign2.SizeMode = PictureBoxSizeMode.StretchImage;
+                lbl_campaignHead2.Text = AdmincampaignNames[1];
+                lbl_campaignText2.Text = AdmincampaignDescriptions[1];
+            }
+
+            if (totalCampaigns > 2)
+            {
+                pBoxAdmin_campaign3.ImageLocation = AdmincampaignImagePaths[2];
+                pBoxAdmin_campaign3.SizeMode = PictureBoxSizeMode.StretchImage;
+                lbl_campaignHead3.Text = AdmincampaignNames[2];
+                lbl_campaignText3.Text = AdmincampaignDescriptions[2];
             }
         }
-
 
         private void btn_signUpExit_Click(object sender, EventArgs e)
         {

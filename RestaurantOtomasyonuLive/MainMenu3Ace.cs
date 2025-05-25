@@ -127,12 +127,12 @@ namespace RestaurantOtomasyonuLive
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LoadFormIntoPanel(new SignUpScreen());
+            LoadFormIntoPanel(new SignUpScreenAce());
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            new SignUpScreen().Show();
+            new SignUpScreenAce().Show();
             this.Close();
         }
 

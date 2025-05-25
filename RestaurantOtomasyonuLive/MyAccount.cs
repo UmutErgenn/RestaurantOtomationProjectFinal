@@ -32,7 +32,7 @@ namespace RestaurantOtomasyonuLive
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            SignUpScreen signUpScreen = new SignUpScreen();
+            SignUpScreenAce signUpScreen = new SignUpScreenAce();
             signUpScreen.Show();
             this.Close();
         }

@@ -19,7 +19,7 @@ namespace RestaurantOtomasyonuLive
 
         private void btn_logout_Click(object sender, EventArgs e)
         {
-            new SignUpScreen().Show();
+            new SignUpScreenAce().Show();
             this.Close();
         }
 

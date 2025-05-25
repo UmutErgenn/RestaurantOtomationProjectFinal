@@ -13,6 +13,8 @@ namespace RestaurantOtomasyonuLive
         {
             InitializeComponent();
             form_Load();
+
+            this.btn_Siparişlerim.Click += new EventHandler(this.btn_Siparişlerim_Click);
         }
 
         private List<string> campaignNames = new List<string>();
@@ -204,5 +206,11 @@ namespace RestaurantOtomasyonuLive
             this.Hide();
             menuAce2.Show();
         }
+        private void btn_Siparişlerim_Click(object sender, EventArgs e)
+        {
+            LoadFormIntoPanel(new OrdersForm());
+        }
+
+
     }
 }

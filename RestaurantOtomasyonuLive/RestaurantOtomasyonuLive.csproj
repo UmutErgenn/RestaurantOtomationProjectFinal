@@ -147,6 +147,18 @@
       <DependentUpon>MyAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Notification.cs" />
+    <Compile Include="OrderDetailsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderDetailsForm.Designer.cs">
+      <DependentUpon>OrderDetailsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrdersForm.Designer.cs">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReservationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MyAccount.resx">
       <DependentUpon>MyAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrdersForm.resx">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ReservationForm.resx">
       <DependentUpon>ReservationForm.cs</DependentUpon>

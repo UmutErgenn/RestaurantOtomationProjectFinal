@@ -217,6 +217,7 @@
             this.btn_Menus.TabIndex = 14;
             this.btn_Menus.Text = "Menüler";
             this.btn_Menus.UseVisualStyleBackColor = false;
+            this.btn_Menus.Click += new System.EventHandler(this.btn_Menus_Click);
             // 
             // btn_Campaigns
             // 
@@ -235,7 +236,7 @@
             // 
             // pBox_restaurantLogo
             // 
-            this.pBox_restaurantLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.pBox_restaurantLogo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pBox_restaurantLogo.BackColor = System.Drawing.Color.Transparent;
             this.pBox_restaurantLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pBox_restaurantLogo.BackgroundImage")));
@@ -285,6 +286,7 @@
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(925, 654);
             this.PanelMenu.TabIndex = 20;
+            this.PanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenu_Paint);
             // 
             // label5
             // 
@@ -486,7 +488,7 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Ürün Resmi";
             // 
-            // MenuAdmin
+            // MenuAdminAce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -495,7 +497,7 @@
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "MenuAdmin";
+            this.Name = "MenuAdminAce";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuAdmin";
             this.panel2.ResumeLayout(false);

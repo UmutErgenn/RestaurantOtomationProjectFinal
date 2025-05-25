@@ -119,5 +119,15 @@ namespace RestaurantOtomasyonuLive
         {
             // Gerekirse buraya kod ekleyebilirsiniz
         }
+
+        private void PanelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_Menus_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

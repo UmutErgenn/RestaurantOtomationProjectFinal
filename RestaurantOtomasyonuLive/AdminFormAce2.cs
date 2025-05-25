@@ -64,6 +64,27 @@ namespace RestaurantOtomasyonuLive
             statUC.Dock = DockStyle.Fill;
         }
 
+        private void btn_Menus_Click(object sender, EventArgs e)
+        {
+            // Önce paneli temizle
+            panel1.Controls.Clear();
 
+            // MenuAdminAce formunu bir child form olarak oluştur
+            MenuAdminAce menusForm = new MenuAdminAce
+            {
+                TopLevel = false,                   // child form yap
+                FormBorderStyle = FormBorderStyle.None,
+                Dock = DockStyle.Fill
+            };
+
+            // panel1 içine ekle ve göster
+            panel1.Controls.Add(menusForm);
+            menusForm.Show();
+        }
+
+        private void btn_Orders_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

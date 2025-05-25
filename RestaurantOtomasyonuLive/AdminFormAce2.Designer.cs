@@ -162,6 +162,7 @@
             this.btn_Orders.TabIndex = 15;
             this.btn_Orders.Text = "Siparişler";
             this.btn_Orders.UseVisualStyleBackColor = false;
+            this.btn_Orders.Click += new System.EventHandler(this.btn_Orders_Click);
             // 
             // btn_Menus
             // 
@@ -177,6 +178,7 @@
             this.btn_Menus.TabIndex = 14;
             this.btn_Menus.Text = "Menüler";
             this.btn_Menus.UseVisualStyleBackColor = false;
+            this.btn_Menus.Click += new System.EventHandler(this.btn_Menus_Click);
             // 
             // btn_Campaigns
             // 

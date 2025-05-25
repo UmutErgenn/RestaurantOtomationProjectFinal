@@ -96,5 +96,15 @@ namespace RestaurantOtomasyonuLive
             StartScreen3 startScreen3 = new StartScreen3();
             startScreen3.Show();
         }
+
+        private void PanelMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void btn_Orders_Click(object sender, EventArgs e)
+        {
+         
+        }
+
     }
 }

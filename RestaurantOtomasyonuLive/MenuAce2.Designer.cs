@@ -135,6 +135,7 @@
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(949, 654);
             this.PanelMenu.TabIndex = 17;
+            this.PanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenu_Paint);
             // 
             // flowLayoutPanel14
             // 
@@ -720,6 +721,7 @@
             this.btn_Siparişlerim.TabIndex = 15;
             this.btn_Siparişlerim.Text = "Siparişlerim";
             this.btn_Siparişlerim.UseVisualStyleBackColor = false;
+            this.btn_Siparişlerim.Click += new System.EventHandler(this.btn_Orders_Click);
             // 
             // btn_Menü
             // 

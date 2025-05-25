@@ -45,7 +45,7 @@ namespace RestaurantOtomasyonuLive
             {
                 try
                 {
-                    sqlMethods4Ace.SignUp(
+                    sqlMethods4Ace2.SignUp(
                         txt_nameSignUp.Text,
                         txt_surnameSignUp.Text,
                         txt_mailSignUp.Text,
@@ -78,6 +78,13 @@ namespace RestaurantOtomasyonuLive
         private void btn_signUpExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AdminPersonel adminPersonel = new AdminPersonel();
+            this.Hide();
+            adminPersonel.Show();
         }
     }
 }

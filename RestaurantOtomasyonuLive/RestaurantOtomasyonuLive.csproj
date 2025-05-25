@@ -71,29 +71,35 @@
     <Compile Include="AboutUserControl.Designer.cs">
       <DependentUpon>AboutUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminCampaignAce.cs">
+    <Compile Include="AdminCampaignAce2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminCampaignAce.Designer.cs">
-      <DependentUpon>AdminCampaignAce.cs</DependentUpon>
+    <Compile Include="AdminCampaignAce2.Designer.cs">
+      <DependentUpon>AdminCampaignAce2.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminCampaignEditAce.cs">
+    <Compile Include="AdminCampaignEditAce2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminCampaignEditAce.Designer.cs">
-      <DependentUpon>AdminCampaignEditAce.cs</DependentUpon>
+    <Compile Include="AdminCampaignEditAce2.Designer.cs">
+      <DependentUpon>AdminCampaignEditAce2.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminForm.cs">
+    <Compile Include="AdminFormAce2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminForm.Designer.cs">
-      <DependentUpon>AdminForm.cs</DependentUpon>
+    <Compile Include="AdminFormAce2.Designer.cs">
+      <DependentUpon>AdminFormAce2.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminMessagesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AdminMessagesForm.Designer.cs">
       <DependentUpon>AdminMessagesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPersonel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPersonel.Designer.cs">
+      <DependentUpon>AdminPersonel.cs</DependentUpon>
     </Compile>
     <Compile Include="AppSession.cs" />
     <Compile Include="CampaignSQLAce.cs" />
@@ -147,7 +153,7 @@
     <Compile Include="ReservationForm.Designer.cs">
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="sqlMethods4Ace.cs" />
+    <Compile Include="sqlMethods4Ace2.cs" />
     <Compile Include="StartScreen3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,17 +189,20 @@
     <EmbeddedResource Include="AboutUserControl.resx">
       <DependentUpon>AboutUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminCampaignAce.resx">
-      <DependentUpon>AdminCampaignAce.cs</DependentUpon>
+    <EmbeddedResource Include="AdminCampaignAce2.resx">
+      <DependentUpon>AdminCampaignAce2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminCampaignEditAce.resx">
-      <DependentUpon>AdminCampaignEditAce.cs</DependentUpon>
+    <EmbeddedResource Include="AdminCampaignEditAce2.resx">
+      <DependentUpon>AdminCampaignEditAce2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminForm.resx">
-      <DependentUpon>AdminForm.cs</DependentUpon>
+    <EmbeddedResource Include="AdminFormAce2.resx">
+      <DependentUpon>AdminFormAce2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMessagesForm.resx">
       <DependentUpon>AdminMessagesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPersonel.resx">
+      <DependentUpon>AdminPersonel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CardForm.resx">
       <DependentUpon>CardForm.cs</DependentUpon>

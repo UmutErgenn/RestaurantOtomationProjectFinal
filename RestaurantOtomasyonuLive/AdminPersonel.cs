@@ -86,5 +86,9 @@ namespace RestaurantOtomasyonuLive
             sqlMethods4Ace2.UpdateEmployeeSalaryByMail(mail, salary);
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -113,6 +113,7 @@
             this.lbl_campaignHead1.TabIndex = 1;
             this.lbl_campaignHead1.Text = "Kampanya Başlığı";
             this.lbl_campaignHead1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl_campaignHead1.Click += new System.EventHandler(this.lbl_campaignHead1_Click);
             // 
             // panel2
             // 
@@ -138,6 +139,7 @@
             this.lbl_campaignText2.TabIndex = 6;
             this.lbl_campaignText2.Text = "Kampanya Metni";
             this.lbl_campaignText2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_campaignText2.Click += new System.EventHandler(this.lbl_campaignText2_Click);
             // 
             // pBoxAdmin_campaign2
             // 
@@ -147,6 +149,7 @@
             this.pBoxAdmin_campaign2.Size = new System.Drawing.Size(223, 150);
             this.pBoxAdmin_campaign2.TabIndex = 3;
             this.pBoxAdmin_campaign2.TabStop = false;
+            this.pBoxAdmin_campaign2.Click += new System.EventHandler(this.pBoxAdmin_campaign2_Click);
             // 
             // lbl_campaignHead2
             // 

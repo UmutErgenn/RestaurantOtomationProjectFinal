@@ -25,33 +25,38 @@ namespace RestaurantOtomasyonuLive
 
         private void start()
         {
-            CampaignSQLAce campaignSQL = new CampaignSQLAce();
+           
+            AdmincampaignNames.Clear();
+            AdmincampaignDescriptions.Clear();
+            AdmincampaignImagePaths.Clear();
+
+            
+            var campaignSQL = new CampaignSQLAce();
             campaignSQL.getCampaigns();
 
+           
             AdmincampaignNames.AddRange(CampaignSQLAce.campaignNames);
             AdmincampaignDescriptions.AddRange(CampaignSQLAce.campaignDescriptions);
             AdmincampaignImagePaths.AddRange(CampaignSQLAce.campaignImagePaths);
 
-            int totalCampaigns = AdmincampaignNames.Count;
+            
+            int total = AdmincampaignNames.Count;
 
+            
+            var pics = new[] { pBoxAdmin_campaign1, pBoxAdmin_campaign2, pBoxAdmin_campaign3 };
+            var heads = new[] { lbl_campaignHead1, lbl_campaignHead2, lbl_campaignHead3 };
+            var texts = new[] { lbl_campaignText1, lbl_campaignText2, lbl_campaignText3 };
 
-            pBoxAdmin_campaign1.ImageLocation = AdmincampaignImagePaths[0];
-            pBoxAdmin_campaign1.SizeMode = PictureBoxSizeMode.StretchImage;
-            lbl_campaignHead1.Text = AdmincampaignNames[0];
-            lbl_campaignText1.Text = AdmincampaignDescriptions[0];
-
-            pBoxAdmin_campaign2.ImageLocation = AdmincampaignImagePaths[1];
-            pBoxAdmin_campaign2.SizeMode = PictureBoxSizeMode.StretchImage;
-            lbl_campaignHead2.Text = AdmincampaignNames[1];
-            lbl_campaignText2.Text = AdmincampaignDescriptions[1];
-
-            pBoxAdmin_campaign3.ImageLocation = AdmincampaignImagePaths[2];
-            pBoxAdmin_campaign3.SizeMode = PictureBoxSizeMode.StretchImage;
-            lbl_campaignHead3.Text = AdmincampaignNames[2];
-            lbl_campaignText3.Text = AdmincampaignDescriptions[2];
-
-
+            
+            for (int i = 0; i < Math.Min(total, pics.Length); i++)
+            {
+                pics[i].ImageLocation = AdmincampaignImagePaths[i];
+                pics[i].SizeMode = PictureBoxSizeMode.StretchImage;
+                heads[i].Text = AdmincampaignNames[i];
+                texts[i].Text = AdmincampaignDescriptions[i];
+            }
         }
+
 
         private void btn_signUpExit_Click(object sender, EventArgs e)
         {
@@ -67,6 +72,21 @@ namespace RestaurantOtomasyonuLive
         private void btn_mainExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void lbl_campaignHead1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbl_campaignText2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pBoxAdmin_campaign2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

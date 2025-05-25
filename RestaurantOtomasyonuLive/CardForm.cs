@@ -28,7 +28,7 @@ namespace RestaurantOtomasyonuLive
         private void LoadCart()
         {
             // 1) Sepeti çek
-            DataTable dt = sqlMethods4Ace.GetCartContents(AppSession.CartId);
+            DataTable dt = sqlMethods4Ace2.GetCartContents(AppSession.CartId);
 
             // 2) DataGridView'e ata
             dataGridView3.DataSource = dt;
@@ -72,7 +72,7 @@ namespace RestaurantOtomasyonuLive
             dataGridView3.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView3.ReadOnly = true;
 
-            dataGridView3.DataSource = sqlMethods4Ace.GetCartContents(AppSession.CartId);
+            dataGridView3.DataSource = sqlMethods4Ace2.GetCartContents(AppSession.CartId);
             dataGridView3.Columns["ItemType"].HeaderText = "Tür";
             dataGridView3.Columns["ItemId"].HeaderText = "No";
             dataGridView3.Columns["UrunAdi"].HeaderText = "Yemek Adı";
@@ -82,7 +82,7 @@ namespace RestaurantOtomasyonuLive
 
         private void btn_card_approve_Click(object sender, EventArgs e)
         {
-            int orderId = sqlMethods4Ace.ConfirmCart(AppSession.CartId);
+            int orderId = sqlMethods4Ace2.ConfirmCart(AppSession.CartId);
 
             if (orderId > 0)
                 MessageBox.Show($"Sipariş başarıyla oluşturuldu. Sipariş No: {orderId}",
@@ -109,11 +109,11 @@ namespace RestaurantOtomasyonuLive
             bool ok = false;
             if (type == "Reservation")
             {
-                ok = sqlMethods4Ace.RemoveReservationFromCart(AppSession.CartId);
+                ok = sqlMethods4Ace2.RemoveReservationFromCart(AppSession.CartId);
             }
             else if (type == "Meal")
             {
-                ok = sqlMethods4Ace.RemoveMealFromCart(AppSession.CartId, itemId);
+                ok = sqlMethods4Ace2.RemoveMealFromCart(AppSession.CartId, itemId);
             }
 
             if (ok)
@@ -136,7 +136,7 @@ namespace RestaurantOtomasyonuLive
             int urunId = Convert.ToInt32(row.Cells["ItemId"].Value);
             int quantity = Convert.ToInt32(row.Cells["Quantity"].Value) + 1;
 
-            if (sqlMethods4Ace.UpdateMealQuantity(AppSession.CartId, urunId, quantity))
+            if (sqlMethods4Ace2.UpdateMealQuantity(AppSession.CartId, urunId, quantity))
                 LoadCart();
         }
 
@@ -150,7 +150,7 @@ namespace RestaurantOtomasyonuLive
             int quantity = Convert.ToInt32(row.Cells["Quantity"].Value) - 1;
             if (quantity < 1) return; // 0 veya altı yasak
 
-            if (sqlMethods4Ace.UpdateMealQuantity(AppSession.CartId, urunId, quantity))
+            if (sqlMethods4Ace2.UpdateMealQuantity(AppSession.CartId, urunId, quantity))
                 LoadCart();
         }
 

@@ -41,13 +41,13 @@ namespace RestaurantOtomasyonuLive
             {
                 try
                 {
-                    int selectedReservationId = sqlMethods4Ace.addReservation(
+                    int selectedReservationId = sqlMethods4Ace2.addReservation(
                         txt_mail_info.Text,
                         Convert.ToInt32(txt_table_No.Text),
                         dateTimePicker_info.Value
                         );
 
-                    bool ok = sqlMethods4Ace.AddReservationToCart(AppSession.CartId, selectedReservationId);
+                    bool ok = sqlMethods4Ace2.AddReservationToCart(AppSession.CartId, selectedReservationId);
 
                     if (selectedReservationId > 0)
                     {

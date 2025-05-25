@@ -26,7 +26,7 @@ namespace RestaurantOtomasyonuLive
         {
             flowLayoutMainPanel.Controls.Clear();
 
-            sqlMethods4Ace sql = new sqlMethods4Ace();
+            sqlMethods4Ace2 sql = new sqlMethods4Ace2();
             var urunler = sql.UrunleriGetir(kategoriId);
 
             foreach (var (id, urunAdi, gorselYolu, urunDescription, urun_fiyat) in urunler)
@@ -123,7 +123,7 @@ namespace RestaurantOtomasyonuLive
             // Sepete ekleme işlemi için kod buraya
             try
             {
-                bool ok = sqlMethods4Ace.AddMealToCart(
+                bool ok = sqlMethods4Ace2.AddMealToCart(
                     AppSession.CartId,
                     urun_name.Text,
                     Convert.ToInt32(urun_quantity.Value)

@@ -34,7 +34,7 @@ namespace RestaurantOtomasyonuLive
             }
 
             // Giriş işlemi
-            if (sqlMethods4Ace.login(txt_mail.Text, txt_password.Text))  // login metodu burada başarılıysa
+            if (sqlMethods4Ace2.login(txt_mail.Text, txt_password.Text))  // login metodu burada başarılıysa
             {
                 // Kullanıcı bilgilerini al
                 KullaniciGiris(txt_mail.Text, txt_password.Text);
@@ -44,7 +44,7 @@ namespace RestaurantOtomasyonuLive
                 string role = KullaniciBilgileri.KullaniciData.Role;
                 if (role.Equals("admin"))
                 {
-                    AdminForm adminForm = new AdminForm();
+                    AdminFormAce2 adminForm = new AdminFormAce2();
                     adminForm.Show();
                     this.Hide();
                 }
@@ -55,7 +55,7 @@ namespace RestaurantOtomasyonuLive
                     this.Hide();
                 }
                 //currentCartId = sqlMethods4.CreateCart(StartScreen3.KullaniciBilgileri.KullaniciData.Mail);
-                AppSession.CartId = sqlMethods4Ace.GetOrCreateCart(KullaniciBilgileri.KullaniciData.Mail);
+                AppSession.CartId = sqlMethods4Ace2.GetOrCreateCart(KullaniciBilgileri.KullaniciData.Mail);
             }
             else // Hatalı giriş işlemi, var olmayan kullanıcı bilgileri
             {

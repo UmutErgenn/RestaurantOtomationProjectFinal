@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static RestaurantOtomasyonuLive.sqlMethods4Ace;
+using static RestaurantOtomasyonuLive.sqlMethods4Ace2;
 
 namespace RestaurantOtomasyonuLive
 {
@@ -87,7 +87,7 @@ namespace RestaurantOtomasyonuLive
             }
             int secilenKategoriId = comboBox1.SelectedIndex + 1;
 
-            sqlMethods4Ace sql = new sqlMethods4Ace();
+            sqlMethods4Ace2 sql = new sqlMethods4Ace2();
             bool basarili = sql.UrunEkle(urunAdi, gorselYolu, urunAciklama, urunFiyat, secilenKategoriId);
 
             if (basarili)

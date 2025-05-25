@@ -85,7 +85,7 @@ namespace RestaurantOtomasyonuLive
             string role = KullaniciBilgileri.KullaniciData.Role;
             if (role.Equals("admin"))
             {
-                AdminForm adminForm = new AdminForm();
+                AdminFormAce2 adminForm = new AdminFormAce2();
                 adminForm.Show();
                 this.Hide();
             }
@@ -178,7 +178,7 @@ namespace RestaurantOtomasyonuLive
             string subject = txt_Topic.Text;
             string message = rtxt_Message.Text;
 
-            bool sent = sqlMethods4Ace.SendMessage(mail, subject, message);
+            bool sent = sqlMethods4Ace2.SendMessage(mail, subject, message);
             if (sent)
                 MessageBox.Show("Mesajınız gönderildi.");
         }

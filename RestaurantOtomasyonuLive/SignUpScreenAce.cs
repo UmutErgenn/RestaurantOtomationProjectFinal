@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace RestaurantOtomasyonuLive
 {
-    public partial class SignUpScreen : Form
+    public partial class SignUpScreenAce : Form
     {
         Notification notification = new Notification();
         StartScreen3 startScreen = new StartScreen3();
-        public SignUpScreen()
+        public SignUpScreenAce()
         {
             InitializeComponent();
         }
@@ -78,13 +78,6 @@ namespace RestaurantOtomasyonuLive
         private void btn_signUpExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            AdminPersonel adminPersonel = new AdminPersonel();
-            this.Hide();
-            adminPersonel.Show();
         }
     }
 }

@@ -65,7 +65,7 @@ namespace RestaurantOtomasyonuLive
 
         private void btn_signUp_Click(object sender, EventArgs e)
         {
-            SignUpScreen signUpScreen = new SignUpScreen();
+            SignUpScreenAce signUpScreen = new SignUpScreenAce();
             signUpScreen.Show();
             this.Hide();
         }

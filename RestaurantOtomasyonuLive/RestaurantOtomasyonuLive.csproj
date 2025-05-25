@@ -159,6 +159,12 @@
     <Compile Include="OrdersForm.Designer.cs">
       <DependentUpon>OrdersForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OrdersUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OrdersUserControl.Designer.cs">
+      <DependentUpon>OrdersUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReservationForm.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -82,9 +82,16 @@ namespace RestaurantOtomasyonuLive
             menusForm.Show();
         }
 
+
         private void btn_Orders_Click(object sender, EventArgs e)
         {
-
+            panel1.Controls.Clear();
+            var ordersUC = new OrdersUserControl { Dock = DockStyle.Fill };
+            panel1.Controls.Add(ordersUC);
         }
+
+
+
+
     }
 }

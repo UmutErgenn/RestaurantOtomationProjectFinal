@@ -93,7 +93,7 @@ namespace RestaurantOtomasyonuLive
         //kullanıcı giriş yaptığı zaman bilgileri buraya çekiyoruz kullanmak için, üstteki kullanıcı sınıfında tutuluyor
         public void KullaniciGiris(string email, string sifre)
         {
-            Connection conn = new Connection();
+            Connection2 conn = new Connection2();
 
             using (SqlCommand cmd = new SqlCommand("sp_KullaniciGiris", conn.Connect))
             {

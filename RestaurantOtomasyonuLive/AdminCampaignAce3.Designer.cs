@@ -1,6 +1,6 @@
 ﻿namespace RestaurantOtomasyonuLive
 {
-    partial class AdminCampaignAce2
+    partial class AdminCampaignAce3
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminCampaignAce2));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminCampaignAce3));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbl_campaignText1 = new System.Windows.Forms.Label();
             this.pBoxAdmin_campaign1 = new System.Windows.Forms.PictureBox();

@@ -13,7 +13,7 @@ namespace RestaurantOtomasyonuLive
     {
         public static bool login(string mail, string psswrd)
         {
-            using (SqlConnection connString = new SqlConnection(Connection.connString))
+            using (SqlConnection connString = new SqlConnection(Connection2.connString))
             {
                 connString.Open();
                 SqlCommand cmd = new SqlCommand("login_proc", connString);
@@ -27,7 +27,7 @@ namespace RestaurantOtomasyonuLive
 
         public static bool SignUp(string name, string surname, string mail, string password, string phone, string gender)
         {
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            using (SqlConnection conn = new SqlConnection(Connection2.connString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("signUp_proc", conn);
@@ -48,7 +48,7 @@ namespace RestaurantOtomasyonuLive
             int newResId = -1;
             try
             {
-                Connection connection = new Connection();
+                Connection2 connection = new Connection2();
                 SqlCommand cmd = new SqlCommand("addReservation_proc", connection.Connect);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("mail", mail);
@@ -73,7 +73,7 @@ namespace RestaurantOtomasyonuLive
 
         public static bool UpdateUserInfo(string mail, string ad, string soyad, string telefon, string sifre)
         {
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            using (SqlConnection conn = new SqlConnection(Connection2.connString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("sp_GuncelleKullaniciBilgileri", conn);
@@ -94,7 +94,7 @@ namespace RestaurantOtomasyonuLive
 
         public static DataTable getAllPersons()
         {
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            using (SqlConnection conn = new SqlConnection(Connection2.connString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("getAllPersons_proc", conn);
@@ -108,7 +108,7 @@ namespace RestaurantOtomasyonuLive
 
         public static bool deleteUser(int person_id)
         {
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            using (SqlConnection conn = new SqlConnection(Connection2.connString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("delete_user_proc", conn);
@@ -121,7 +121,7 @@ namespace RestaurantOtomasyonuLive
 
         public static bool SendMessage(string mail, string subject, string messageBody)
         {
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            using (SqlConnection conn = new SqlConnection(Connection2.connString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("send_message_proc", conn);
@@ -138,7 +138,7 @@ namespace RestaurantOtomasyonuLive
         public static int GetToplamSatis()
         {
             int toplam = 0;
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            using (SqlConnection conn = new SqlConnection(Connection2.connString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("sp_ToplamSatis", conn);
@@ -153,7 +153,7 @@ namespace RestaurantOtomasyonuLive
         public static int GetToplamSiparis()
         {
             int toplam = 0;
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            using (SqlConnection conn = new SqlConnection(Connection2.connString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Orders", conn);
@@ -167,7 +167,7 @@ namespace RestaurantOtomasyonuLive
         public static int GetToplamKullanici()
         {
             int toplam = 0;
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            using (SqlConnection conn = new SqlConnection(Connection2.connString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("sp_MusteriSayisi", conn);
@@ -182,7 +182,7 @@ namespace RestaurantOtomasyonuLive
         public static int GetToplamRezervasyon()
         {
             int toplam = 0;
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            using (SqlConnection conn = new SqlConnection(Connection2.connString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("sp_RezervasyonSayisi", conn);
@@ -197,7 +197,7 @@ namespace RestaurantOtomasyonuLive
         public static DataTable GetAylikSatis()
         {
             DataTable dt = new DataTable();
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            using (SqlConnection conn = new SqlConnection(Connection2.connString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("sp_AylikSatis", conn);
@@ -209,7 +209,7 @@ namespace RestaurantOtomasyonuLive
         }
         public static string GetTopMenu()
         {
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            using (SqlConnection conn = new SqlConnection(Connection2.connString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("sp_GetTopMenu", conn);
@@ -229,7 +229,7 @@ namespace RestaurantOtomasyonuLive
         public static DataTable GetHaftalikSiparis()
         {
             DataTable dt = new DataTable();
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            using (SqlConnection conn = new SqlConnection(Connection2.connString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("sp_GetHaftalikSiparis", conn);
@@ -241,7 +241,7 @@ namespace RestaurantOtomasyonuLive
         }
         public static DataTable GetMessages()
         {
-            Connection connection = new Connection();
+            Connection2 connection = new Connection2();
             SqlCommand cmd = new SqlCommand("get_messages_proc", connection.Connect);
             cmd.CommandType = CommandType.StoredProcedure;
 
@@ -253,7 +253,7 @@ namespace RestaurantOtomasyonuLive
 
         public static DataRow GetMessageDetail(int messageId)
         {
-            Connection connection = new Connection();
+            Connection2 connection = new Connection2();
             SqlCommand cmd = new SqlCommand("get_message_detail_proc", connection.Connect);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@message_id", messageId);
@@ -268,13 +268,13 @@ namespace RestaurantOtomasyonuLive
         {
             var urunListesi = new List<(int, string, string, string, string)>();
 
-            Connection connection = null;
+            Connection2 connection = null;
             SqlCommand cmd = null;
             SqlDataReader reader = null;
 
             try
             {
-                connection = new Connection();
+                connection = new Connection2();
                 if (connection.Connect.State != System.Data.ConnectionState.Open)
                     connection.Connect.Open();
 
@@ -300,12 +300,12 @@ namespace RestaurantOtomasyonuLive
 
         public bool UrunEkle(string urunAdi, string gorselYolu, string urunAciklama, decimal urunFiyat, int kategoriId)
         {
-            Connection connection = null;
+            Connection2 connection = null;
             SqlCommand cmd = null;
 
             try
             {
-                connection = new Connection();
+                connection = new Connection2();
 
                 cmd = new SqlCommand("INSERT INTO Urunler (UrunAdi, GorselYolu, urun_Description, urun_price, MenuKategoriId) " +
                                      "VALUES (@adi, @yol, @aciklama, @fiyat, @MenuKategoriId)", connection.Connect);
@@ -335,7 +335,7 @@ namespace RestaurantOtomasyonuLive
         {
             try
             {
-                Connection connection = new Connection();
+                Connection2 connection = new Connection2();
                 SqlCommand cmd = new SqlCommand("cart_AddReservation", connection.Connect) { CommandType = CommandType.StoredProcedure };
                 cmd.Parameters.AddWithValue("@cartId", cartId);
                 cmd.Parameters.AddWithValue("@reservationId", reservationId);
@@ -350,7 +350,7 @@ namespace RestaurantOtomasyonuLive
         {
             try
             {
-                Connection connection = new Connection();
+                Connection2 connection = new Connection2();
                 SqlCommand cmd = new SqlCommand("cart_AddMeal", connection.Connect) { CommandType = CommandType.StoredProcedure };
                 cmd.Parameters.AddWithValue("@cartId", cartId);
                 cmd.Parameters.AddWithValue("@mealName", mealName);
@@ -364,7 +364,7 @@ namespace RestaurantOtomasyonuLive
         // 4) Sepet içeriğini al
         public static DataTable GetCartContents(int cartId)
         {
-            Connection connection = new Connection();
+            Connection2 connection = new Connection2();
             SqlCommand cmd = new SqlCommand("cart_GetContents", connection.Connect) { CommandType = CommandType.StoredProcedure };
             cmd.Parameters.AddWithValue("@cartId", cartId);
 
@@ -382,7 +382,7 @@ namespace RestaurantOtomasyonuLive
         {
             int newOrderId = -1;
 
-            Connection connection = new Connection();
+            Connection2 connection = new Connection2();
             SqlCommand cmd = new SqlCommand("cart_Confirm", connection.Connect);
             cmd.CommandType = CommandType.StoredProcedure;
             {
@@ -418,7 +418,7 @@ namespace RestaurantOtomasyonuLive
         // sepet içeriğini db'den çekiyoruz
         public DataTable GetCartContentsForCardLoad(int cartId)
         {
-            Connection connection = new Connection();
+            Connection2 connection = new Connection2();
             SqlCommand cmd = new SqlCommand("cart_GetContents", connection.Connect);
             {
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -437,7 +437,7 @@ namespace RestaurantOtomasyonuLive
             int cartId = -1;
             try
             {
-                Connection connection = new Connection();
+                Connection2 connection = new Connection2();
                 SqlCommand cmd = new SqlCommand("sp_GetOrCreateCart", connection.Connect)
                 {
                     CommandType = CommandType.StoredProcedure
@@ -466,7 +466,7 @@ namespace RestaurantOtomasyonuLive
         {
             try
             {
-                Connection conn = new Connection();
+                Connection2 conn = new Connection2();
                 SqlCommand cmd = new SqlCommand("cart_RemoveReservation", conn.Connect)
                 {
                     CommandType = CommandType.StoredProcedure
@@ -488,7 +488,7 @@ namespace RestaurantOtomasyonuLive
         {
             try
             {
-                Connection conn = new Connection();
+                Connection2 conn = new Connection2();
                 SqlCommand cmd = new SqlCommand("cart_RemoveMeal", conn.Connect)
                 {
                     CommandType = CommandType.StoredProcedure
@@ -507,7 +507,7 @@ namespace RestaurantOtomasyonuLive
         {
             try
             {
-                Connection conn = new Connection();
+                Connection2 conn = new Connection2();
                 using (var cmd = new SqlCommand("cart_UpdateMealQuantity", conn.Connect))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -529,7 +529,7 @@ namespace RestaurantOtomasyonuLive
         {
             var urunler = new List<(int, string, string, string, decimal)>();
 
-            Connection conn = new Connection();
+            Connection2 conn = new Connection2();
 
             using (SqlConnection sqlConnection = conn.Connect) // SqlConnection nesnesi
             {
@@ -568,7 +568,7 @@ namespace RestaurantOtomasyonuLive
 
         public static void InsertPersonAndEmployee(string name, string surname, string mail, string phone, string position, decimal salary, bool gender)
         {
-            Connection conn = new Connection();
+            Connection2 conn = new Connection2();
 
             using (SqlConnection sqlConnection = conn.Connect)
             {
@@ -626,7 +626,7 @@ namespace RestaurantOtomasyonuLive
 
         public static void DeletePersonelByMail(string mail)
         {
-            Connection conn = new Connection();
+            Connection2 conn = new Connection2();
 
             using (SqlConnection sqlConnection = conn.Connect)
             {
@@ -685,7 +685,7 @@ namespace RestaurantOtomasyonuLive
 
         public static void UpdateEmployeeSalaryByMail(string mail, decimal newSalary)
         {
-            Connection conn = new Connection();
+            Connection2 conn = new Connection2();
 
             using (SqlConnection sqlConnection = conn.Connect)
             {

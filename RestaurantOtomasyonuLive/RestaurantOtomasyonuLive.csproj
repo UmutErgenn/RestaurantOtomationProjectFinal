@@ -71,11 +71,11 @@
     <Compile Include="AboutUserControl.Designer.cs">
       <DependentUpon>AboutUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminCampaignAce2.cs">
+    <Compile Include="AdminCampaignAce3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminCampaignAce2.Designer.cs">
-      <DependentUpon>AdminCampaignAce2.cs</DependentUpon>
+    <Compile Include="AdminCampaignAce3.Designer.cs">
+      <DependentUpon>AdminCampaignAce3.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminCampaignEditAce2.cs">
       <SubType>Form</SubType>
@@ -109,7 +109,7 @@
     <Compile Include="CardForm.Designer.cs">
       <DependentUpon>CardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Connection.cs" />
+    <Compile Include="Connection2.cs" />
     <Compile Include="MainMenu3Ace.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -189,8 +189,8 @@
     <EmbeddedResource Include="AboutUserControl.resx">
       <DependentUpon>AboutUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminCampaignAce2.resx">
-      <DependentUpon>AdminCampaignAce2.cs</DependentUpon>
+    <EmbeddedResource Include="AdminCampaignAce3.resx">
+      <DependentUpon>AdminCampaignAce3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminCampaignEditAce2.resx">
       <DependentUpon>AdminCampaignEditAce2.cs</DependentUpon>

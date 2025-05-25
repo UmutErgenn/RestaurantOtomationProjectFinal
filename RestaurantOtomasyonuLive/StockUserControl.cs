@@ -93,7 +93,7 @@ namespace RestaurantOtomasyonuLive
 
         private void LoadStock()
         {
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            using (SqlConnection conn = new SqlConnection(Connection2.connString))
             {
                 conn.Open();
                 SqlDataAdapter da = new SqlDataAdapter("SELECT stock_id, product_name, quantity, unit, category FROM Stock", conn);
@@ -136,7 +136,7 @@ namespace RestaurantOtomasyonuLive
                 txtQuantity.Focus();
                 return;
             }
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            using (SqlConnection conn = new SqlConnection(Connection2.connString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(
@@ -167,7 +167,7 @@ namespace RestaurantOtomasyonuLive
                 txtQuantity.Focus();
                 return;
             }
-            using (SqlConnection conn = new SqlConnection(Connection.connString))
+            using (SqlConnection conn = new SqlConnection(Connection2.connString))
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(
@@ -196,7 +196,7 @@ namespace RestaurantOtomasyonuLive
             {
                 try
                 {
-                    using (SqlConnection conn = new SqlConnection(Connection.connString))
+                    using (SqlConnection conn = new SqlConnection(Connection2.connString))
                     {
                         conn.Open();
                         SqlCommand cmd = new SqlCommand("DELETE FROM Stock WHERE stock_id=@id", conn);

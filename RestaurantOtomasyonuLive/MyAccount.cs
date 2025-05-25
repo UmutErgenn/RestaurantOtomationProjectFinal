@@ -138,7 +138,7 @@ namespace RestaurantOtomasyonuLive
             {
                 try
                 {
-                    using (SqlConnection conn = new Connection().Connect)
+                    using (SqlConnection conn = new Connection2().Connect)
                     {
                         using (SqlCommand cmd = new SqlCommand("sp_KullaniciSil", conn))
                         {

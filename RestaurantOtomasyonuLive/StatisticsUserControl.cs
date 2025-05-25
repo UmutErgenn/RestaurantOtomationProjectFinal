@@ -56,14 +56,18 @@ namespace RestaurantOtomasyonuLive
         private decimal GetToplamOdeme()
         {
             using (var conn = new SqlConnection(Connection.connString))
-            using (var cmd = new SqlCommand("sp_ToplamOdeme", conn))
+            using (var cmd = new SqlCommand("dbo.sp_ToplamOdeme", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
                 conn.Open();
                 var result = cmd.ExecuteScalar();
-                return result != null ? Convert.ToDecimal(result) : 0;
+                // DBNull kontrolü
+                return (result == null || result == DBNull.Value)
+                    ? 0
+                    : Convert.ToDecimal(result);
             }
         }
+
 
         private int GetMusteriSayisi()
         {

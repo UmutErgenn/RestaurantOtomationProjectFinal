@@ -17,7 +17,7 @@ namespace RestaurantOtomasyonuLive
 
         private void OrderDetailsForm_Load(object sender, EventArgs e)
         {
-            // Windows başlık çubuğunun Text’ini dinamik atıyoruz:
+            
             this.Text = $"Sipariş {_orderId} Detayları";
             LoadDetails();
         }

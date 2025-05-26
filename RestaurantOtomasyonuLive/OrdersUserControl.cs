@@ -24,9 +24,9 @@ namespace RestaurantOtomasyonuLive
             ctxOrder.Items.Add("Detay").Name = "mnuViewDetail";
             ctxOrder.ItemClicked += ctxOrder_ItemClicked;
 
-            // Satıra tıklandığında seç, menüyü göster
+            
             dgvOrders.CellMouseClick += dgvOrders_CellMouseClick;
-            // Boş alana tıklandığında temizle
+           
             dgvOrders.Click += dgvOrders_Click;
         }
 
@@ -117,7 +117,7 @@ namespace RestaurantOtomasyonuLive
 
         private void dgvOrders_Click(object sender, EventArgs e)
         {
-            // Tıklanan noktanın hücre mi boş alan mı olduğunu bul
+            
             Point p = dgvOrders.PointToClient(Cursor.Position);
             var hit = dgvOrders.HitTest(p.X, p.Y);
             if (hit.Type != DataGridViewHitTestType.Cell || hit.RowIndex < 0)

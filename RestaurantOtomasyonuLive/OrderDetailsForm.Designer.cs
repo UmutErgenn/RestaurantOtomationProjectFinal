@@ -37,7 +37,7 @@
             this.ClientSize = new System.Drawing.Size(600, 400);
             this.Controls.Add(this.dataGridViewDetails);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.ControlBox = true;               // ← Windows başlık çubuğu ve X butonu burada
+            this.ControlBox = true;             
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

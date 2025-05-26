@@ -27,7 +27,7 @@ namespace RestaurantOtomasyonuLive
             DateTime from = dateTimePickerFrom.Value.Date;
             DateTime to = dateTimePickerTo.Value.Date.AddDays(1).AddSeconds(-1);
 
-            // 1) Önce DB'den gerçek order_id'leri çekelim
+            
             var dt = new DataTable();
             using (var conn = new Connection2().Connect)
             using (var cmd = conn.CreateCommand())
@@ -50,7 +50,7 @@ namespace RestaurantOtomasyonuLive
                 new SqlDataAdapter(cmd).Fill(dt);
             }
 
-            // 2) Görüntülemek için yeni DataTable oluşturalım
+           
             var display = new DataTable();
             display.Columns.Add("No", typeof(int));       // ekranda gözükecek sıra numarası
             display.Columns.Add("Sipariş No", typeof(int));       // gerçek order_id
@@ -114,7 +114,7 @@ namespace RestaurantOtomasyonuLive
                 cmd.ExecuteNonQuery();
             }
 
-            // *** Burada yeniden yükleyip 'No' sütununu yeniden numaralarız: ***
+            
             LoadOrders();
         }
 

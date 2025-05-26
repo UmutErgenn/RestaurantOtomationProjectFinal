@@ -65,7 +65,6 @@ namespace RestaurantOtomasyonuLive
             this.pictureBoxBack.SizeMode = PictureBoxSizeMode.Zoom;
             this.pictureBoxBack.Location = new Point(10, 15);
             this.pictureBoxBack.Size = new Size(30, 30);
-            //this.pictureBoxBack.Image = Properties.Resources.back_white; // Veya uygun bir ikon
             this.pictureBoxBack.Click += new EventHandler(this.btnBack_Click);
             // 
             // lblTitle

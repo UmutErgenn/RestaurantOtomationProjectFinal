@@ -71,23 +71,23 @@
     <Compile Include="AboutUserControl.Designer.cs">
       <DependentUpon>AboutUserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminCampaignAce3.cs">
+    <Compile Include="AdminCampaignAce4.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminCampaignAce3.Designer.cs">
-      <DependentUpon>AdminCampaignAce3.cs</DependentUpon>
+    <Compile Include="AdminCampaignAce4.Designer.cs">
+      <DependentUpon>AdminCampaignAce4.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminCampaignEditAce2.cs">
+    <Compile Include="AdminCampaignEditAce3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminCampaignEditAce2.Designer.cs">
-      <DependentUpon>AdminCampaignEditAce2.cs</DependentUpon>
+    <Compile Include="AdminCampaignEditAce3.Designer.cs">
+      <DependentUpon>AdminCampaignEditAce3.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminFormAce2.cs">
+    <Compile Include="AdminFormAce3.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminFormAce2.Designer.cs">
-      <DependentUpon>AdminFormAce2.cs</DependentUpon>
+    <Compile Include="AdminFormAce3.Designer.cs">
+      <DependentUpon>AdminFormAce3.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminMessagesForm.cs">
       <SubType>Form</SubType>
@@ -95,44 +95,44 @@
     <Compile Include="AdminMessagesForm.Designer.cs">
       <DependentUpon>AdminMessagesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminPersonel.cs">
+    <Compile Include="AdminPersonelAce.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminPersonel.Designer.cs">
-      <DependentUpon>AdminPersonel.cs</DependentUpon>
+    <Compile Include="AdminPersonelAce.Designer.cs">
+      <DependentUpon>AdminPersonelAce.cs</DependentUpon>
     </Compile>
     <Compile Include="AppSession.cs" />
-    <Compile Include="CampaignSQLAce.cs" />
-    <Compile Include="CardForm.cs">
+    <Compile Include="User\User_SQL\CampaignSQLAce.cs" />
+    <Compile Include="User\User_CardForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CardForm.Designer.cs">
-      <DependentUpon>CardForm.cs</DependentUpon>
+    <Compile Include="User\User_CardForm.Designer.cs">
+      <DependentUpon>User_CardForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Connection2.cs" />
-    <Compile Include="MainMenu3Ace.cs">
+    <Compile Include="SQL\Connection2.cs" />
+    <Compile Include="User\User_MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu3Ace.Designer.cs">
-      <DependentUpon>MainMenu3Ace.cs</DependentUpon>
+    <Compile Include="User\User_MainMenu.Designer.cs">
+      <DependentUpon>User_MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu2Capmaign.cs">
+    <Compile Include="User\User_Campaign.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu2Capmaign.Designer.cs">
-      <DependentUpon>MainMenu2Capmaign.cs</DependentUpon>
+    <Compile Include="User\User_Campaign.Designer.cs">
+      <DependentUpon>User_Campaign.cs</DependentUpon>
     </Compile>
-    <Compile Include="Menu3Ace.cs">
+    <Compile Include="User\User_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu3Ace.Designer.cs">
-      <DependentUpon>Menu3Ace.cs</DependentUpon>
+    <Compile Include="User\User_Menu.Designer.cs">
+      <DependentUpon>User_Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuAce2.cs">
+    <Compile Include="User\User_MenuHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuAce2.Designer.cs">
-      <DependentUpon>MenuAce2.cs</DependentUpon>
+    <Compile Include="User\User_MenuHome.Designer.cs">
+      <DependentUpon>User_MenuHome.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuAdminAce.cs">
       <SubType>Form</SubType>
@@ -140,11 +140,11 @@
     <Compile Include="MenuAdminAce.Designer.cs">
       <DependentUpon>MenuAdminAce.cs</DependentUpon>
     </Compile>
-    <Compile Include="MyAccount.cs">
+    <Compile Include="User\User_MyAccount.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MyAccount.Designer.cs">
-      <DependentUpon>MyAccount.cs</DependentUpon>
+    <Compile Include="User\User_MyAccount.Designer.cs">
+      <DependentUpon>User_MyAccount.cs</DependentUpon>
     </Compile>
     <Compile Include="Notification.cs" />
     <Compile Include="OrderDetailsForm.cs">
@@ -171,13 +171,13 @@
     <Compile Include="PersonelForm.Designer.cs">
       <DependentUpon>PersonelForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ReservationForm.cs">
+    <Compile Include="User\User_ReservationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ReservationForm.Designer.cs">
-      <DependentUpon>ReservationForm.cs</DependentUpon>
+    <Compile Include="User\User_ReservationForm.Designer.cs">
+      <DependentUpon>User_ReservationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="sqlMethods4Ace2.cs" />
+    <Compile Include="SQL\sqlMethods4Ace2.cs" />
     <Compile Include="StaffForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,11 +192,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SignUpScreenAce.cs">
+    <Compile Include="SignUpScreenAce2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUpScreenAce.Designer.cs">
-      <DependentUpon>SignUpScreenAce.cs</DependentUpon>
+    <Compile Include="SignUpScreenAce2.Designer.cs">
+      <DependentUpon>SignUpScreenAce2.cs</DependentUpon>
     </Compile>
     <Compile Include="StatisticsUserControl.cs">
       <SubType>UserControl</SubType>
@@ -225,41 +225,41 @@
     <EmbeddedResource Include="AboutUserControl.resx">
       <DependentUpon>AboutUserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminCampaignAce3.resx">
-      <DependentUpon>AdminCampaignAce3.cs</DependentUpon>
+    <EmbeddedResource Include="AdminCampaignAce4.resx">
+      <DependentUpon>AdminCampaignAce4.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminCampaignEditAce2.resx">
-      <DependentUpon>AdminCampaignEditAce2.cs</DependentUpon>
+    <EmbeddedResource Include="AdminCampaignEditAce3.resx">
+      <DependentUpon>AdminCampaignEditAce3.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminFormAce2.resx">
-      <DependentUpon>AdminFormAce2.cs</DependentUpon>
+    <EmbeddedResource Include="AdminFormAce3.resx">
+      <DependentUpon>AdminFormAce3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminMessagesForm.resx">
       <DependentUpon>AdminMessagesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminPersonel.resx">
-      <DependentUpon>AdminPersonel.cs</DependentUpon>
+    <EmbeddedResource Include="AdminPersonelAce.resx">
+      <DependentUpon>AdminPersonelAce.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CardForm.resx">
-      <DependentUpon>CardForm.cs</DependentUpon>
+    <EmbeddedResource Include="User\User_CardForm.resx">
+      <DependentUpon>User_CardForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu3Ace.resx">
-      <DependentUpon>MainMenu3Ace.cs</DependentUpon>
+    <EmbeddedResource Include="User\User_MainMenu.resx">
+      <DependentUpon>User_MainMenu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu2Capmaign.resx">
-      <DependentUpon>MainMenu2Capmaign.cs</DependentUpon>
+    <EmbeddedResource Include="User\User_Campaign.resx">
+      <DependentUpon>User_Campaign.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu3Ace.resx">
-      <DependentUpon>Menu3Ace.cs</DependentUpon>
+    <EmbeddedResource Include="User\User_Menu.resx">
+      <DependentUpon>User_Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuAce2.resx">
-      <DependentUpon>MenuAce2.cs</DependentUpon>
+    <EmbeddedResource Include="User\User_MenuHome.resx">
+      <DependentUpon>User_MenuHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuAdminAce.resx">
       <DependentUpon>MenuAdminAce.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MyAccount.resx">
-      <DependentUpon>MyAccount.cs</DependentUpon>
+    <EmbeddedResource Include="User\User_MyAccount.resx">
+      <DependentUpon>User_MyAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrdersForm.resx">
       <DependentUpon>OrdersForm.cs</DependentUpon>
@@ -267,8 +267,8 @@
     <EmbeddedResource Include="PersonelForm.resx">
       <DependentUpon>PersonelForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ReservationForm.resx">
-      <DependentUpon>ReservationForm.cs</DependentUpon>
+    <EmbeddedResource Include="User\User_ReservationForm.resx">
+      <DependentUpon>User_ReservationForm.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="StaffForm.resx">
@@ -287,8 +287,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SignUpScreenAce.resx">
-      <DependentUpon>SignUpScreenAce.cs</DependentUpon>
+    <EmbeddedResource Include="SignUpScreenAce2.resx">
+      <DependentUpon>SignUpScreenAce2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StatisticsUserControl.resx">
       <DependentUpon>StatisticsUserControl.cs</DependentUpon>

@@ -165,24 +165,14 @@ namespace RestaurantOtomasyonuLive
 
         private void btn_Yardım_Click(object sender, EventArgs e)
         {
-            pnl_UserMessage.BringToFront();
-            pnl_UserMessage.Visible = true;
-            pnl_UserMessage.Enabled = true;
-
-            PanelMenu.SendToBack();
-            PanelMenu.Visible = false;
-            PanelMenu.Enabled = false;
+            UserMessageForm userMessageForm = new UserMessageForm();
+            userMessageForm.Show();
+            this.Hide();
         }
 
         private void btn_SendMessage_Click(object sender, EventArgs e)
         {
-            string mail = txt_Mail.Text;
-            string subject = txt_Topic.Text;
-            string message = rtxt_Message.Text;
 
-            bool sent = sqlMethods4Ace2.SendMessage(mail, subject, message);
-            if (sent)
-                MessageBox.Show("Mesajınız gönderildi.");
         }
 
         private void btn_Hakkımızda_Click(object sender, EventArgs e)
@@ -211,6 +201,11 @@ namespace RestaurantOtomasyonuLive
             LoadFormIntoPanel(new OrdersForm());
         }
 
-
+        private void pBox_CartLogo_Click(object sender, EventArgs e)
+        {
+            CardForm cardForm = new CardForm();
+            cardForm.Show();
+            this.Hide();
+        }
     }
 }

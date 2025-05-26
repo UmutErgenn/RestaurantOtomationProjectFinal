@@ -44,13 +44,13 @@ namespace RestaurantOtomasyonuLive
                 string role = KullaniciBilgileri.KullaniciData.Role;
                 if (role.Equals("admin"))
                 {
-                    AdminFormAce2 adminForm = new AdminFormAce2();
+                    AdminFormAce3 adminForm = new AdminFormAce3();
                     adminForm.Show();
                     this.Hide();
                 }
                 else if (role.Equals("user"))
                 {
-                    MainMenu3Ace mainMenu2 = new MainMenu3Ace();
+                    User_MainMenu mainMenu2 = new User_MainMenu();
                     mainMenu2.Show();
                     this.Hide();
                 }
@@ -82,7 +82,7 @@ namespace RestaurantOtomasyonuLive
 
         private void btn_signUp_Click(object sender, EventArgs e)
         {
-            SignUpScreenAce signUpScreen = new SignUpScreenAce();
+            SignUpScreenAce2 signUpScreen = new SignUpScreenAce2();
             signUpScreen.Show();
             this.Hide();
         }

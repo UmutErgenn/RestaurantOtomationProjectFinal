@@ -32,14 +32,14 @@ namespace RestaurantOtomasyonuLive
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            CardForm cardForm = new CardForm();
+            User_CardForm cardForm = new User_CardForm();
             cardForm.Show();
             this.Hide();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            MyAccount myAccount = new MyAccount();
+            User_MyAccount myAccount = new User_MyAccount();
             myAccount.Show();
             this.Hide();
         }
@@ -51,7 +51,7 @@ namespace RestaurantOtomasyonuLive
 
         private void btn_Ana_Menü_Click(object sender, EventArgs e)
         {
-            MainMenu3Ace mainMenu = new MainMenu3Ace();
+            User_MainMenu mainMenu = new User_MainMenu();
             mainMenu.Show();
             this.Hide();
         }

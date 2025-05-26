@@ -40,13 +40,15 @@
             this.pBox_restaurantLogo = new System.Windows.Forms.PictureBox();
             this.lbl_restaurantNameText = new System.Windows.Forms.Label();
             this.PanelMenu = new System.Windows.Forms.Panel();
-            this.txt_table_1_status = new System.Windows.Forms.TextBox();
             this.pnl_RezervasyonOnay = new System.Windows.Forms.Panel();
+            this.cmbStartHour = new System.Windows.Forms.ComboBox();
+            this.cmbEndHour = new System.Windows.Forms.ComboBox();
             this.btn_close_reserv_info = new System.Windows.Forms.Button();
             this.txt_mail_info = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btn_add_reservation = new System.Windows.Forms.Button();
             this.dateTimePicker_info = new System.Windows.Forms.DateTimePicker();
+            this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -150,6 +152,7 @@
             this.btn_Yardım.TabIndex = 17;
             this.btn_Yardım.Text = "Yardım";
             this.btn_Yardım.UseVisualStyleBackColor = false;
+            this.btn_Yardım.Click += new System.EventHandler(this.btn_Yardım_Click);
             // 
             // btn_Rezervasyon
             // 
@@ -180,6 +183,7 @@
             this.btn_Siparişlerim.TabIndex = 15;
             this.btn_Siparişlerim.Text = "Siparişlerim";
             this.btn_Siparişlerim.UseVisualStyleBackColor = false;
+            this.btn_Siparişlerim.Click += new System.EventHandler(this.btn_Siparişlerim_Click);
             // 
             // btn_Menü
             // 
@@ -195,6 +199,7 @@
             this.btn_Menü.TabIndex = 14;
             this.btn_Menü.Text = "Menü";
             this.btn_Menü.UseVisualStyleBackColor = false;
+            this.btn_Menü.Click += new System.EventHandler(this.btn_Menü_Click);
             // 
             // btn_Ana_Menü
             // 
@@ -210,6 +215,7 @@
             this.btn_Ana_Menü.TabIndex = 13;
             this.btn_Ana_Menü.Text = "Ana Menü";
             this.btn_Ana_Menü.UseVisualStyleBackColor = false;
+            this.btn_Ana_Menü.Click += new System.EventHandler(this.btn_Ana_Menü_Click);
             // 
             // pBox_restaurantLogo
             // 
@@ -243,7 +249,6 @@
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.PanelMenu.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PanelMenu.BackgroundImage")));
             this.PanelMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.PanelMenu.Controls.Add(this.txt_table_1_status);
             this.PanelMenu.Controls.Add(this.pnl_RezervasyonOnay);
             this.PanelMenu.Controls.Add(this.Table_9_Brown);
             this.PanelMenu.Controls.Add(this.Table_6_Brown);
@@ -267,20 +272,16 @@
             this.PanelMenu.Size = new System.Drawing.Size(694, 531);
             this.PanelMenu.TabIndex = 17;
             // 
-            // txt_table_1_status
-            // 
-            this.txt_table_1_status.Location = new System.Drawing.Point(160, 171);
-            this.txt_table_1_status.Name = "txt_table_1_status";
-            this.txt_table_1_status.Size = new System.Drawing.Size(52, 20);
-            this.txt_table_1_status.TabIndex = 30;
-            // 
             // pnl_RezervasyonOnay
             // 
+            this.pnl_RezervasyonOnay.Controls.Add(this.cmbStartHour);
+            this.pnl_RezervasyonOnay.Controls.Add(this.cmbEndHour);
             this.pnl_RezervasyonOnay.Controls.Add(this.btn_close_reserv_info);
             this.pnl_RezervasyonOnay.Controls.Add(this.txt_mail_info);
             this.pnl_RezervasyonOnay.Controls.Add(this.label1);
             this.pnl_RezervasyonOnay.Controls.Add(this.btn_add_reservation);
             this.pnl_RezervasyonOnay.Controls.Add(this.dateTimePicker_info);
+            this.pnl_RezervasyonOnay.Controls.Add(this.label2);
             this.pnl_RezervasyonOnay.Controls.Add(this.label5);
             this.pnl_RezervasyonOnay.Controls.Add(this.label4);
             this.pnl_RezervasyonOnay.Controls.Add(this.label3);
@@ -289,11 +290,30 @@
             this.pnl_RezervasyonOnay.Controls.Add(this.txt_name_info);
             this.pnl_RezervasyonOnay.Controls.Add(this.lbl_name);
             this.pnl_RezervasyonOnay.Enabled = false;
-            this.pnl_RezervasyonOnay.Location = new System.Drawing.Point(231, 172);
+            this.pnl_RezervasyonOnay.Location = new System.Drawing.Point(185, 162);
             this.pnl_RezervasyonOnay.Name = "pnl_RezervasyonOnay";
             this.pnl_RezervasyonOnay.Size = new System.Drawing.Size(335, 262);
             this.pnl_RezervasyonOnay.TabIndex = 29;
             this.pnl_RezervasyonOnay.Visible = false;
+            // 
+            // cmbStartHour
+            // 
+            this.cmbStartHour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbStartHour.FormattingEnabled = true;
+            this.cmbStartHour.Location = new System.Drawing.Point(106, 171);
+            this.cmbStartHour.Name = "cmbStartHour";
+            this.cmbStartHour.Size = new System.Drawing.Size(79, 21);
+            this.cmbStartHour.TabIndex = 10;
+            this.cmbStartHour.SelectedIndexChanged += new System.EventHandler(this.cmbStartHour_SelectedIndexChanged);
+            // 
+            // cmbEndHour
+            // 
+            this.cmbEndHour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbEndHour.FormattingEnabled = true;
+            this.cmbEndHour.Location = new System.Drawing.Point(227, 170);
+            this.cmbEndHour.Name = "cmbEndHour";
+            this.cmbEndHour.Size = new System.Drawing.Size(79, 21);
+            this.cmbEndHour.TabIndex = 11;
             // 
             // btn_close_reserv_info
             // 
@@ -328,7 +348,7 @@
             // 
             // btn_add_reservation
             // 
-            this.btn_add_reservation.Location = new System.Drawing.Point(231, 196);
+            this.btn_add_reservation.Location = new System.Drawing.Point(231, 217);
             this.btn_add_reservation.Name = "btn_add_reservation";
             this.btn_add_reservation.Size = new System.Drawing.Size(75, 23);
             this.btn_add_reservation.TabIndex = 4;
@@ -342,6 +362,16 @@
             this.dateTimePicker_info.Name = "dateTimePicker_info";
             this.dateTimePicker_info.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker_info.TabIndex = 3;
+            this.dateTimePicker_info.ValueChanged += new System.EventHandler(this.dateTimePicker_info_ValueChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(33, 178);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(32, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Saat:";
             // 
             // label5
             // 
@@ -376,6 +406,7 @@
             this.txt_table_No.Name = "txt_table_No";
             this.txt_table_No.Size = new System.Drawing.Size(200, 20);
             this.txt_table_No.TabIndex = 1;
+            this.txt_table_No.TextChanged += new System.EventHandler(this.txt_table_No_TextChanged);
             // 
             // txt_surname_info
             // 
@@ -600,6 +631,7 @@
             this.Name = "ReservationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReservationForm";
+            this.Load += new System.EventHandler(this.ReservationForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -664,6 +696,8 @@
         private System.Windows.Forms.TextBox txt_mail_info;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_close_reserv_info;
-        private System.Windows.Forms.TextBox txt_table_1_status;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbStartHour;
+        private System.Windows.Forms.ComboBox cmbEndHour;
     }
 }

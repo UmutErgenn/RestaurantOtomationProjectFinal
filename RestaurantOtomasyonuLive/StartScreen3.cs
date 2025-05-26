@@ -54,6 +54,23 @@ namespace RestaurantOtomasyonuLive
                     mainMenu2.Show();
                     this.Hide();
                 }
+                else if (role.Equals("personel"))
+                {
+                    // Pozisyonu da gönder
+                    string pozisyon = KullaniciBilgileri.KullaniciData.Role; // Eğer pozisyon ayrı bir alan ise, ona göre değiştirin
+                    string position = ""; // Pozisyonu çekmek için ek alan
+                    // Pozisyonu veritabanından çekmek için:
+                    using (SqlCommand cmd = new SqlCommand("SELECT e.e_position FROM person p JOIN employee e ON p.person_id = e.p_id_FK WHERE p.mail = @mail", new Connection2().Connect))
+                    {
+                        cmd.Parameters.AddWithValue("@mail", KullaniciBilgileri.KullaniciData.Mail);
+                        var pos = cmd.ExecuteScalar();
+                        if (pos != null)
+                            position = pos.ToString();
+                    }
+                    StaffForm staffForm = new StaffForm(position); // Pozisyonu parametre olarak gönder
+                    staffForm.Show();
+                    this.Hide();
+                }
                 //currentCartId = sqlMethods4.CreateCart(StartScreen3.KullaniciBilgileri.KullaniciData.Mail);
                 AppSession.CartId = sqlMethods4Ace2.GetOrCreateCart(KullaniciBilgileri.KullaniciData.Mail);
             }

@@ -165,6 +165,12 @@
     <Compile Include="OrdersUserControl.Designer.cs">
       <DependentUpon>OrdersUserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="PersonelForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelForm.Designer.cs">
+      <DependentUpon>PersonelForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ReservationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,12 @@
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="sqlMethods4Ace2.cs" />
+    <Compile Include="StaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffForm.Designer.cs">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="StartScreen3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,6 +209,12 @@
     </Compile>
     <Compile Include="StockUserControl.Designer.cs">
       <DependentUpon>StockUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMessageForm.Designer.cs">
+      <DependentUpon>UserMessageForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Users.cs">
       <SubType>Form</SubType>
@@ -246,8 +264,16 @@
     <EmbeddedResource Include="OrdersForm.resx">
       <DependentUpon>OrdersForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PersonelForm.resx">
+      <DependentUpon>PersonelForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ReservationForm.resx">
       <DependentUpon>ReservationForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffForm.resx">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="StartScreen3.resx">
       <DependentUpon>StartScreen3.cs</DependentUpon>
@@ -269,6 +295,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StockUserControl.resx">
       <DependentUpon>StockUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMessageForm.resx">
+      <DependentUpon>UserMessageForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users.resx">
       <DependentUpon>Users.cs</DependentUpon>

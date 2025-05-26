@@ -43,7 +43,7 @@ namespace RestaurantOtomasyonuLive
             }
         }
 
-        public static int addReservation(string mail, int tableNo, DateTime dateTime)
+        public static int addReservation(string mail, int tableNo, DateTime startTime, DateTime endTime)
         {
             int newResId = -1;
             try
@@ -53,7 +53,8 @@ namespace RestaurantOtomasyonuLive
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("mail", mail);
                 cmd.Parameters.AddWithValue("table_id", tableNo);
-                cmd.Parameters.AddWithValue("reservation_date", dateTime);
+                cmd.Parameters.AddWithValue("reservation_start", startTime);
+                cmd.Parameters.AddWithValue("reservation_end", endTime);
 
                 var outParam = new SqlParameter("@newResId", SqlDbType.Int)
                 {
@@ -69,6 +70,28 @@ namespace RestaurantOtomasyonuLive
             }
 
             return newResId;
+        }
+
+        public static List<(TimeSpan Start, TimeSpan End)> GetReservedTimeSlots(int tableNo, DateTime date)
+        {
+            var result = new List<(TimeSpan, TimeSpan)>();
+            using (var conn = new SqlConnection(Connection2.connString))
+            using (var cmd = new SqlCommand("SELECT reservation_start, reservation_end FROM Reservation WHERE table_id=@tableNo AND CAST(reservation_start AS DATE)=@date", conn))
+            {
+                cmd.Parameters.AddWithValue("@tableNo", tableNo);
+                cmd.Parameters.AddWithValue("@date", date.Date);
+                conn.Open();
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var start = ((DateTime)reader["reservation_start"]).TimeOfDay;
+                        var end = ((DateTime)reader["reservation_end"]).TimeOfDay;
+                        result.Add((start, end));
+                    }
+                }
+            }
+            return result;
         }
 
         public static bool UpdateUserInfo(string mail, string ad, string soyad, string telefon, string sifre)
@@ -738,5 +761,67 @@ namespace RestaurantOtomasyonuLive
             }
         }
 
+        public static DataTable GetWaiterOrders()
+        {
+            using (var conn = new SqlConnection(Connection2.connString))
+            using (var cmd = new SqlCommand("sp_GetWaiterOrders", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                var dt = new DataTable();
+                conn.Open();
+                using (var da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+                return dt;
+            }
+        }
+
+        public static DataTable GetKitchenOrders()
+        {
+            using (var conn = new SqlConnection(Connection2.connString))
+            using (var cmd = new SqlCommand("sp_GetKitchenOrders", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                var dt = new DataTable();
+                conn.Open();
+                using (var da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+                return dt;
+            }
+        }
+
+        public static string GetOrderDetail(int orderId)
+        {
+            using (var conn = new SqlConnection(Connection2.connString))
+            using (var cmd = new SqlCommand("sp_GetOrderDetail", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@orderId", orderId);
+                conn.Open();
+                using (var reader = cmd.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return $"Sipariş No: {reader["order_id"]}\nTarih: {reader["order_date"]}\nTutar: {reader["total_amount"]}\nMüşteri: {reader["p_name"]} {reader["p_surname"]}\nTelefon: {reader["phone_number"]}\nMail: {reader["mail"]}";
+                    }
+                }
+            }
+            return "Detay bulunamadı.";
+        }
+
+        public static void UpdateOrderStatus(int orderId, string newStatus)
+        {
+            using (var conn = new SqlConnection(Connection2.connString))
+            using (var cmd = new SqlCommand("UPDATE Orders SET order_status = @status WHERE order_id = @orderId", conn))
+            {
+                cmd.Parameters.AddWithValue("@orderId", orderId);
+                cmd.Parameters.AddWithValue("@status", newStatus);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
     }
 }

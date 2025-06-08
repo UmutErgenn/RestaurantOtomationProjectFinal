@@ -19,6 +19,7 @@ namespace RestaurantOtomasyonuLive
         public User_ReservationForm()
         {
             InitializeComponent();
+            btn_add_reservation.Click += btn_add_reservation_Click;
         }
 
         private void ReservationForm_Load(object sender, EventArgs e)
@@ -139,12 +140,11 @@ namespace RestaurantOtomasyonuLive
 
         private void btn_add_reservation_Click(object sender, EventArgs e)
         {
-            // Boş bırakılma kontrolü
+            // 1) Alan boş bırakılma kontrolü
             if (string.IsNullOrWhiteSpace(txt_name_info.Text) ||
                 string.IsNullOrWhiteSpace(txt_surname_info.Text) ||
                 string.IsNullOrWhiteSpace(txt_mail_info.Text) ||
                 string.IsNullOrWhiteSpace(txt_table_No.Text) ||
-                string.IsNullOrWhiteSpace(Convert.ToString(dateTimePicker_info.Value)) ||
                 cmbStartHour.SelectedIndex == -1 ||
                 cmbEndHour.SelectedIndex == -1)
             {
@@ -152,50 +152,58 @@ namespace RestaurantOtomasyonuLive
                 return;
             }
 
+            // 2) Tarih ve saatleri birleştir
+            var date = dateTimePicker_info.Value.Date;
             int startHour = int.Parse(cmbStartHour.SelectedItem.ToString().Substring(0, 2));
             int endHour = int.Parse(cmbEndHour.SelectedItem.ToString().Substring(0, 2));
-            DateTime selectedDate = dateTimePicker_info.Value.Date;
-            DateTime startDateTime = selectedDate.AddHours(startHour);
-            DateTime endDateTime = selectedDate.AddHours(endHour);
+            var startDate = date.AddHours(startHour);
+            var endDate = date.AddHours(endHour);
 
-            DialogResult onay = MessageBox.Show("Rezervasyon Sepete Eklensin Mi?", "Rezervasyon Ekleme",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            // 3) Kullanıcı onayı
+            var onay = MessageBox.Show(
+                "Rezervasyon Sepete Eklensin Mi?",
+                "Rezervasyon Ekleme",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
 
-            if (onay == DialogResult.Yes)
-            {
-                try
-                {
-                    int selectedReservationId = sqlMethods4Ace2.addReservation(
-                        txt_mail_info.Text,
-                        Convert.ToInt32(txt_table_No.Text),
-                        startDateTime,
-                        endDateTime
-                    );
-
-                    bool ok = sqlMethods4Ace2.AddReservationToCart(AppSession.CartId, selectedReservationId);
-
-                    if (selectedReservationId > 0)
-                    {
-                        MessageBox.Show("Rezervasyon sepete eklendi. ID: " + selectedReservationId);
-                        pnl_RezervasyonOnay.Visible = false;
-                        pnl_RezervasyonOnay.Enabled = false;
-                        pnl_RezervasyonOnay.SendToBack();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Rezervasyon eklenemedi.");
-                    }
-                }
-                catch (Exception hata)
-                {
-                    MessageBox.Show("Hata: " + hata.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
+            if (onay != DialogResult.Yes)
             {
                 notification.showNotification(this, "Rezervasyon iptal edildi", false);
+                return;
+            }
+
+            try
+            {
+                // 4) Rezervasyonu ekle (tek DateTime parametresi)
+                int newResId = sqlMethods4Ace2.AddReservation(
+                    txt_mail_info.Text,
+                    int.Parse(txt_table_No.Text),
+                    startDate
+                );
+
+                // 5) Sepete ekle (opsiyonel)
+                bool ok = sqlMethods4Ace2.AddReservationToCart(AppSession.CartId, newResId);
+
+                // 6) Geri bildirim
+                if (newResId > 0)
+                {
+                    MessageBox.Show($"Rezervasyon sepete eklendi. ID: {newResId}");
+                    pnl_RezervasyonOnay.Visible = false;
+                    pnl_RezervasyonOnay.Enabled = false;
+                    pnl_RezervasyonOnay.SendToBack();
+                }
+                else
+                {
+                    MessageBox.Show("Rezervasyon eklenemedi.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Hata: {ex.Message}", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void btn_mainExit_Click(object sender, EventArgs e) { Application.Exit(); }
         private void Table_1_Brown_Click(object sender, EventArgs e) { panelSet("1"); }
@@ -267,6 +275,11 @@ namespace RestaurantOtomasyonuLive
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PanelMenu_Paint(object sender, PaintEventArgs e)
         {
 
         }

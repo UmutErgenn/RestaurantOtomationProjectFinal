@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace RestaurantOtomasyonuLive
@@ -43,8 +44,9 @@ namespace RestaurantOtomasyonuLive
             pnlContainer.Controls.Add(txtUnit);
             pnlContainer.Controls.Add(txtCategory);
 
-            ArrangePanel(); 
-            LoadStock();    
+            ArrangePanel();
+            this.Load += async (s, e) => await LoadStockAsync();
+
         }
 
         private void CenterPanel()
@@ -109,6 +111,42 @@ namespace RestaurantOtomasyonuLive
             dgvStock.Columns["category"].HeaderText = "Kategori";
             SetDgvStockProperties();
         }
+
+        /// <summary>
+        /// UI thread’i bloke etmeden stok verisini arka planda çeker.
+        /// </summary>
+        private async Task LoadStockAsync()
+        {
+            // 1) Thread havuzunda veri çekme
+            var table = await Task.Run(() =>
+            {
+                var dt = new DataTable();
+                using (var conn = new SqlConnection(Connection2.connString))
+                using (var da = new SqlDataAdapter(
+                       "SELECT stock_id, product_name, quantity, unit, category FROM Stock",
+                       conn))
+                {
+                    conn.Open();
+                    da.Fill(dt);
+                }
+                return dt;
+            });
+
+            // 2) UI’da DataGridView’e ata
+            dgvStock.DataSource = table;
+            dgvStock.Columns["stock_id"].Visible = false;
+            dgvStock.Columns["product_name"].HeaderText = "Ürün";
+            dgvStock.Columns["quantity"].HeaderText = "Adet";
+            dgvStock.Columns["unit"].HeaderText = "Birim";
+            dgvStock.Columns["category"].HeaderText = "Kategori";
+            SetDgvStockProperties();
+        }
+
+        private void dgvStock_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
         private void SetDgvStockProperties()
         {
             dgvStock.AllowUserToResizeColumns = false;

@@ -48,11 +48,10 @@
             this.lbl_name = new System.Windows.Forms.Label();
             this.Table_9_Brown = new System.Windows.Forms.PictureBox();
             this.Table_6_Brown = new System.Windows.Forms.PictureBox();
+            this.Table_5_Brown = new System.Windows.Forms.PictureBox();
             this.Table_3_Brown = new System.Windows.Forms.PictureBox();
             this.Table_8_Brown = new System.Windows.Forms.PictureBox();
-            this.Table_5_Brown = new System.Windows.Forms.PictureBox();
             this.Table_7_Brown = new System.Windows.Forms.PictureBox();
-            this.Table_2_Brown = new System.Windows.Forms.PictureBox();
             this.Table_4_Brown = new System.Windows.Forms.PictureBox();
             this.Table_1_Brown = new System.Windows.Forms.PictureBox();
             this.btn_mainExit = new System.Windows.Forms.Button();
@@ -61,19 +60,20 @@
             this.pBox_CartLogo = new System.Windows.Forms.PictureBox();
             this.pBox_AccountLogo = new System.Windows.Forms.PictureBox();
             this.flowLP_campaigns = new System.Windows.Forms.FlowLayoutPanel();
+            this.Table_2_Brown = new System.Windows.Forms.PictureBox();
             this.PanelMenu.SuspendLayout();
             this.pnl_RezervasyonOnay.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Table_9_Brown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_6_Brown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table_5_Brown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_3_Brown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_8_Brown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Table_5_Brown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_7_Brown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Table_2_Brown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_4_Brown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_1_Brown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_CartLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_AccountLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table_2_Brown)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelMenu
@@ -103,6 +103,7 @@
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(925, 654);
             this.PanelMenu.TabIndex = 17;
+            this.PanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenu_Paint);
             // 
             // pnl_RezervasyonOnay
             // 
@@ -124,7 +125,7 @@
             this.pnl_RezervasyonOnay.Controls.Add(this.lbl_name);
             this.pnl_RezervasyonOnay.Enabled = false;
             this.pnl_RezervasyonOnay.Location = new System.Drawing.Point(256, 183);
-            this.pnl_RezervasyonOnay.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnl_RezervasyonOnay.Margin = new System.Windows.Forms.Padding(4);
             this.pnl_RezervasyonOnay.Name = "pnl_RezervasyonOnay";
             this.pnl_RezervasyonOnay.Size = new System.Drawing.Size(447, 322);
             this.pnl_RezervasyonOnay.TabIndex = 29;
@@ -135,7 +136,7 @@
             this.cmbStartHour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbStartHour.FormattingEnabled = true;
             this.cmbStartHour.Location = new System.Drawing.Point(141, 205);
-            this.cmbStartHour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbStartHour.Margin = new System.Windows.Forms.Padding(4);
             this.cmbStartHour.Name = "cmbStartHour";
             this.cmbStartHour.Size = new System.Drawing.Size(104, 24);
             this.cmbStartHour.TabIndex = 10;
@@ -146,7 +147,7 @@
             this.cmbEndHour.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEndHour.FormattingEnabled = true;
             this.cmbEndHour.Location = new System.Drawing.Point(301, 205);
-            this.cmbEndHour.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbEndHour.Margin = new System.Windows.Forms.Padding(4);
             this.cmbEndHour.Name = "cmbEndHour";
             this.cmbEndHour.Size = new System.Drawing.Size(104, 24);
             this.cmbEndHour.TabIndex = 11;
@@ -159,7 +160,7 @@
             this.btn_close_reserv_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_close_reserv_info.ForeColor = System.Drawing.Color.White;
             this.btn_close_reserv_info.Location = new System.Drawing.Point(413, 0);
-            this.btn_close_reserv_info.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_close_reserv_info.Margin = new System.Windows.Forms.Padding(4);
             this.btn_close_reserv_info.Name = "btn_close_reserv_info";
             this.btn_close_reserv_info.Size = new System.Drawing.Size(33, 33);
             this.btn_close_reserv_info.TabIndex = 28;
@@ -170,7 +171,7 @@
             // txt_mail_info
             // 
             this.txt_mail_info.Location = new System.Drawing.Point(141, 111);
-            this.txt_mail_info.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_mail_info.Margin = new System.Windows.Forms.Padding(4);
             this.txt_mail_info.Name = "txt_mail_info";
             this.txt_mail_info.Size = new System.Drawing.Size(265, 22);
             this.txt_mail_info.TabIndex = 6;
@@ -192,7 +193,7 @@
             // 
             this.btn_add_reservation.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_add_reservation.Location = new System.Drawing.Point(301, 267);
-            this.btn_add_reservation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_add_reservation.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add_reservation.Name = "btn_add_reservation";
             this.btn_add_reservation.Size = new System.Drawing.Size(107, 28);
             this.btn_add_reservation.TabIndex = 4;
@@ -204,7 +205,7 @@
             // 
             this.dateTimePicker_info.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dateTimePicker_info.Location = new System.Drawing.Point(141, 173);
-            this.dateTimePicker_info.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dateTimePicker_info.Margin = new System.Windows.Forms.Padding(4);
             this.dateTimePicker_info.Name = "dateTimePicker_info";
             this.dateTimePicker_info.Size = new System.Drawing.Size(265, 24);
             this.dateTimePicker_info.TabIndex = 3;
@@ -266,7 +267,7 @@
             // txt_table_No
             // 
             this.txt_table_No.Location = new System.Drawing.Point(141, 143);
-            this.txt_table_No.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_table_No.Margin = new System.Windows.Forms.Padding(4);
             this.txt_table_No.Name = "txt_table_No";
             this.txt_table_No.Size = new System.Drawing.Size(265, 22);
             this.txt_table_No.TabIndex = 1;
@@ -275,7 +276,7 @@
             // txt_surname_info
             // 
             this.txt_surname_info.Location = new System.Drawing.Point(141, 79);
-            this.txt_surname_info.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_surname_info.Margin = new System.Windows.Forms.Padding(4);
             this.txt_surname_info.Name = "txt_surname_info";
             this.txt_surname_info.Size = new System.Drawing.Size(265, 22);
             this.txt_surname_info.TabIndex = 1;
@@ -283,7 +284,7 @@
             // txt_name_info
             // 
             this.txt_name_info.Location = new System.Drawing.Point(141, 47);
-            this.txt_name_info.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_name_info.Margin = new System.Windows.Forms.Padding(4);
             this.txt_name_info.Name = "txt_name_info";
             this.txt_name_info.Size = new System.Drawing.Size(265, 22);
             this.txt_name_info.TabIndex = 1;
@@ -306,7 +307,7 @@
             this.Table_9_Brown.BackColor = System.Drawing.Color.Transparent;
             this.Table_9_Brown.Image = ((System.Drawing.Image)(resources.GetObject("Table_9_Brown.Image")));
             this.Table_9_Brown.Location = new System.Drawing.Point(641, 471);
-            this.Table_9_Brown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Table_9_Brown.Margin = new System.Windows.Forms.Padding(4);
             this.Table_9_Brown.Name = "Table_9_Brown";
             this.Table_9_Brown.Size = new System.Drawing.Size(185, 165);
             this.Table_9_Brown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -319,7 +320,7 @@
             this.Table_6_Brown.BackColor = System.Drawing.Color.Transparent;
             this.Table_6_Brown.Image = ((System.Drawing.Image)(resources.GetObject("Table_6_Brown.Image")));
             this.Table_6_Brown.Location = new System.Drawing.Point(641, 288);
-            this.Table_6_Brown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Table_6_Brown.Margin = new System.Windows.Forms.Padding(4);
             this.Table_6_Brown.Name = "Table_6_Brown";
             this.Table_6_Brown.Size = new System.Drawing.Size(185, 165);
             this.Table_6_Brown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -327,12 +328,25 @@
             this.Table_6_Brown.TabStop = false;
             this.Table_6_Brown.Click += new System.EventHandler(this.Table_6_Brown_Click);
             // 
+            // Table_5_Brown
+            // 
+            this.Table_5_Brown.BackColor = System.Drawing.Color.Transparent;
+            this.Table_5_Brown.Image = ((System.Drawing.Image)(resources.GetObject("Table_5_Brown.Image")));
+            this.Table_5_Brown.Location = new System.Drawing.Point(364, 288);
+            this.Table_5_Brown.Margin = new System.Windows.Forms.Padding(4);
+            this.Table_5_Brown.Name = "Table_5_Brown";
+            this.Table_5_Brown.Size = new System.Drawing.Size(185, 165);
+            this.Table_5_Brown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Table_5_Brown.TabIndex = 28;
+            this.Table_5_Brown.TabStop = false;
+            this.Table_5_Brown.Click += new System.EventHandler(this.Table_5_Brown_Click);
+            // 
             // Table_3_Brown
             // 
             this.Table_3_Brown.BackColor = System.Drawing.Color.Transparent;
             this.Table_3_Brown.Image = ((System.Drawing.Image)(resources.GetObject("Table_3_Brown.Image")));
             this.Table_3_Brown.Location = new System.Drawing.Point(641, 105);
-            this.Table_3_Brown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Table_3_Brown.Margin = new System.Windows.Forms.Padding(4);
             this.Table_3_Brown.Name = "Table_3_Brown";
             this.Table_3_Brown.Size = new System.Drawing.Size(185, 165);
             this.Table_3_Brown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -345,7 +359,7 @@
             this.Table_8_Brown.BackColor = System.Drawing.Color.Transparent;
             this.Table_8_Brown.Image = ((System.Drawing.Image)(resources.GetObject("Table_8_Brown.Image")));
             this.Table_8_Brown.Location = new System.Drawing.Point(364, 471);
-            this.Table_8_Brown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Table_8_Brown.Margin = new System.Windows.Forms.Padding(4);
             this.Table_8_Brown.Name = "Table_8_Brown";
             this.Table_8_Brown.Size = new System.Drawing.Size(185, 165);
             this.Table_8_Brown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -353,25 +367,12 @@
             this.Table_8_Brown.TabStop = false;
             this.Table_8_Brown.Click += new System.EventHandler(this.Table_8_Brown_Click);
             // 
-            // Table_5_Brown
-            // 
-            this.Table_5_Brown.BackColor = System.Drawing.Color.Transparent;
-            this.Table_5_Brown.Image = ((System.Drawing.Image)(resources.GetObject("Table_5_Brown.Image")));
-            this.Table_5_Brown.Location = new System.Drawing.Point(364, 288);
-            this.Table_5_Brown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Table_5_Brown.Name = "Table_5_Brown";
-            this.Table_5_Brown.Size = new System.Drawing.Size(185, 165);
-            this.Table_5_Brown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Table_5_Brown.TabIndex = 28;
-            this.Table_5_Brown.TabStop = false;
-            this.Table_5_Brown.Click += new System.EventHandler(this.Table_5_Brown_Click);
-            // 
             // Table_7_Brown
             // 
             this.Table_7_Brown.BackColor = System.Drawing.Color.Transparent;
             this.Table_7_Brown.Image = ((System.Drawing.Image)(resources.GetObject("Table_7_Brown.Image")));
             this.Table_7_Brown.Location = new System.Drawing.Point(78, 471);
-            this.Table_7_Brown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Table_7_Brown.Margin = new System.Windows.Forms.Padding(4);
             this.Table_7_Brown.Name = "Table_7_Brown";
             this.Table_7_Brown.Size = new System.Drawing.Size(185, 165);
             this.Table_7_Brown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -379,25 +380,12 @@
             this.Table_7_Brown.TabStop = false;
             this.Table_7_Brown.Click += new System.EventHandler(this.Table_7_Brown_Click);
             // 
-            // Table_2_Brown
-            // 
-            this.Table_2_Brown.BackColor = System.Drawing.Color.Transparent;
-            this.Table_2_Brown.Image = ((System.Drawing.Image)(resources.GetObject("Table_2_Brown.Image")));
-            this.Table_2_Brown.Location = new System.Drawing.Point(364, 105);
-            this.Table_2_Brown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Table_2_Brown.Name = "Table_2_Brown";
-            this.Table_2_Brown.Size = new System.Drawing.Size(185, 165);
-            this.Table_2_Brown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Table_2_Brown.TabIndex = 28;
-            this.Table_2_Brown.TabStop = false;
-            this.Table_2_Brown.Click += new System.EventHandler(this.Table_2_Brown_Click);
-            // 
             // Table_4_Brown
             // 
             this.Table_4_Brown.BackColor = System.Drawing.Color.Transparent;
             this.Table_4_Brown.Image = ((System.Drawing.Image)(resources.GetObject("Table_4_Brown.Image")));
             this.Table_4_Brown.Location = new System.Drawing.Point(78, 288);
-            this.Table_4_Brown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Table_4_Brown.Margin = new System.Windows.Forms.Padding(4);
             this.Table_4_Brown.Name = "Table_4_Brown";
             this.Table_4_Brown.Size = new System.Drawing.Size(185, 165);
             this.Table_4_Brown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -410,7 +398,7 @@
             this.Table_1_Brown.BackColor = System.Drawing.Color.Transparent;
             this.Table_1_Brown.Image = ((System.Drawing.Image)(resources.GetObject("Table_1_Brown.Image")));
             this.Table_1_Brown.Location = new System.Drawing.Point(78, 105);
-            this.Table_1_Brown.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Table_1_Brown.Margin = new System.Windows.Forms.Padding(4);
             this.Table_1_Brown.Name = "Table_1_Brown";
             this.Table_1_Brown.Size = new System.Drawing.Size(185, 165);
             this.Table_1_Brown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -426,7 +414,7 @@
             this.btn_mainExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_mainExit.ForeColor = System.Drawing.Color.White;
             this.btn_mainExit.Location = new System.Drawing.Point(892, 0);
-            this.btn_mainExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_mainExit.Margin = new System.Windows.Forms.Padding(4);
             this.btn_mainExit.Name = "btn_mainExit";
             this.btn_mainExit.Size = new System.Drawing.Size(33, 33);
             this.btn_mainExit.TabIndex = 27;
@@ -500,15 +488,28 @@
             this.flowLP_campaigns.TabIndex = 13;
             this.flowLP_campaigns.WrapContents = false;
             // 
-            // ReservationForm
+            // Table_2_Brown
+            // 
+            this.Table_2_Brown.BackColor = System.Drawing.Color.Transparent;
+            this.Table_2_Brown.Image = ((System.Drawing.Image)(resources.GetObject("Table_2_Brown.Image")));
+            this.Table_2_Brown.Location = new System.Drawing.Point(364, 105);
+            this.Table_2_Brown.Margin = new System.Windows.Forms.Padding(4);
+            this.Table_2_Brown.Name = "Table_2_Brown";
+            this.Table_2_Brown.Size = new System.Drawing.Size(185, 165);
+            this.Table_2_Brown.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Table_2_Brown.TabIndex = 28;
+            this.Table_2_Brown.TabStop = false;
+            this.Table_2_Brown.Click += new System.EventHandler(this.Table_2_Brown_Click);
+            // 
+            // User_ReservationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(925, 654);
             this.Controls.Add(this.PanelMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.Name = "ReservationForm";
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Name = "User_ReservationForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ReservationForm";
             this.Load += new System.EventHandler(this.ReservationForm_Load);
@@ -518,15 +519,15 @@
             this.pnl_RezervasyonOnay.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Table_9_Brown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_6_Brown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table_5_Brown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_3_Brown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_8_Brown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Table_5_Brown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_7_Brown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Table_2_Brown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_4_Brown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Table_1_Brown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_CartLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_AccountLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Table_2_Brown)).EndInit();
             this.ResumeLayout(false);
 
         }

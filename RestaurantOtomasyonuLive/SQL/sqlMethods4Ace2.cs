@@ -43,56 +43,65 @@ namespace RestaurantOtomasyonuLive
             }
         }
 
-        public static int addReservation(string mail, int tableNo, DateTime startTime, DateTime endTime)
+        public static int AddReservation(string mail, int tableNo, DateTime reservationDate)
         {
             int newResId = -1;
-            try
+            using (var conn = new SqlConnection(Connection2.connString))
+            using (var cmd = new SqlCommand("addReservation_proc", conn))
             {
-                Connection2 connection = new Connection2();
-                SqlCommand cmd = new SqlCommand("addReservation_proc", connection.Connect);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("mail", mail);
-                cmd.Parameters.AddWithValue("table_id", tableNo);
-                cmd.Parameters.AddWithValue("reservation_start", startTime);
-                cmd.Parameters.AddWithValue("reservation_end", endTime);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@mail", mail);
+                cmd.Parameters.AddWithValue("@table_id", tableNo);
+                cmd.Parameters.AddWithValue("@reservation_date", reservationDate);
 
                 var outParam = new SqlParameter("@newResId", SqlDbType.Int)
                 {
                     Direction = ParameterDirection.Output
                 };
                 cmd.Parameters.Add(outParam);
+
+                conn.Open();
                 cmd.ExecuteNonQuery();
                 newResId = (int)outParam.Value;
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Rezervasyon eklenirken hata: " + ex.Message);
-            }
-
             return newResId;
         }
+
 
         public static List<(TimeSpan Start, TimeSpan End)> GetReservedTimeSlots(int tableNo, DateTime date)
         {
             var result = new List<(TimeSpan, TimeSpan)>();
+
+            const string sql = @"
+        SELECT reservation_date
+        FROM Reservation
+        WHERE table_id                   = @tableNo
+          AND CAST(reservation_date AS DATE) = @date
+    ";
+
             using (var conn = new SqlConnection(Connection2.connString))
-            using (var cmd = new SqlCommand("SELECT reservation_start, reservation_end FROM Reservation WHERE table_id=@tableNo AND CAST(reservation_start AS DATE)=@date", conn))
+            using (var cmd = new SqlCommand(sql, conn))
             {
                 cmd.Parameters.AddWithValue("@tableNo", tableNo);
                 cmd.Parameters.AddWithValue("@date", date.Date);
+
                 conn.Open();
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        var start = ((DateTime)reader["reservation_start"]).TimeOfDay;
-                        var end = ((DateTime)reader["reservation_end"]).TimeOfDay;
+                        var dt = (DateTime)reader["reservation_date"];
+                        var start = dt.TimeOfDay;
+                        var end = dt.AddHours(1).TimeOfDay;  // varsayılan 1 saatlik rezervasyon
                         result.Add((start, end));
                     }
                 }
             }
+
             return result;
         }
+
+
 
         public static bool UpdateUserInfo(string mail, string ad, string soyad, string telefon, string sifre)
         {
@@ -358,14 +367,23 @@ namespace RestaurantOtomasyonuLive
         {
             try
             {
+                
                 Connection2 connection = new Connection2();
-                SqlCommand cmd = new SqlCommand("cart_AddReservation", connection.Connect) { CommandType = CommandType.StoredProcedure };
-                cmd.Parameters.AddWithValue("@cartId", cartId);
-                cmd.Parameters.AddWithValue("@reservationId", reservationId);
-                cmd.ExecuteNonQuery();
+                using (var cmd = new SqlCommand("cart_AddReservation", connection.Connect)
+                {
+                    CommandType = CommandType.StoredProcedure
+                })
+                {
+                    cmd.Parameters.AddWithValue("@cartId", cartId);
+                    cmd.Parameters.AddWithValue("@reservationId", reservationId);
+                    cmd.ExecuteNonQuery();
+                }
                 return true;
             }
-            catch { return false; }
+            catch
+            {
+                return false;
+            }
         }
 
         // 3) Yemeği sepete ekle

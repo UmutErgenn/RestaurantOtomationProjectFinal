@@ -10,9 +10,8 @@ namespace RestaurantOtomasyonuLive
     internal  class Connection2
     {
         SqlConnection connect;
-        public static string connString = "Data Source=ASUS;Initial Catalog=RESTAURANT;Integrated Security=True;";
-        //umut
-        //public static String connString = "server=DESKTOP-GDM81IQ\\SQLEXPRESS; " + "database=RESTAURANT; Trusted_Connection=True";
+    
+        public static String connString = "server=DARKMATTER\\MSSQLSERVER01; " + "database=RESTAURANT; Trusted_Connection=True";
 
         public SqlConnection Connect
         {

@@ -21,7 +21,7 @@ namespace RestaurantOtomasyonuLive
 
         private void Users_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = sqlMethods4Ace2.getAllPersons();
+            dataGridView1.DataSource = sqlMethods4Ace3.getAllPersons();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.ReadOnly = true;
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -58,7 +58,7 @@ namespace RestaurantOtomasyonuLive
 
                 if (confirmResult == DialogResult.Yes)
                 {
-                    bool success = sqlMethods4Ace2.deleteUser(selectedId);
+                    bool success = sqlMethods4Ace3.deleteUser(selectedId);
                     if (success)
                     {
                         MessageBox.Show("Kullanıcı silindi.");

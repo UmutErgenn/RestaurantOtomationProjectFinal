@@ -36,7 +36,7 @@ namespace RestaurantOtomasyonuLive
                 // combobox_gender: "Kadın" => false, "Erkek" => true
                 bool gender = combobox_gender.SelectedItem.ToString() == "Erkek";
 
-                sqlMethods4Ace2.InsertPersonAndEmployee(name, surname, mail, phone, position, salary, gender);
+                sqlMethods4Ace3.InsertPersonAndEmployee(name, surname, mail, phone, position, salary, gender);
             }
             catch (FormatException)
             {
@@ -63,7 +63,7 @@ namespace RestaurantOtomasyonuLive
                 return;
             }
 
-            sqlMethods4Ace2.DeletePersonelByMail(mail);
+            sqlMethods4Ace3.DeletePersonelByMail(mail);
         }
 
         private void btnUpdateSalary_Click(object sender, EventArgs e)
@@ -83,7 +83,7 @@ namespace RestaurantOtomasyonuLive
                 return;
             }
 
-            sqlMethods4Ace2.UpdateEmployeeSalaryByMail(mail, salary);
+            sqlMethods4Ace3.UpdateEmployeeSalaryByMail(mail, salary);
         }
 
         private void button4_Click(object sender, EventArgs e)

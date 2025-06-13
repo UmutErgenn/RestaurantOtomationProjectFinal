@@ -65,13 +65,13 @@ namespace RestaurantOtomasyonuLive
         private void LoadWaiterOrders()
         {
             // Garsonun göreceği siparişleri getir
-            dgvWaiterOrders.DataSource = sqlMethods4Ace2.GetWaiterOrders();
+            dgvWaiterOrders.DataSource = sqlMethods4Ace3.GetWaiterOrders();
         }
 
         private void LoadKitchenOrders()
         {
             // Mutfak personelinin göreceği siparişleri getir
-            dgvKitchenOrders.DataSource = sqlMethods4Ace2.GetKitchenOrders();
+            dgvKitchenOrders.DataSource = sqlMethods4Ace3.GetKitchenOrders();
         }
 
         private void btnOrderDetail_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace RestaurantOtomasyonuLive
             if (dgvWaiterOrders.SelectedRows.Count > 0)
             {
                 int orderId = Convert.ToInt32(dgvWaiterOrders.SelectedRows[0].Cells["order_id"].Value);
-                var detail = sqlMethods4Ace2.GetOrderDetail(orderId);
+                var detail = sqlMethods4Ace3.GetOrderDetail(orderId);
                 MessageBox.Show(detail, "Sipariş Detayı");
             }
         }
@@ -89,7 +89,7 @@ namespace RestaurantOtomasyonuLive
             if (dgvWaiterOrders.SelectedRows.Count > 0)
             {
                 int orderId = Convert.ToInt32(dgvWaiterOrders.SelectedRows[0].Cells["order_id"].Value);
-                sqlMethods4Ace2.UpdateOrderStatus(orderId, "Onaylandı");
+                sqlMethods4Ace3.UpdateOrderStatus(orderId, "Onaylandı");
                 LoadWaiterOrders();
             }
         }
@@ -99,7 +99,7 @@ namespace RestaurantOtomasyonuLive
             if (dgvWaiterOrders.SelectedRows.Count > 0)
             {
                 int orderId = Convert.ToInt32(dgvWaiterOrders.SelectedRows[0].Cells["order_id"].Value);
-                sqlMethods4Ace2.UpdateOrderStatus(orderId, "Reddedildi");
+                sqlMethods4Ace3.UpdateOrderStatus(orderId, "Reddedildi");
                 LoadWaiterOrders();
             }
         }

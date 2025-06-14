@@ -56,7 +56,7 @@ namespace RestaurantOtomasyonuLive
             }
         }
 
-        public static int AddReservation(string mail, int tableNo, DateTime reservationDate)
+        public static int AddReservation(string mail, int tableNo, DateTime reservationStart, DateTime reservationEnd)
         {
             int newResId = -1;
             using (var conn = new SqlConnection(Connection2.connString))
@@ -65,7 +65,8 @@ namespace RestaurantOtomasyonuLive
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@mail", mail);
                 cmd.Parameters.AddWithValue("@table_id", tableNo);
-                cmd.Parameters.AddWithValue("@reservation_date", reservationDate);
+                cmd.Parameters.AddWithValue("@reservation_start", reservationStart);
+                cmd.Parameters.AddWithValue("@reservation_end", reservationEnd);
 
                 var outParam = new SqlParameter("@newResId", SqlDbType.Int)
                 {
@@ -852,6 +853,37 @@ namespace RestaurantOtomasyonuLive
                 cmd.Parameters.AddWithValue("@status", newStatus);
                 conn.Open();
                 cmd.ExecuteNonQuery();
+            }
+        }
+
+        public static void ConfirmReservation(int reservationId, int orderId)
+        {
+            using (var conn = new SqlConnection(Connection2.connString))
+            using (var cmd = new SqlCommand("sp_ConfirmReservation", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@reservation_id", reservationId);
+                cmd.Parameters.AddWithValue("@order_id", orderId);
+
+                conn.Open();
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        public static DataTable GetOrderDetailsKitchen(int orderId)
+        {
+            using (var conn = new SqlConnection(Connection2.connString))
+            using (var cmd = new SqlCommand("sp_GetOrderDetailsKitchen", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@order_id", orderId);
+                var dt = new DataTable();
+                conn.Open();
+                using (var da = new SqlDataAdapter(cmd))
+                {
+                    da.Fill(dt);
+                }
+                return dt;
             }
         }
     }

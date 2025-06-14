@@ -19,7 +19,6 @@ namespace RestaurantOtomasyonuLive
         public User_ReservationForm()
         {
             InitializeComponent();
-            btn_add_reservation.Click += btn_add_reservation_Click;
         }
 
         private void ReservationForm_Load(object sender, EventArgs e)
@@ -179,10 +178,11 @@ namespace RestaurantOtomasyonuLive
                 int newResId = sqlMethods4Ace3.AddReservation(
                     txt_mail_info.Text,
                     int.Parse(txt_table_No.Text),
-                    startDate
+                    startDate,
+                    endDate
                 );
 
-                // 5) Sepete ekle (opsiyonel)
+                // 5) Sepete ekle 
                 bool ok = sqlMethods4Ace3.AddReservationToCart(AppSession.CartId, newResId);
 
                 // 6) Geri bildirim

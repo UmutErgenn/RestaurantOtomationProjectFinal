@@ -11,7 +11,8 @@ namespace RestaurantOtomasyonuLive
     {
         SqlConnection connect;
     
-        public static String connString = "server=DARKMATTER\\MSSQLSERVER01; " + "database=RESTAURANT; Trusted_Connection=True";
+        //public static String connString = "server=DARKMATTER\\MSSQLSERVER01; " + "database=RESTAURANT; Trusted_Connection=True";
+        public static String connString = "server=DESKTOP-GDM81IQ\\SQLEXPRESS; " + "database=RESTAURANT; Trusted_Connection=True";
 
         public SqlConnection Connect
         {

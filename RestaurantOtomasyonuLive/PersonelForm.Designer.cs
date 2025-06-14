@@ -36,8 +36,8 @@
             this.pBox_restaurantLogo = new System.Windows.Forms.PictureBox();
             this.lbl_restaurantNameText = new System.Windows.Forms.Label();
             this.pnl_UserMessage = new System.Windows.Forms.Panel();
-            this.btn_mainExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btn_mainExit = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBox_restaurantLogo)).BeginInit();
@@ -57,9 +57,9 @@
             this.panel2.Controls.Add(this.lbl_restaurantNameText);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(8);
+            this.panel2.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(188, 531);
+            this.panel2.Size = new System.Drawing.Size(251, 654);
             this.panel2.TabIndex = 17;
             // 
             // pictureBox3
@@ -68,10 +68,10 @@
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Location = new System.Drawing.Point(157, 499);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(6, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(209, 614);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(8, 5, 5, 5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(26, 28);
+            this.pictureBox3.Size = new System.Drawing.Size(35, 34);
             this.pictureBox3.TabIndex = 27;
             this.pictureBox3.TabStop = false;
             // 
@@ -82,10 +82,10 @@
             this.btn_Kitchen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Kitchen.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Kitchen.ForeColor = System.Drawing.Color.White;
-            this.btn_Kitchen.Location = new System.Drawing.Point(13, 216);
-            this.btn_Kitchen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
+            this.btn_Kitchen.Location = new System.Drawing.Point(17, 266);
+            this.btn_Kitchen.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
             this.btn_Kitchen.Name = "btn_Kitchen";
-            this.btn_Kitchen.Size = new System.Drawing.Size(165, 32);
+            this.btn_Kitchen.Size = new System.Drawing.Size(220, 39);
             this.btn_Kitchen.TabIndex = 14;
             this.btn_Kitchen.Text = "Mutfak";
             this.btn_Kitchen.UseVisualStyleBackColor = false;
@@ -97,10 +97,10 @@
             this.btn_Waiter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Waiter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Waiter.ForeColor = System.Drawing.Color.White;
-            this.btn_Waiter.Location = new System.Drawing.Point(13, 172);
-            this.btn_Waiter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
+            this.btn_Waiter.Location = new System.Drawing.Point(17, 212);
+            this.btn_Waiter.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
             this.btn_Waiter.Name = "btn_Waiter";
-            this.btn_Waiter.Size = new System.Drawing.Size(165, 32);
+            this.btn_Waiter.Size = new System.Drawing.Size(220, 39);
             this.btn_Waiter.TabIndex = 13;
             this.btn_Waiter.Text = "Garson";
             this.btn_Waiter.UseVisualStyleBackColor = false;
@@ -112,10 +112,10 @@
             this.pBox_restaurantLogo.BackColor = System.Drawing.Color.Transparent;
             this.pBox_restaurantLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pBox_restaurantLogo.BackgroundImage")));
             this.pBox_restaurantLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pBox_restaurantLogo.Location = new System.Drawing.Point(48, 46);
+            this.pBox_restaurantLogo.Location = new System.Drawing.Point(64, 57);
             this.pBox_restaurantLogo.Margin = new System.Windows.Forms.Padding(0);
             this.pBox_restaurantLogo.Name = "pBox_restaurantLogo";
-            this.pBox_restaurantLogo.Size = new System.Drawing.Size(95, 107);
+            this.pBox_restaurantLogo.Size = new System.Drawing.Size(127, 132);
             this.pBox_restaurantLogo.TabIndex = 11;
             this.pBox_restaurantLogo.TabStop = false;
             // 
@@ -125,7 +125,7 @@
             this.lbl_restaurantNameText.BackColor = System.Drawing.Color.Transparent;
             this.lbl_restaurantNameText.Font = new System.Drawing.Font("Forte", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_restaurantNameText.ForeColor = System.Drawing.Color.White;
-            this.lbl_restaurantNameText.Location = new System.Drawing.Point(9, 20);
+            this.lbl_restaurantNameText.Location = new System.Drawing.Point(12, 25);
             this.lbl_restaurantNameText.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_restaurantNameText.Name = "lbl_restaurantNameText";
             this.lbl_restaurantNameText.Size = new System.Drawing.Size(171, 26);
@@ -138,10 +138,20 @@
             this.pnl_UserMessage.Controls.Add(this.dataGridView1);
             this.pnl_UserMessage.Controls.Add(this.btn_mainExit);
             this.pnl_UserMessage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_UserMessage.Location = new System.Drawing.Point(188, 0);
+            this.pnl_UserMessage.Location = new System.Drawing.Point(251, 0);
+            this.pnl_UserMessage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pnl_UserMessage.Name = "pnl_UserMessage";
-            this.pnl_UserMessage.Size = new System.Drawing.Size(694, 531);
+            this.pnl_UserMessage.Size = new System.Drawing.Size(925, 654);
             this.pnl_UserMessage.TabIndex = 29;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 41);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(925, 544);
+            this.dataGridView1.TabIndex = 31;
             // 
             // btn_mainExit
             // 
@@ -150,29 +160,23 @@
             this.btn_mainExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_mainExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_mainExit.ForeColor = System.Drawing.Color.White;
-            this.btn_mainExit.Location = new System.Drawing.Point(669, 0);
+            this.btn_mainExit.Location = new System.Drawing.Point(892, 0);
+            this.btn_mainExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_mainExit.Name = "btn_mainExit";
-            this.btn_mainExit.Size = new System.Drawing.Size(25, 27);
+            this.btn_mainExit.Size = new System.Drawing.Size(33, 33);
             this.btn_mainExit.TabIndex = 30;
             this.btn_mainExit.Text = "X";
             this.btn_mainExit.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 33);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(694, 442);
-            this.dataGridView1.TabIndex = 31;
-            // 
             // PersonelForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(882, 531);
+            this.ClientSize = new System.Drawing.Size(1176, 654);
             this.Controls.Add(this.pnl_UserMessage);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "PersonelForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PersonelForm";

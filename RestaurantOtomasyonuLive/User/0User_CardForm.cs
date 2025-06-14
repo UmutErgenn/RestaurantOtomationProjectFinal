@@ -82,15 +82,36 @@ namespace RestaurantOtomasyonuLive
 
         private void btn_card_approve_Click(object sender, EventArgs e)
         {
+
+            // Sepetin boş olup olmadığının kontrolü
+            DataTable dt = sqlMethods4Ace3.GetCartContents(AppSession.CartId);
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Sepetiniz boş. Sipariş verilemez.", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             int orderId = sqlMethods4Ace3.ConfirmCart(AppSession.CartId);
 
-            if (orderId > 0)
-                MessageBox.Show($"Sipariş başarıyla oluşturuldu. Sipariş No: {orderId}",
-                                "Başarılı",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+            if (orderId > 0) {
+
+                // Sepette rezervasyon var mı kontrol et
+                var reservationRow = dt.AsEnumerable()
+                    .FirstOrDefault(row => row["ItemType"].ToString() == "Reservation");
+                if (reservationRow != null)
+                {
+                    int reservationId = Convert.ToInt32(reservationRow["ItemId"]);
+                    sqlMethods4Ace3.ConfirmReservation(reservationId, orderId);
+                }
+
+                MessageBox.Show($"Sipariş başarıyla oluşturuldu. Sipariş No: {orderId}", "Başarılı",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information); 
+            }
             else
                 MessageBox.Show("Sipariş onaylanamadı.", "Hata", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+
             CardForm_Load(sender, e);
         }
 

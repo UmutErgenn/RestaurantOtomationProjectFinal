@@ -43,7 +43,7 @@ namespace RestaurantOtomasyonuLive
 
         private decimal GetToplamSatis()
         {
-            using (var conn = new SqlConnection(Connection2.connString))
+            using (var conn = new SqlConnection(Connection.connString))
             using (var cmd = new SqlCommand("sp_ToplamSatis", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -55,7 +55,7 @@ namespace RestaurantOtomasyonuLive
 
         private decimal GetToplamOdeme()
         {
-            using (var conn = new SqlConnection(Connection2.connString))
+            using (var conn = new SqlConnection(Connection.connString))
             using (var cmd = new SqlCommand("dbo.sp_ToplamOdeme", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -71,7 +71,7 @@ namespace RestaurantOtomasyonuLive
 
         private int GetMusteriSayisi()
         {
-            using (var conn = new SqlConnection(Connection2.connString))
+            using (var conn = new SqlConnection(Connection.connString))
             using (var cmd = new SqlCommand("sp_MusteriSayisi", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -83,7 +83,7 @@ namespace RestaurantOtomasyonuLive
 
         private int GetPersonelSayisi()
         {
-            using (var conn = new SqlConnection(Connection2.connString))
+            using (var conn = new SqlConnection(Connection.connString))
             using (var cmd = new SqlCommand("sp_PersonelSayisi", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -95,7 +95,7 @@ namespace RestaurantOtomasyonuLive
 
         private int GetRezervasyonSayisi()
         {
-            using (var conn = new SqlConnection(Connection2.connString))
+            using (var conn = new SqlConnection(Connection.connString))
             using (var cmd = new SqlCommand("sp_RezervasyonSayisi", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -107,7 +107,7 @@ namespace RestaurantOtomasyonuLive
 
         private string GetTopMenu()
         {
-            using (var conn = new SqlConnection(Connection2.connString))
+            using (var conn = new SqlConnection(Connection.connString))
             using (var cmd = new SqlCommand("sp_GetTopMenu", conn))
             {
                 cmd.CommandType = CommandType.StoredProcedure;

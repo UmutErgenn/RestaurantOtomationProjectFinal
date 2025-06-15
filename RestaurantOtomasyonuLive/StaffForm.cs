@@ -86,13 +86,13 @@ namespace RestaurantOtomasyonuLive
         private void LoadWaiterOrders()
         {
             // Garsonun göreceği siparişleri getir
-            dgvWaiterOrders.DataSource = sqlMethods4Ace3.GetWaiterOrders();
+            dgvWaiterOrders.DataSource = sqlMethods.GetWaiterOrders();
         }
 
         private void LoadKitchenOrders()
         {
             // Mutfak personelinin göreceği siparişleri getir
-            dgvKitchenOrders.DataSource = sqlMethods4Ace3.GetKitchenOrders();
+            dgvKitchenOrders.DataSource = sqlMethods.GetKitchenOrders();
         }
 
         private void btnOrderDetail_Click(object sender, EventArgs e)
@@ -100,7 +100,7 @@ namespace RestaurantOtomasyonuLive
             if (dgvWaiterOrders.SelectedRows.Count > 0)
             {
                 int orderId = Convert.ToInt32(dgvWaiterOrders.SelectedRows[0].Cells["order_id"].Value);
-                var detail = sqlMethods4Ace3.GetOrderDetail(orderId);
+                var detail = sqlMethods.GetOrderDetail(orderId);
                 MessageBox.Show(detail, "Sipariş Detayı");
             }
         }
@@ -110,7 +110,7 @@ namespace RestaurantOtomasyonuLive
             if (dgvWaiterOrders.SelectedRows.Count > 0)
             {
                 int orderId = Convert.ToInt32(dgvWaiterOrders.SelectedRows[0].Cells["order_id"].Value);
-                sqlMethods4Ace3.UpdateOrderStatus(orderId, "Onaylandı");
+                sqlMethods.UpdateOrderStatus(orderId, "Onaylandı");
                 LoadWaiterOrders();
             }
         }
@@ -120,7 +120,7 @@ namespace RestaurantOtomasyonuLive
             if (dgvWaiterOrders.SelectedRows.Count > 0)
             {
                 int orderId = Convert.ToInt32(dgvWaiterOrders.SelectedRows[0].Cells["order_id"].Value);
-                sqlMethods4Ace3.UpdateOrderStatus(orderId, "Reddedildi");
+                sqlMethods.UpdateOrderStatus(orderId, "Reddedildi");
                 LoadWaiterOrders();
             }
         }
@@ -137,7 +137,7 @@ namespace RestaurantOtomasyonuLive
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            new SignUpScreenAce3().Show();
+            new SignUpScreen().Show();
             this.Close();
         }
 
@@ -146,7 +146,7 @@ namespace RestaurantOtomasyonuLive
             if (dgvKitchenOrders.SelectedRows.Count > 0)
             {
                 int orderId = Convert.ToInt32(dgvKitchenOrders.SelectedRows[0].Cells["order_id"].Value);
-                var dt = sqlMethods4Ace3.GetOrderDetailsKitchen(orderId);
+                var dt = sqlMethods.GetOrderDetailsKitchen(orderId);
 
                 if (dt.Rows.Count == 0)
                 {

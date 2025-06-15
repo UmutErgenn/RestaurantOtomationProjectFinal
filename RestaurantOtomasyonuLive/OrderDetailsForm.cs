@@ -25,7 +25,7 @@ namespace RestaurantOtomasyonuLive
 
         private void LoadDetails()
         {
-            using (SqlConnection conn = new Connection2().Connect)
+            using (SqlConnection conn = new Connection().Connect)
             using (SqlCommand cmd = conn.CreateCommand())
             {
                 cmd.CommandText = @"

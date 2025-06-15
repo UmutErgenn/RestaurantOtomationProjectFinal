@@ -19,7 +19,7 @@ namespace RestaurantOtomasyonuLive
 
             public void getCampaigns()
             {
-                Connection2 connection = new Connection2();
+                Connection connection = new Connection();
                 SqlCommand cmd = new SqlCommand("get_All_Campaigns_proc", connection.Connect);
                 cmd.CommandType = CommandType.StoredProcedure;
                 SqlDataReader reader = cmd.ExecuteReader();
@@ -37,7 +37,7 @@ namespace RestaurantOtomasyonuLive
             {
                 try
                 {
-                    Connection2 connection = new Connection2();
+                    Connection connection = new Connection();
                     SqlCommand cmd = new SqlCommand("add_Campaign_proc", connection.Connect);
                     cmd.CommandType = CommandType.StoredProcedure;
 

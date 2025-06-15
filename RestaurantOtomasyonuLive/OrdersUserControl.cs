@@ -9,7 +9,7 @@ namespace RestaurantOtomasyonuLive
 {
     public partial class OrdersUserControl : UserControl
     {
-        private readonly Connection2 conn = new Connection2();
+        private readonly Connection conn = new Connection();
         private readonly ContextMenuStrip ctxOrder = new ContextMenuStrip();
 
         public OrdersUserControl()

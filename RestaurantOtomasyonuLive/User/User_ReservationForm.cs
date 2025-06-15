@@ -206,23 +206,23 @@ namespace RestaurantOtomasyonuLive
 
 
         private void btn_mainExit_Click(object sender, EventArgs e) { Application.Exit(); }
-        private void Table_1_Brown_Click(object sender, EventArgs e) { panelSet("1"); }
+        private void Table_1_Brown_Click(object sender, EventArgs e) { panelSet("1"); UpdateHourComboboxes(); }
 
-        private void Table_2_Brown_Click(object sender, EventArgs e) { panelSet("2"); }
+        private void Table_2_Brown_Click(object sender, EventArgs e) { panelSet("2"); UpdateHourComboboxes(); }
 
-        private void Table_3_Brown_Click(object sender, EventArgs e) { panelSet("3"); }
+        private void Table_3_Brown_Click(object sender, EventArgs e) { panelSet("3"); UpdateHourComboboxes(); }
 
-        private void Table_4_Brown_Click(object sender, EventArgs e) { panelSet("4"); }
+        private void Table_4_Brown_Click(object sender, EventArgs e) { panelSet("4"); UpdateHourComboboxes(); }
 
-        private void Table_5_Brown_Click(object sender, EventArgs e) { panelSet("5"); }
+        private void Table_5_Brown_Click(object sender, EventArgs e) { panelSet("5"); UpdateHourComboboxes(); }
 
-        private void Table_6_Brown_Click(object sender, EventArgs e) { panelSet("6"); }
+        private void Table_6_Brown_Click(object sender, EventArgs e) { panelSet("6"); UpdateHourComboboxes(); }
 
-        private void Table_7_Brown_Click(object sender, EventArgs e) { panelSet("7"); }
+        private void Table_7_Brown_Click(object sender, EventArgs e) { panelSet("7"); UpdateHourComboboxes(); }
 
-        private void Table_8_Brown_Click(object sender, EventArgs e) { panelSet("8"); }
+        private void Table_8_Brown_Click(object sender, EventArgs e) { panelSet("8"); UpdateHourComboboxes(); }
 
-        private void Table_9_Brown_Click(object sender, EventArgs e) { panelSet("9"); }
+        private void Table_9_Brown_Click(object sender, EventArgs e) { panelSet("9"); UpdateHourComboboxes(); }
         public void panelSet(String num)
         {
             pnl_RezervasyonOnay.BringToFront();
@@ -263,6 +263,32 @@ namespace RestaurantOtomasyonuLive
         private void pBox_AccountLogo_Click(object sender, EventArgs e)
         {
             LoadFormIntoPanel(new User_MyAccount());
+        }
+        private void UpdateHourComboboxes()
+        {
+            cmbStartHour.Items.Clear();
+            cmbEndHour.Items.Clear();
+
+            // Örneğin 07:00 - 23:00 arası saatler
+            var allHours = Enumerable.Range(7, 17).Select(h => new TimeSpan(h, 0, 0)).ToList();
+
+            int selectedTableId = Convert.ToInt32(txt_table_No.Text);
+            DateTime selectedDate = dateTimePicker_info.Value.Date;
+
+            sqlMethods sqlmethods = new sqlMethods();
+            var reservedRanges = sqlmethods.GetReservedTimeRanges(selectedTableId, selectedDate);
+
+            // Rezerve edilen saatleri çıkar
+            var availableHours = allHours
+                .Where(hour => !reservedRanges.Any(r => hour >= r.start && hour < r.end))
+                .ToList();
+
+            foreach (var hour in availableHours)
+            {
+                string hourStr = hour.ToString(@"hh\:mm");
+                cmbStartHour.Items.Add(hourStr);
+                cmbEndHour.Items.Add(hourStr);
+            }
         }
     }
 }

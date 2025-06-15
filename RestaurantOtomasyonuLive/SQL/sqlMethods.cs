@@ -886,5 +886,30 @@ namespace RestaurantOtomasyonuLive
                 return dt;
             }
         }
+
+        public List<(TimeSpan start, TimeSpan end)> GetReservedTimeRanges(int tableId, DateTime reservationDate)
+        {
+            var reservedRanges = new List<(TimeSpan, TimeSpan)>();
+
+            using (var conn = new SqlConnection(Connection.connString))
+            using (var cmd = new SqlCommand("GetReservedTimeRanges", conn))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@table_id", tableId);
+                cmd.Parameters.AddWithValue("@reservation_date", reservationDate.Date);
+
+                conn.Open();
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        var start = ((DateTime)reader["reservation_start"]).TimeOfDay;
+                        var end = ((DateTime)reader["reservation_end"]).TimeOfDay;
+                        reservedRanges.Add((start, end));
+                    }
+                }
+            }
+            return reservedRanges;
+        }
     }
 }

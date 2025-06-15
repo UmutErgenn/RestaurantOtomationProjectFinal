@@ -39,7 +39,41 @@ namespace RestaurantOtomasyonuLive
 
         private void btn_Menus_Click(object sender, EventArgs e)
         {
+            Admin_Menu adminMenu = new Admin_Menu();
+            adminMenu.Show();
+            this.Hide();
+        }
 
+        private void btn_Campaigns_Click(object sender, EventArgs e)
+        {
+            Admin_Campaign adminCampaign = new Admin_Campaign();
+            adminCampaign.Show();
+            this.Hide();
+        }
+
+        private void btn_Staffs_Click(object sender, EventArgs e)
+        {
+            Admin_Personel admin_Personel = new Admin_Personel();
+            admin_Personel.Show();
+            this.Hide();
+        }
+
+        private void btn_Users_Click(object sender, EventArgs e)
+        {
+            Admin_Users admin_Users = new Admin_Users();
+            admin_Users.Show();
+            this.Hide();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            new SignUpScreen().Show();
+            this.Close();
+        }
+
+        private void btn_Orders_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

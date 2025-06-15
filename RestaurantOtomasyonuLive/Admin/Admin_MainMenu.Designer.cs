@@ -67,9 +67,9 @@
             this.panel2.Controls.Add(this.lbl_restaurantNameText);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(11, 10, 11, 10);
+            this.panel2.Margin = new System.Windows.Forms.Padding(8, 8, 8, 8);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(251, 654);
+            this.panel2.Size = new System.Drawing.Size(188, 531);
             this.panel2.TabIndex = 17;
             // 
             // pictureBox3
@@ -78,12 +78,13 @@
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Location = new System.Drawing.Point(209, 614);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(8, 5, 5, 5);
+            this.pictureBox3.Location = new System.Drawing.Point(157, 499);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(6, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(35, 34);
+            this.pictureBox3.Size = new System.Drawing.Size(26, 28);
             this.pictureBox3.TabIndex = 27;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // btn_Stock
             // 
@@ -92,10 +93,10 @@
             this.btn_Stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Stock.ForeColor = System.Drawing.Color.White;
-            this.btn_Stock.Location = new System.Drawing.Point(13, 537);
-            this.btn_Stock.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.btn_Stock.Location = new System.Drawing.Point(10, 436);
+            this.btn_Stock.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
             this.btn_Stock.Name = "btn_Stock";
-            this.btn_Stock.Size = new System.Drawing.Size(220, 39);
+            this.btn_Stock.Size = new System.Drawing.Size(165, 32);
             this.btn_Stock.TabIndex = 19;
             this.btn_Stock.Text = "Stok";
             this.btn_Stock.UseVisualStyleBackColor = false;
@@ -108,10 +109,10 @@
             this.btn_Statistics.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Statistics.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Statistics.ForeColor = System.Drawing.Color.White;
-            this.btn_Statistics.Location = new System.Drawing.Point(13, 483);
-            this.btn_Statistics.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.btn_Statistics.Location = new System.Drawing.Point(10, 392);
+            this.btn_Statistics.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
             this.btn_Statistics.Name = "btn_Statistics";
-            this.btn_Statistics.Size = new System.Drawing.Size(220, 39);
+            this.btn_Statistics.Size = new System.Drawing.Size(165, 32);
             this.btn_Statistics.TabIndex = 19;
             this.btn_Statistics.Text = "İstatistik";
             this.btn_Statistics.UseVisualStyleBackColor = false;
@@ -124,10 +125,10 @@
             this.btn_Users.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Users.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Users.ForeColor = System.Drawing.Color.White;
-            this.btn_Users.Location = new System.Drawing.Point(13, 428);
-            this.btn_Users.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.btn_Users.Location = new System.Drawing.Point(10, 348);
+            this.btn_Users.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
             this.btn_Users.Name = "btn_Users";
-            this.btn_Users.Size = new System.Drawing.Size(220, 39);
+            this.btn_Users.Size = new System.Drawing.Size(165, 32);
             this.btn_Users.TabIndex = 17;
             this.btn_Users.Text = "Kullanıcılar";
             this.btn_Users.UseVisualStyleBackColor = false;
@@ -140,13 +141,14 @@
             this.btn_Staffs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Staffs.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Staffs.ForeColor = System.Drawing.Color.White;
-            this.btn_Staffs.Location = new System.Drawing.Point(14, 374);
-            this.btn_Staffs.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.btn_Staffs.Location = new System.Drawing.Point(10, 304);
+            this.btn_Staffs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
             this.btn_Staffs.Name = "btn_Staffs";
-            this.btn_Staffs.Size = new System.Drawing.Size(220, 39);
+            this.btn_Staffs.Size = new System.Drawing.Size(165, 32);
             this.btn_Staffs.TabIndex = 16;
             this.btn_Staffs.Text = "Personel";
             this.btn_Staffs.UseVisualStyleBackColor = false;
+            this.btn_Staffs.Click += new System.EventHandler(this.btn_Staffs_Click);
             // 
             // btn_Orders
             // 
@@ -155,10 +157,10 @@
             this.btn_Orders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Orders.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Orders.ForeColor = System.Drawing.Color.White;
-            this.btn_Orders.Location = new System.Drawing.Point(17, 320);
-            this.btn_Orders.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.btn_Orders.Location = new System.Drawing.Point(13, 260);
+            this.btn_Orders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
             this.btn_Orders.Name = "btn_Orders";
-            this.btn_Orders.Size = new System.Drawing.Size(220, 39);
+            this.btn_Orders.Size = new System.Drawing.Size(165, 32);
             this.btn_Orders.TabIndex = 15;
             this.btn_Orders.Text = "Siparişler";
             this.btn_Orders.UseVisualStyleBackColor = false;
@@ -171,10 +173,10 @@
             this.btn_Menus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Menus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Menus.ForeColor = System.Drawing.Color.White;
-            this.btn_Menus.Location = new System.Drawing.Point(17, 266);
-            this.btn_Menus.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.btn_Menus.Location = new System.Drawing.Point(13, 216);
+            this.btn_Menus.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
             this.btn_Menus.Name = "btn_Menus";
-            this.btn_Menus.Size = new System.Drawing.Size(220, 39);
+            this.btn_Menus.Size = new System.Drawing.Size(165, 32);
             this.btn_Menus.TabIndex = 14;
             this.btn_Menus.Text = "Menüler";
             this.btn_Menus.UseVisualStyleBackColor = false;
@@ -187,10 +189,10 @@
             this.btn_Campaigns.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Campaigns.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Campaigns.ForeColor = System.Drawing.Color.White;
-            this.btn_Campaigns.Location = new System.Drawing.Point(17, 212);
-            this.btn_Campaigns.Margin = new System.Windows.Forms.Padding(5, 5, 5, 10);
+            this.btn_Campaigns.Location = new System.Drawing.Point(13, 172);
+            this.btn_Campaigns.Margin = new System.Windows.Forms.Padding(4, 4, 4, 8);
             this.btn_Campaigns.Name = "btn_Campaigns";
-            this.btn_Campaigns.Size = new System.Drawing.Size(220, 39);
+            this.btn_Campaigns.Size = new System.Drawing.Size(165, 32);
             this.btn_Campaigns.TabIndex = 13;
             this.btn_Campaigns.Text = "Kampanyalar";
             this.btn_Campaigns.UseVisualStyleBackColor = false;
@@ -203,10 +205,10 @@
             this.pBox_restaurantLogo.BackColor = System.Drawing.Color.Transparent;
             this.pBox_restaurantLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pBox_restaurantLogo.BackgroundImage")));
             this.pBox_restaurantLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pBox_restaurantLogo.Location = new System.Drawing.Point(64, 57);
+            this.pBox_restaurantLogo.Location = new System.Drawing.Point(48, 46);
             this.pBox_restaurantLogo.Margin = new System.Windows.Forms.Padding(0);
             this.pBox_restaurantLogo.Name = "pBox_restaurantLogo";
-            this.pBox_restaurantLogo.Size = new System.Drawing.Size(127, 132);
+            this.pBox_restaurantLogo.Size = new System.Drawing.Size(95, 107);
             this.pBox_restaurantLogo.TabIndex = 11;
             this.pBox_restaurantLogo.TabStop = false;
             // 
@@ -216,10 +218,10 @@
             this.lbl_restaurantNameText.BackColor = System.Drawing.Color.Transparent;
             this.lbl_restaurantNameText.Font = new System.Drawing.Font("Forte", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_restaurantNameText.ForeColor = System.Drawing.Color.White;
-            this.lbl_restaurantNameText.Location = new System.Drawing.Point(12, 25);
+            this.lbl_restaurantNameText.Location = new System.Drawing.Point(9, 20);
             this.lbl_restaurantNameText.Margin = new System.Windows.Forms.Padding(0);
             this.lbl_restaurantNameText.Name = "lbl_restaurantNameText";
-            this.lbl_restaurantNameText.Size = new System.Drawing.Size(214, 32);
+            this.lbl_restaurantNameText.Size = new System.Drawing.Size(171, 26);
             this.lbl_restaurantNameText.TabIndex = 12;
             this.lbl_restaurantNameText.Text = "Mola Restoran";
             // 
@@ -230,10 +232,9 @@
             this.btn_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btn_Exit.ForeColor = System.Drawing.Color.White;
-            this.btn_Exit.Location = new System.Drawing.Point(892, 0);
-            this.btn_Exit.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Exit.Location = new System.Drawing.Point(669, 0);
             this.btn_Exit.Name = "btn_Exit";
-            this.btn_Exit.Size = new System.Drawing.Size(33, 33);
+            this.btn_Exit.Size = new System.Drawing.Size(25, 27);
             this.btn_Exit.TabIndex = 18;
             this.btn_Exit.Text = "X";
             this.btn_Exit.UseVisualStyleBackColor = false;
@@ -245,10 +246,9 @@
             this.panel1.Controls.Add(this.btn_AdminMessages);
             this.panel1.Controls.Add(this.btn_Exit);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(251, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(188, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(925, 654);
+            this.panel1.Size = new System.Drawing.Size(694, 531);
             this.panel1.TabIndex = 19;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -258,24 +258,23 @@
             this.btn_AdminMessages.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_AdminMessages.BackgroundImage")));
             this.btn_AdminMessages.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btn_AdminMessages.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_AdminMessages.Location = new System.Drawing.Point(751, 0);
-            this.btn_AdminMessages.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_AdminMessages.Location = new System.Drawing.Point(563, 0);
+            this.btn_AdminMessages.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_AdminMessages.Name = "btn_AdminMessages";
-            this.btn_AdminMessages.Size = new System.Drawing.Size(55, 55);
+            this.btn_AdminMessages.Size = new System.Drawing.Size(41, 45);
             this.btn_AdminMessages.TabIndex = 28;
             this.btn_AdminMessages.TabStop = false;
             this.btn_AdminMessages.Click += new System.EventHandler(this.btn_AdminMessages_Click);
             // 
-            // AdminFormAce2
+            // Admin_MainMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1176, 654);
+            this.ClientSize = new System.Drawing.Size(882, 531);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "AdminFormAce2";
+            this.Name = "Admin_MainMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminForm";
             this.panel2.ResumeLayout(false);

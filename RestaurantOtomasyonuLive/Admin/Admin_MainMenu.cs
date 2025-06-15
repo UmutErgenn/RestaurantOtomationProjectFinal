@@ -90,8 +90,17 @@ namespace RestaurantOtomasyonuLive
             panel1.Controls.Add(ordersUC);
         }
 
+        private void btn_Staffs_Click(object sender, EventArgs e)
+        {
+            Admin_Personel admin_Personel = new Admin_Personel();
+            admin_Personel.Show();
+            this.Hide();
+        }
 
-
-
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            new SignUpScreen().Show();
+            this.Close();
+        }
     }
 }

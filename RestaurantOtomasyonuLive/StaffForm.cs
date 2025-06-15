@@ -31,9 +31,6 @@ namespace RestaurantOtomasyonuLive
             {
                 pnlWaiter.Visible = true;
                 dgvWaiterOrders.Visible = true;
-                dgvWaiterOrders.BringToFront();
-                dgvWaiterOrders.BringToFront();
-                dgvWaiterOrders.BringToFront();
                 pnlWaiter.BringToFront();
                 pnlWaiter.BringToFront();
                 pnlWaiter.BringToFront();
@@ -46,7 +43,6 @@ namespace RestaurantOtomasyonuLive
             {
                 pnlKitchen.Visible = true;
                 dgvKitchenOrders.Visible = true;
-                dgvKitchenOrders.BringToFront();
                 pnlKitchen.BringToFront();
                 pnlKitchen.BringToFront();
                 pnlKitchen.BringToFront();
